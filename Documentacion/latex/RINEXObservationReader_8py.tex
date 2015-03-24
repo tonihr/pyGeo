@@ -1,0 +1,32 @@
+\section{Referencia del Archivo /home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/\-R\-I\-N\-E\-X\-Observation\-Reader.py}
+\label{RINEXObservationReader_8py}\index{/home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/\-R\-I\-N\-E\-X\-Observation\-Reader.\-py@{/home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/\-R\-I\-N\-E\-X\-Observation\-Reader.\-py}}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-R\-I\-N\-E\-X\-Observation\-Reader}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-main}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple {\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-ficheros} = listdir(rutasample)
+\begin{DoxyCompactList}\small\item\em print(rutasample) \end{DoxyCompactList}\item 
+list {\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-val} = [i for i in ficheros if i.\-endswith(\char`\"{}o\char`\"{})]
+\item 
+{\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-seleccionado} = None
+\begin{DoxyCompactList}\small\item\em print(val) \end{DoxyCompactList}\item 
+string {\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-rutadescom} = rutasample+\char`\"{}/\char`\"{}
+\item 
+tuple {\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-rin} = R\-I\-N\-E\-X\-Observation\-Reader(rutadescom)
+\item 
+tuple {\bf G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-obs} = rin.\-get\-Observation([\char`\"{}C1\char`\"{},\char`\"{}P2\char`\"{}])
+\end{DoxyCompactItemize}

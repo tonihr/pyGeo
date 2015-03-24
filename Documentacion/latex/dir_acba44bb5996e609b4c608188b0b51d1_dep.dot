@@ -1,0 +1,9 @@
+digraph "/home/toni/Dropbox/pyGeo/Controladores" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e2627865121f9a1fcbd3858eeb7187ed {
+    graph [ bgcolor="#ddddee", pencolor="black", label="pyGeo" fontname="Helvetica", fontsize="10", URL="dir_e2627865121f9a1fcbd3858eeb7187ed.html"]
+  dir_acba44bb5996e609b4c608188b0b51d1 [shape=box, label="Controladores", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_acba44bb5996e609b4c608188b0b51d1.html"];
+  }
+}

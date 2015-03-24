@@ -1,0 +1,26 @@
+var classGeometrias_1_1Angulo_1_1Angulo =
+[
+    [ "__init__", "classGeometrias_1_1Angulo_1_1Angulo.html#afc9ef0c36d0f7ae2b1f15a2abd5a6f0e", null ],
+    [ "Convert2Min", "classGeometrias_1_1Angulo_1_1Angulo.html#abb4465528872fdddec3770f3b6f610b8", null ],
+    [ "Convert2Seconds", "classGeometrias_1_1Angulo_1_1Angulo.html#ab23d5cb55daa70c8a6961a2031bc5761", null ],
+    [ "Convertir", "classGeometrias_1_1Angulo_1_1Angulo.html#a2e07d7bb5bc3c6246afe3f0326e43ca5", null ],
+    [ "getAngulo", "classGeometrias_1_1Angulo_1_1Angulo.html#a5f5b0336518635a75cbc7385a86d616b", null ],
+    [ "getFormato", "classGeometrias_1_1Angulo_1_1Angulo.html#a45aa55b51bd7472b08a752a1f6b1abfd", null ],
+    [ "getFormatosDisponibles", "classGeometrias_1_1Angulo_1_1Angulo.html#aac625c9c6c7785e02225ab892202c471", null ],
+    [ "getGirar", "classGeometrias_1_1Angulo_1_1Angulo.html#a5399e0f65b12149a6f7e1f06a8af7666", null ],
+    [ "getNegativos", "classGeometrias_1_1Angulo_1_1Angulo.html#aedcb2c1f69b72bce3feb7eba405f7ea1", null ],
+    [ "setAngulo", "classGeometrias_1_1Angulo_1_1Angulo.html#a3f2bff0da5d4310a062efe296b52d478", null ],
+    [ "setFormato", "classGeometrias_1_1Angulo_1_1Angulo.html#a1f944bb1f56f54b4b9def8b7135d7d23", null ],
+    [ "setGirar", "classGeometrias_1_1Angulo_1_1Angulo.html#ad60407836c76135d9a51c139fc574d54", null ],
+    [ "setNegativos", "classGeometrias_1_1Angulo_1_1Angulo.html#aca0636352295005a56b0c35e76de4533", null ],
+    [ "toJSON", "classGeometrias_1_1Angulo_1_1Angulo.html#a02b71a8eac4d714c5bc88974fd5ab0b1", null ],
+    [ "toString", "classGeometrias_1_1Angulo_1_1Angulo.html#aa3277a58fc30817c96345969ceb1b220", null ],
+    [ "__ang", "classGeometrias_1_1Angulo_1_1Angulo.html#abd9a3433bbaff7309756cc2254c8808a", null ],
+    [ "__f", "classGeometrias_1_1Angulo_1_1Angulo.html#af7016e1c2c1aa32873daddf94e320dbf", null ],
+    [ "__ftype", "classGeometrias_1_1Angulo_1_1Angulo.html#ae997f90aa5b09c3eced1d29f3103fc39", null ],
+    [ "__g", "classGeometrias_1_1Angulo_1_1Angulo.html#aa906e28ee1a6d4dbb10d53fc006b4f83", null ],
+    [ "__girar", "classGeometrias_1_1Angulo_1_1Angulo.html#a967decd7f95f3b4f2ef9aef459130762", null ],
+    [ "__m", "classGeometrias_1_1Angulo_1_1Angulo.html#a0ccc8d657536f3fff53c00097388e1e4", null ],
+    [ "__negativo", "classGeometrias_1_1Angulo_1_1Angulo.html#aa971debd5f848fb9850a102d85963bfa", null ],
+    [ "__s", "classGeometrias_1_1Angulo_1_1Angulo.html#a4dfb6f6abd49b66913ab6e1ac4513a1b", null ]
+];

@@ -1,0 +1,128 @@
+\section{Referencia de la Clase Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia}
+\label{classGeodesia_1_1PIGeodesia_1_1PIGeodesia}\index{Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia@{Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia}}
+
+
+classdocs  
+
+
+
+
+Diagrama de herencias de Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia
+
+
+Diagrama de colaboración para Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+def {\bf set\-P\-G\-Inicial}
+\begin{DoxyCompactList}\small\item\em \-: Método que establece y comprueba el punto geodésio inicial. \end{DoxyCompactList}\item 
+def {\bf set\-P\-G\-Final}
+\begin{DoxyCompactList}\small\item\em \-: Método que establece y comprueba el punto geodésio final. \end{DoxyCompactList}\item 
+def {\bf Calcular\-Bessel}
+\begin{DoxyCompactList}\small\item\em \-: Método que calcula el problema inverso de la geodesia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-pgeo1} = None
+\item 
+{\bf \-\_\-\-\_\-pgeo2} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+classdocs 
+
+\subsection{Documentación del constructor y destructor}
+\index{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Geodesia::PIGeodesia::PIGeodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{P\-G\-Inicial, }
+\item[{}]{P\-G\-Final}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PIGeodesia_1_1PIGeodesia_ac753d1acd323f8ce47ee6617605a20ac}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em P\-G\-Inicial} & Punto\-Geodesico\-: Punto Geodésico inicial de la línea. \\
+\hline
+{\em P\-G\-Final} & Punto\-Geodesico\-: Punto Geodésico final de la línea. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}!Calcular\-Bessel@{Calcular\-Bessel}}
+\index{Calcular\-Bessel@{Calcular\-Bessel}!Geodesia::PIGeodesia::PIGeodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}}
+\subsubsection[{Calcular\-Bessel}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia.\-Calcular\-Bessel (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Nombre\-Elipsoide}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PIGeodesia_1_1PIGeodesia_a914622d7c3961c6fdbf64a8632e856d5}
+
+
+\-: Método que calcula el problema inverso de la geodesia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Nombre\-Elipsoide} & str\-: Elipsoide de calculo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}!set\-P\-G\-Final@{set\-P\-G\-Final}}
+\index{set\-P\-G\-Final@{set\-P\-G\-Final}!Geodesia::PIGeodesia::PIGeodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}}
+\subsubsection[{set\-P\-G\-Final}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia.\-set\-P\-G\-Final (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{P\-G\-Final}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PIGeodesia_1_1PIGeodesia_a2d8f6e83cca82012dba1533c06cad428}
+
+
+\-: Método que establece y comprueba el punto geodésio final. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em P\-G\-Final} & Punto\-Geodesico\-: Punto Geodésico final de la línea. \\
+\hline
+\end{DoxyParams}
+\index{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}!set\-P\-G\-Inicial@{set\-P\-G\-Inicial}}
+\index{set\-P\-G\-Inicial@{set\-P\-G\-Inicial}!Geodesia::PIGeodesia::PIGeodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}}
+\subsubsection[{set\-P\-G\-Inicial}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia.\-set\-P\-G\-Inicial (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{P\-G\-Inicial}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PIGeodesia_1_1PIGeodesia_a3e0ac7c64fe29af760eae30f2d3c8859}
+
+
+\-: Método que establece y comprueba el punto geodésio inicial. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em P\-G\-Inicial} & Punto\-Geodesico\-: Punto Geodésico inicial de la línea. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}!\-\_\-\-\_\-pgeo1@{\-\_\-\-\_\-pgeo1}}
+\index{\-\_\-\-\_\-pgeo1@{\-\_\-\-\_\-pgeo1}!Geodesia::PIGeodesia::PIGeodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-pgeo1}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia.\-\_\-\-\_\-pgeo1 = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1PIGeodesia_1_1PIGeodesia_a690c865c8d6ff73aca1d2df9c14003a2}
+\index{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}!\-\_\-\-\_\-pgeo2@{\-\_\-\-\_\-pgeo2}}
+\index{\-\_\-\-\_\-pgeo2@{\-\_\-\-\_\-pgeo2}!Geodesia::PIGeodesia::PIGeodesia@{Geodesia\-::\-P\-I\-Geodesia\-::\-P\-I\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-pgeo2}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-P\-I\-Geodesia.\-P\-I\-Geodesia.\-\_\-\-\_\-pgeo2 = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1PIGeodesia_1_1PIGeodesia_a47900bf21b7bf837e5ba423890cdd6e8}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Geodesia/{\bf P\-I\-Geodesia.\-py}\end{DoxyCompactItemize}

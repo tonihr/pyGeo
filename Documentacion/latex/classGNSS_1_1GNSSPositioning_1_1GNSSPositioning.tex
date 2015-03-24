@@ -1,0 +1,175 @@
+\section{Referencia de la Clase G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning}
+\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning}\index{G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning}}
+
+
+Diagrama de herencias de G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning
+
+
+Diagrama de colaboración para G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf set\-R\-I\-N\-E\-X\-File}
+\begin{DoxyCompactList}\small\item\em \-: Comprueba y asigna el fichero Rinex de osevación. \end{DoxyCompactList}\item 
+def {\bf set\-Navigaton\-Files}
+\begin{DoxyCompactList}\small\item\em \-: Comprueba y asigna los ficheros R\-I\-N\-E\-X de navegación. \end{DoxyCompactList}\item 
+def {\bf set\-S\-P3\-File}
+\begin{DoxyCompactList}\small\item\em \-: Comprueba y asigna el fichero de efemérides precisas. \end{DoxyCompactList}\item 
+def {\bf set\-A\-T\-X\-File}
+\begin{DoxyCompactList}\small\item\em \-: Comprueba y asigna el fichero de antenas. \end{DoxyCompactList}\item 
+def {\bf Posicionamiento\-Codigo}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-r} = None
+\item 
+{\bf \-\_\-\-\_\-n} = None
+\item 
+{\bf \-\_\-\-\_\-g} = None
+\item 
+{\bf \-\_\-\-\_\-mixed} = None
+\item 
+{\bf \-\_\-\-\_\-sp3} = None
+\item 
+{\bf \-\_\-\-\_\-atx} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}classdocs
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación del constructor y destructor}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{R\-I\-N\-E\-X\-File, }
+\item[{}]{Navigation\-Files, }
+\item[{}]{S\-P3\-File = {\ttfamily None}, }
+\item[{}]{A\-T\-X\-File = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a5f0ce838824ff5057a9845eaf4c7b247}
+\begin{DoxyVerb}Constructor
+@param RINEXFile str:
+@param NavigationFiles str|[]:
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!Posicionamiento\-Codigo@{Posicionamiento\-Codigo}}
+\index{Posicionamiento\-Codigo@{Posicionamiento\-Codigo}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{Posicionamiento\-Codigo}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-Posicionamiento\-Codigo (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Observable}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a2f32bb833dd8fdd96084da34d5381c6b}
+\begin{DoxyVerb}@brief: Método que realiza el posicionamiento por código para cada una de las épocas disponibles en el fichero RINEX de observación.
+@param Observable: C o P
+@type Observable: str
+    
+@note: Si en una época hay 4 satélites o menos,no se realizara el posicionamiento.
+@note 2: 
+\end{DoxyVerb}
+ \index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!set\-A\-T\-X\-File@{set\-A\-T\-X\-File}}
+\index{set\-A\-T\-X\-File@{set\-A\-T\-X\-File}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{set\-A\-T\-X\-File}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-set\-A\-T\-X\-File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{A\-T\-X\-File}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a8b87943a42f1eb56ed1b36f09d37a43c}
+
+
+\-: Comprueba y asigna el fichero de antenas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em A\-T\-X\-File} & str\-: Ruta del fichero de antenas. \\
+\hline
+\end{DoxyParams}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!set\-Navigaton\-Files@{set\-Navigaton\-Files}}
+\index{set\-Navigaton\-Files@{set\-Navigaton\-Files}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{set\-Navigaton\-Files}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-set\-Navigaton\-Files (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Navigation\-Files}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a01cb40c4708c9e9a7c9b51329f2ecab8}
+
+
+\-: Comprueba y asigna los ficheros R\-I\-N\-E\-X de navegación. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Navigation\-Files} & str$\vert$[]\-: Ruta de los ficheros R\-I\-N\-E\-X de navegación \\
+\hline
+\end{DoxyParams}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!set\-R\-I\-N\-E\-X\-File@{set\-R\-I\-N\-E\-X\-File}}
+\index{set\-R\-I\-N\-E\-X\-File@{set\-R\-I\-N\-E\-X\-File}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{set\-R\-I\-N\-E\-X\-File}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-set\-R\-I\-N\-E\-X\-File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{R\-I\-N\-E\-X\-File}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a9429dabfc4b7844c34bf4ef281a3c85e}
+
+
+\-: Comprueba y asigna el fichero Rinex de osevación. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em R\-I\-N\-E\-X\-File} & str\-: Ruta del fichero R\-I\-N\-E\-X de observación. \\
+\hline
+\end{DoxyParams}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!set\-S\-P3\-File@{set\-S\-P3\-File}}
+\index{set\-S\-P3\-File@{set\-S\-P3\-File}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{set\-S\-P3\-File}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-set\-S\-P3\-File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{S\-P3\-File}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a5e4dbe6c49f80845689f4dfd6ddb7a4d}
+
+
+\-: Comprueba y asigna el fichero de efemérides precisas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em S\-P3\-File} & str\-: Ruta del fichero de efemérides precisas. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de los datos miembro}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!\-\_\-\-\_\-atx@{\-\_\-\-\_\-atx}}
+\index{\-\_\-\-\_\-atx@{\-\_\-\-\_\-atx}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{\-\_\-\-\_\-atx}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-\_\-\-\_\-atx = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a09d548a5ec58922e14cdafd26efe8421}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!\-\_\-\-\_\-g@{\-\_\-\-\_\-g}}
+\index{\-\_\-\-\_\-g@{\-\_\-\-\_\-g}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{\-\_\-\-\_\-g}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-\_\-\-\_\-g = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a4ebfcaaca5d0498c46e1d1fed0ebf86b}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!\-\_\-\-\_\-mixed@{\-\_\-\-\_\-mixed}}
+\index{\-\_\-\-\_\-mixed@{\-\_\-\-\_\-mixed}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{\-\_\-\-\_\-mixed}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-\_\-\-\_\-mixed = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a06b6e32e68943b6277b3cd938b42dd32}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!\-\_\-\-\_\-n@{\-\_\-\-\_\-n}}
+\index{\-\_\-\-\_\-n@{\-\_\-\-\_\-n}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{\-\_\-\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-\_\-\-\_\-n = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a480aa6e41d90d874730e52e5f79df3f5}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!\-\_\-\-\_\-r@{\-\_\-\-\_\-r}}
+\index{\-\_\-\-\_\-r@{\-\_\-\-\_\-r}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{\-\_\-\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-\_\-\-\_\-r = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_aaa4ed1533211693abb0334306fca5784}
+\begin{DoxyVerb}classdocs
+\end{DoxyVerb}
+ \index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}!\-\_\-\-\_\-sp3@{\-\_\-\-\_\-sp3}}
+\index{\-\_\-\-\_\-sp3@{\-\_\-\-\_\-sp3}!GNSS::GNSSPositioning::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{\-\_\-\-\_\-sp3}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning.\-\_\-\-\_\-sp3 = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning_a27eee1bd65591dc84007596464904bc2}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/{\bf G\-N\-S\-S\-Positioning.\-py}\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\section{Referencia del Namespace Proyecciones.\-Geo2\-U\-T\-M}
+\label{namespaceProyecciones_1_1Geo2UTM}\index{Proyecciones.\-Geo2\-U\-T\-M@{Proyecciones.\-Geo2\-U\-T\-M}}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf Geo2\-U\-T\-M}
+\begin{DoxyCompactList}\small\item\em \-: Método que convierte coordenadas Geodésicas elipsoidales a coordenadas U\-T\-M. \end{DoxyCompactList}\item 
+def {\bf Geo2\-U\-T\-M\-From\-File}
+\item 
+def {\bf main}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\index{Proyecciones\-::\-Geo2\-U\-T\-M@{Proyecciones\-::\-Geo2\-U\-T\-M}!Geo2\-U\-T\-M@{Geo2\-U\-T\-M}}
+\index{Geo2\-U\-T\-M@{Geo2\-U\-T\-M}!Proyecciones::Geo2UTM@{Proyecciones\-::\-Geo2\-U\-T\-M}}
+\subsubsection[{Geo2\-U\-T\-M}]{\setlength{\rightskip}{0pt plus 5cm}def Proyecciones.\-Geo2\-U\-T\-M.\-Geo2\-U\-T\-M (
+\begin{DoxyParamCaption}
+\item[{}]{Punto\-Geodesico, }
+\item[{}]{Nombre\-Elipsoide, }
+\item[{}]{Huso = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\label{namespaceProyecciones_1_1Geo2UTM_a858338a8aea1949e4575386db6022b85}
+
+
+\-: Método que convierte coordenadas Geodésicas elipsoidales a coordenadas U\-T\-M. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Punto\-Geodesico} & Punto\-Geodesico\-: Punto Geodesico con las coordenadas del punto. \\
+\hline
+{\em Nombre\-Elipsoide} & str\-: Nombre del elipsoide de calculo. \\
+\hline
+{\em Huso} & int\-: Valor del Huso en el caso de que se quieran forzar las coordenadas a ese Huso. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Punto\-U\-T\-M\-: Punto con las coordenadas U\-T\-M transformadas. 
+\end{DoxyReturn}
+\index{Proyecciones\-::\-Geo2\-U\-T\-M@{Proyecciones\-::\-Geo2\-U\-T\-M}!Geo2\-U\-T\-M\-From\-File@{Geo2\-U\-T\-M\-From\-File}}
+\index{Geo2\-U\-T\-M\-From\-File@{Geo2\-U\-T\-M\-From\-File}!Proyecciones::Geo2UTM@{Proyecciones\-::\-Geo2\-U\-T\-M}}
+\subsubsection[{Geo2\-U\-T\-M\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}def Proyecciones.\-Geo2\-U\-T\-M.\-Geo2\-U\-T\-M\-From\-File (
+\begin{DoxyParamCaption}
+\item[{}]{File, }
+\item[{}]{Nombre\-Elipsoide}
+\end{DoxyParamCaption}
+)}\label{namespaceProyecciones_1_1Geo2UTM_a5441d4270999485ee1a8049ebed23126}
+\begin{DoxyVerb}@brief: Función que realiza la conversión de geodesicas a UTM desde un fichero.
+@param File str:Ruta del fichero con las coordenadas a transformar.
+@note: El fichero debe tener el siguiente formato como mínimo: id,Lat,Lon
+\end{DoxyVerb}
+ \index{Proyecciones\-::\-Geo2\-U\-T\-M@{Proyecciones\-::\-Geo2\-U\-T\-M}!main@{main}}
+\index{main@{main}!Proyecciones::Geo2UTM@{Proyecciones\-::\-Geo2\-U\-T\-M}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}def Proyecciones.\-Geo2\-U\-T\-M.\-main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespaceProyecciones_1_1Geo2UTM_a4a34f02ed41b246462645d8d3b8d2c3e}

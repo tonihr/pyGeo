@@ -1,0 +1,23 @@
+digraph "/home/toni/Dropbox/pyGeo" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2fbdf3383b04fb3f9e3947996901697e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Dropbox" fontname="Helvetica", fontsize="10", URL="dir_2fbdf3383b04fb3f9e3947996901697e.html"]
+  subgraph clusterdir_e2627865121f9a1fcbd3858eeb7187ed {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e2627865121f9a1fcbd3858eeb7187ed.html"];
+    dir_e2627865121f9a1fcbd3858eeb7187ed [shape=plaintext label="pyGeo"];
+    dir_d1f7c693b0d68a89043c4a936e56d15c [shape=box label="BasesDeDatos" color="red" fillcolor="white" style="filled" URL="dir_d1f7c693b0d68a89043c4a936e56d15c.html"];
+    dir_acba44bb5996e609b4c608188b0b51d1 [shape=box label="Controladores" color="black" fillcolor="white" style="filled" URL="dir_acba44bb5996e609b4c608188b0b51d1.html"];
+    dir_598a923bbf234682817dfe109eb0fd6a [shape=box label="Ficheros" color="black" fillcolor="white" style="filled" URL="dir_598a923bbf234682817dfe109eb0fd6a.html"];
+    dir_0923afa793b6095096d51ae0d6da99eb [shape=box label="Formularios" color="black" fillcolor="white" style="filled" URL="dir_0923afa793b6095096d51ae0d6da99eb.html"];
+    dir_35649ec97b902c73f66d0b6bb21ebe5b [shape=box label="Geodesia" color="red" fillcolor="white" style="filled" URL="dir_35649ec97b902c73f66d0b6bb21ebe5b.html"];
+    dir_1606a39a26db0051b7be64ac159196a0 [shape=box label="Geometrias" color="black" fillcolor="white" style="filled" URL="dir_1606a39a26db0051b7be64ac159196a0.html"];
+    dir_93e5dd9a129be22924825f99105cff8f [shape=box label="GNSS" color="black" fillcolor="white" style="filled" URL="dir_93e5dd9a129be22924825f99105cff8f.html"];
+    dir_edb56d85aea1cc7b86997e8eb57858a7 [shape=box label="Intersecciones" color="black" fillcolor="white" style="filled" URL="dir_edb56d85aea1cc7b86997e8eb57858a7.html"];
+    dir_c768a26906ed4ea409acba666cb16bfa [shape=box label="Proyecciones" color="black" fillcolor="white" style="filled" URL="dir_c768a26906ed4ea409acba666cb16bfa.html"];
+    dir_22820bfa8ddbe89de5d62abfc27afc46 [shape=box label="Tiempo" color="black" fillcolor="white" style="filled" URL="dir_22820bfa8ddbe89de5d62abfc27afc46.html"];
+    dir_a5caa3e8a075f1b7bef2e6b55bd604e6 [shape=box label="Topografia" color="black" fillcolor="white" style="filled" URL="dir_a5caa3e8a075f1b7bef2e6b55bd604e6.html"];
+  }
+  }
+}

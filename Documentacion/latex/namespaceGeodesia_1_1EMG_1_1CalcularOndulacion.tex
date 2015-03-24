@@ -1,0 +1,427 @@
+\section{Referencia del Namespace Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion}
+\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion}\index{Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion@{Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion}}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf Calcular\-Ondulacion}
+\item 
+def {\bf main}
+\begin{DoxyCompactList}\small\item\em Interpolado=a1+a2$\ast$\-Latitud+a3$\ast$\-Longitud+a4$\ast$\-Latitud$\ast$\-Longitud. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf ruta\-\_\-b} = None
+\begin{DoxyCompactList}\small\item\em print(validos) Leer la cabecera de ambos archivos y comprobar en cual de los dos se situa el punto. \end{DoxyCompactList}\item 
+{\bf R\-Lat} = None
+\begin{DoxyCompactList}\small\item\em print(rango\-Lat,rango\-Lon) print(\-Latitud$>$rango\-Lat[0]) print(\-Latitud$<$rango\-Lat[1]) print(\-Longitud$>$rango\-Lon[0]) print(\-Longitud$>$rango\-Lon[1]) print(\-Latitud$>$rango\-Lat[0] and Latitud$<$rango\-Lat[1] and Longitud$>$rango\-Lon[0] and Longitud$<$rango\-Lon[1]) \end{DoxyCompactList}\item 
+{\bf R\-Lon} = None
+\item 
+{\bf Lat0} = None
+\item 
+{\bf Lon0} = None
+\item 
+{\bf nrow} = None
+\item 
+{\bf ncol} = None
+\item 
+{\bf tcel} = None
+\item 
+{\bf N\-O\-\_\-data} = None
+\item 
+string {\bf rut} = path+\char`\"{}/\char`\"{}
+\item 
+tuple {\bf f} = open({\bf rut},'r')
+\begin{DoxyCompactList}\small\item\em print(len(\-Lis\-Lat),len(\-Lis\-Lon)) \end{DoxyCompactList}\item 
+tuple {\bf lin1} = f.\-readline()
+\item 
+tuple {\bf lin2} = f.\-readline()
+\item 
+tuple {\bf lin3} = f.\-readline()
+\item 
+tuple {\bf lin4} = f.\-readline()
+\item 
+tuple {\bf lin5} = f.\-readline()
+\item 
+tuple {\bf lin6} = f.\-readline()
+\item 
+list {\bf rango\-Lat} = [$\,$]
+\begin{DoxyCompactList}\small\item\em print(lin1,lin2,lin3,lin4,lin5,lin6) \end{DoxyCompactList}\item 
+tuple {\bf l2} = float({\bf lin4}[1])
+\item 
+list {\bf rango\-Lon} = [$\,$]
+\item 
+int {\bf const} = 85
+\item 
+{\bf Alat} = {\bf Lat0}-\/Latitud
+\item 
+{\bf Alon} = {\bf Lon0}-\/Longitud
+\item 
+tuple {\bf rows} = int(abs({\bf Alat})/{\bf tcel})
+\item 
+tuple {\bf cols} = int(abs({\bf Alon})/{\bf tcel})
+\item 
+list {\bf Lis\-Lat} = [({\bf Lat0}+i$\ast${\bf tcel}) for i in range(int({\bf nrow}))]
+\begin{DoxyCompactList}\small\item\em print(\-Alat,\-Alon) print(rows,cols) Lista con las latitudes y longitudes exactas de las que se disponen. \end{DoxyCompactList}\item 
+list {\bf Lis\-Lon} = [({\bf Lon0}+i$\ast${\bf tcel}) for i in range(int({\bf ncol}))]
+\item 
+tuple {\bf linea\-\_\-fichero} = len(f.\-readlines())
+\item 
+{\bf linea\-\_\-fichero\-\_\-b} = None
+\begin{DoxyCompactList}\small\item\em print(linea\-\_\-fichero) \end{DoxyCompactList}\item 
+list {\bf Lant} = {\bf Lis\-Lat}[{\bf rows}-\/1]
+\begin{DoxyCompactList}\small\item\em print(j1) \end{DoxyCompactList}\item 
+list {\bf Lpost} = {\bf Lis\-Lat}[{\bf rows}+1]
+\item 
+tuple {\bf d1\-L} = abs({\bf Lant}-\/Latitud)
+\item 
+tuple {\bf d2\-L} = abs({\bf Lpost}-\/Latitud)
+\item 
+{\bf Lat\-\_\-inter} = None
+\item 
+tuple {\bf seccion1} = f.\-readlines()
+\item 
+tuple {\bf seccion2} = f.\-readlines()
+\item 
+list {\bf sal1} = [$\,$]
+\item 
+list {\bf sal2} = [$\,$]
+\item 
+tuple {\bf j1} = i1.\-split()
+\item 
+tuple {\bf j2} = i2.\-split()
+\item 
+{\bf col\-\_\-b} = None
+\begin{DoxyCompactList}\small\item\em print(\-Lant,\-Lpost) \end{DoxyCompactList}\item 
+{\bf Lon\-\_\-inter} = None
+\item 
+list {\bf dato1} = [float({\bf sal1}[{\bf cols}]),{\bf Lat0}+{\bf rows}$\ast${\bf tcel},{\bf Lon0}+{\bf cols}$\ast${\bf tcel}]
+\begin{DoxyCompactList}\small\item\em print(cols,col\-\_\-b) Obtener los cuatro valores necesarios para la interpolación [val,lat,lon] dato1 dato2  la linea original dato dato3 dato4  la linea anterior o siguiente. \end{DoxyCompactList}\item 
+list {\bf dato2} = [float({\bf sal1}[{\bf col\-\_\-b}]),{\bf Lat0}+{\bf rows}$\ast${\bf tcel},{\bf Lon\-\_\-inter}]
+\item 
+list {\bf dato3} = [float({\bf sal2}[{\bf cols}]),{\bf Lat\-\_\-inter},{\bf Lon0}+{\bf cols}$\ast${\bf tcel}]
+\item 
+list {\bf dato4} = [float({\bf sal2}[{\bf col\-\_\-b}]),{\bf Lat\-\_\-inter},{\bf Lon\-\_\-inter}]
+\item 
+tuple {\bf dif\-N} = ({\bf dato2}[0]-\/{\bf dato1}[0])
+\begin{DoxyCompactList}\small\item\em print(dato1) print(dato2) print(dato3) print(dato4) \end{DoxyCompactList}\item 
+tuple {\bf dp} = abs(Longitud-\/{\bf dato1}[2])
+\item 
+list {\bf N12} = {\bf dato1}[0]
+\item 
+list {\bf N34} = {\bf dato3}[0]
+\item 
+{\bf Nf} = {\bf N12}+{\bf dif\-N}$\ast${\bf dp}
+\item 
+tuple {\bf delta\-\_\-lat} = abs(Latitud-\/{\bf dato1}[1])
+\begin{DoxyCompactList}\small\item\em Interpolado=Nf. \end{DoxyCompactList}\item 
+tuple {\bf delta\-\_\-lon} = abs(Longitud-\/{\bf dato1}[2])
+\item 
+{\bf d1} = {\bf delta\-\_\-lat}$\ast${\bf delta\-\_\-lon}
+\item 
+{\bf d2} = {\bf delta\-\_\-lat}$\ast${\bf delta\-\_\-lon}
+\item 
+{\bf d3} = {\bf delta\-\_\-lat}$\ast${\bf delta\-\_\-lon}
+\item 
+{\bf d4} = {\bf delta\-\_\-lat}$\ast${\bf delta\-\_\-lon}
+\item 
+tuple {\bf Interpolado1} = ({\bf dato1}[0]$\ast${\bf d1}+{\bf dato2}[0]$\ast${\bf d2}+{\bf dato3}[0]$\ast${\bf d3}+{\bf dato4}[0]$\ast${\bf d4})
+\begin{DoxyCompactList}\small\item\em print(d4) \end{DoxyCompactList}\item 
+tuple {\bf p} = (Latitud-\/{\bf dato1}[1])
+\begin{DoxyCompactList}\small\item\em input() \end{DoxyCompactList}\item 
+tuple {\bf q} = (Longitud-\/{\bf dato1}[2])
+\item 
+tuple {\bf a1} = (1-\/{\bf p})
+\item 
+tuple {\bf a2} = {\bf p}$\ast$(1-\/{\bf q})
+\item 
+tuple {\bf a3} = {\bf q}$\ast$(1-\/{\bf p})
+\item 
+{\bf a4} = {\bf q}$\ast${\bf p}
+\item 
+list {\bf Interpolado} = {\bf dato1}[0]
+\begin{DoxyCompactList}\small\item\em print(a1,a2,a3,a4) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Calcular\-Ondulacion@{Calcular\-Ondulacion}}
+\index{Calcular\-Ondulacion@{Calcular\-Ondulacion}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Calcular\-Ondulacion}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Calcular\-Ondulacion (
+\begin{DoxyParamCaption}
+\item[{}]{Punto\-Geodesico}
+\end{DoxyParamCaption}
+)}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aec7fca9cec162a2f753579bd14796391}
+\begin{DoxyVerb}Función para realizar la interpolación de la ondulación del geoide a traver de la rejilla.
+\end{DoxyVerb}
+ \index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!main@{main}}
+\index{main@{main}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a94917fe2dde6a95bb193e2964c18e570}
+
+
+Interpolado=a1+a2$\ast$\-Latitud+a3$\ast$\-Longitud+a4$\ast$\-Latitud$\ast$\-Longitud. 
+
+
+
+\subsection{Documentación de las variables}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!a1@{a1}}
+\index{a1@{a1}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{a1}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-a1 = (1-\/{\bf p})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aca8c8fb55538d21c4560c93834363571}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!a2@{a2}}
+\index{a2@{a2}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{a2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-a2 = {\bf p}$\ast$(1-\/{\bf q})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ac5b1efb0d875ecd610024bcdf36cc617}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!a3@{a3}}
+\index{a3@{a3}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{a3}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-a3 = {\bf q}$\ast$(1-\/{\bf p})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a0cd0cfb198da275514b9dff9623eccd8}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!a4@{a4}}
+\index{a4@{a4}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{a4}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-a4 = {\bf q}$\ast${\bf p}}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a54512515393558342847e5598e394972}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Alat@{Alat}}
+\index{Alat@{Alat}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Alat}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Alat = {\bf Lat0}-\/Latitud}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a5c4597a905fb225ccfd67e314007f4fe}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Alon@{Alon}}
+\index{Alon@{Alon}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Alon}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Alon = {\bf Lon0}-\/Longitud}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_adf56ad36908480ee7d508110b58a31e7}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!col\-\_\-b@{col\-\_\-b}}
+\index{col\-\_\-b@{col\-\_\-b}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{col\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}int Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-col\-\_\-b = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a243fdfc416451847711d3c353210f2cc}
+
+
+print(\-Lant,\-Lpost) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!cols@{cols}}
+\index{cols@{cols}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{cols}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-cols = int(abs({\bf Alon})/{\bf tcel})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_afb2f279e62c4413404e448770fc9a8ac}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!const@{const}}
+\index{const@{const}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{const}]{\setlength{\rightskip}{0pt plus 5cm}int Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-const = 85}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a6af34c0493062c7d1229b3e64ac52f79}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!d1@{d1}}
+\index{d1@{d1}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{d1}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d1 = {\bf delta\-\_\-lat}$\ast${\bf delta\-\_\-lon}}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a1a82002be637be28c29d7a90551d185e}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!d1\-L@{d1\-L}}
+\index{d1\-L@{d1\-L}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{d1\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d1\-L = abs({\bf Lant}-\/Latitud)}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a7ffc9a78e00c470664c0547fac4b72dd}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!d2@{d2}}
+\index{d2@{d2}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{d2}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d2 = {\bf delta\-\_\-lat}$\ast${\bf delta\-\_\-lon}}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_acdbf3e91fd417dbcfd338cf6c6417000}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!d2\-L@{d2\-L}}
+\index{d2\-L@{d2\-L}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{d2\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d2\-L = abs({\bf Lpost}-\/Latitud)}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_adb9526a63ed29298912512d71efab147}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!d3@{d3}}
+\index{d3@{d3}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{d3}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d3 = {\bf delta\-\_\-lat}$\ast${\bf delta\-\_\-lon}}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aea8932a198b08b5ade299681c20dafd9}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!d4@{d4}}
+\index{d4@{d4}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{d4}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d4 = {\bf delta\-\_\-lat}$\ast${\bf delta\-\_\-lon}}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_addd77f9e8dbe68c153808b1765f68afe}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!dato1@{dato1}}
+\index{dato1@{dato1}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{dato1}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dato1 = [float({\bf sal1}[{\bf cols}]),{\bf Lat0}+{\bf rows}$\ast${\bf tcel},{\bf Lon0}+{\bf cols}$\ast${\bf tcel}]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aafb1d55da92f4cc3de9a4742c6cb696e}
+
+
+print(cols,col\-\_\-b) Obtener los cuatro valores necesarios para la interpolación [val,lat,lon] dato1 dato2  la linea original dato dato3 dato4  la linea anterior o siguiente. 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!dato2@{dato2}}
+\index{dato2@{dato2}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{dato2}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dato2 = [float({\bf sal1}[{\bf col\-\_\-b}]),{\bf Lat0}+{\bf rows}$\ast${\bf tcel},{\bf Lon\-\_\-inter}]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a895f04b2965687097262110ab6a6c68b}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!dato3@{dato3}}
+\index{dato3@{dato3}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{dato3}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dato3 = [float({\bf sal2}[{\bf cols}]),{\bf Lat\-\_\-inter},{\bf Lon0}+{\bf cols}$\ast${\bf tcel}]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ab7d736c2c100e07da104ca2c583d6de9}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!dato4@{dato4}}
+\index{dato4@{dato4}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{dato4}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dato4 = [float({\bf sal2}[{\bf col\-\_\-b}]),{\bf Lat\-\_\-inter},{\bf Lon\-\_\-inter}]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aa5906bfbff75225b8797d94c1505fa30}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!delta\-\_\-lat@{delta\-\_\-lat}}
+\index{delta\-\_\-lat@{delta\-\_\-lat}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{delta\-\_\-lat}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-delta\-\_\-lat = abs(Latitud-\/{\bf dato1}[1])}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aa5608f92bc6b23080a9c1f1a79aa7a5b}
+
+
+Interpolado=Nf. 
+
+print(d3) Contribucion punto4.
+
+print(d2) Contribucion punto3.
+
+print(d1) Contribucion punto2.\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!delta\-\_\-lon@{delta\-\_\-lon}}
+\index{delta\-\_\-lon@{delta\-\_\-lon}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{delta\-\_\-lon}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-delta\-\_\-lon = abs(Longitud-\/{\bf dato1}[2])}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ac4a63f42ddc1e6a9eeb3056ce720fb9e}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!dif\-N@{dif\-N}}
+\index{dif\-N@{dif\-N}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{dif\-N}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dif\-N = ({\bf dato2}[0]-\/{\bf dato1}[0])}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a4ebe2b6fd539d59b4cbda2cc3d24eca2}
+
+
+print(dato1) print(dato2) print(dato3) print(dato4) 
+
+mayor\-\_\-\-Lat=None mayor\-\_\-\-Lon=None
+
+if dato1[1]$>$dato3[1]\-: mayor\-\_\-\-Lat=dato1[1] else\-: mayor\-\_\-\-Lat=dato3[1]
+
+if dato1[2]$<$dato2[2]\-: mayor\-\_\-\-Lon=dato1[2] else\-: mayor\-\_\-\-Lon=dato1[2] print(mayor\-\_\-\-Lat,mayor\-\_\-\-Lon) dy=mayor\-\_\-\-Lat-\/\-Latitud dx=mayor\-\_\-\-Lon-\/\-Longitud print(dx,dy) Lineal 1-\/2 longitud. \index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!dp@{dp}}
+\index{dp@{dp}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{dp}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dp = abs(Longitud-\/{\bf dato1}[2])}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a0eb87d4d10b3675a5fa2c891c0c03d3e}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!f@{f}}
+\index{f@{f}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-f = open({\bf rut},'r')}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aa3ac86d87cdf5b858e2fa4b80d20fdd7}
+
+
+print(len(\-Lis\-Lat),len(\-Lis\-Lon)) 
+
+print(\-Lant,\-Lpost) print(linea\-\_\-fichero,linea\-\_\-fichero\-\_\-b) \index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Interpolado@{Interpolado}}
+\index{Interpolado@{Interpolado}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Interpolado}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Interpolado = {\bf dato1}[0]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aa5a2f9b242141dee7b1159fcb793ede3}
+
+
+print(a1,a2,a3,a4) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Interpolado1@{Interpolado1}}
+\index{Interpolado1@{Interpolado1}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Interpolado1}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Interpolado1 = ({\bf dato1}[0]$\ast${\bf d1}+{\bf dato2}[0]$\ast${\bf d2}+{\bf dato3}[0]$\ast${\bf d3}+{\bf dato4}[0]$\ast${\bf d4})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a53c215bf941e995672a6d303a8a21449}
+
+
+print(d4) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!j1@{j1}}
+\index{j1@{j1}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{j1}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-j1 = i1.\-split()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a6e8dfa7434529855e0b58fb8178bdcf7}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!j2@{j2}}
+\index{j2@{j2}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{j2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-j2 = i2.\-split()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a673c19041d97d732c3f48b3975c1f45d}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!l2@{l2}}
+\index{l2@{l2}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{l2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-l2 = float({\bf lin4}[1])}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a85605a1ff73fec4406b9ef111e113346}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Lant@{Lant}}
+\index{Lant@{Lant}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Lant}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lant = {\bf Lis\-Lat}[{\bf rows}-\/1]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a03c5323ba5c30734a23cc4b513ce1eb7}
+
+
+print(j1) 
+
+print(k1) print(sal1) print(sal2) \index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Lat0@{Lat0}}
+\index{Lat0@{Lat0}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Lat0}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lat0 = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a3ab880398915e15d4be667fa47bd9ca2}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Lat\-\_\-inter@{Lat\-\_\-inter}}
+\index{Lat\-\_\-inter@{Lat\-\_\-inter}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Lat\-\_\-inter}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lat\-\_\-inter = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a9dcfdc8299a4f1a2fa05a309f20e968b}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!lin1@{lin1}}
+\index{lin1@{lin1}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{lin1}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin1 = f.\-readline()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ad97fd4d9ada18ca681074f6d7524475e}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!lin2@{lin2}}
+\index{lin2@{lin2}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{lin2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin2 = f.\-readline()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a4e6f582be28b160e81b074ada9ad1f1f}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!lin3@{lin3}}
+\index{lin3@{lin3}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{lin3}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin3 = f.\-readline()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_af1cb077e007981822ed224d4350935b2}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!lin4@{lin4}}
+\index{lin4@{lin4}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{lin4}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin4 = f.\-readline()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ac912d4c2e1105c51c8a1968e17b6e2c3}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!lin5@{lin5}}
+\index{lin5@{lin5}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{lin5}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin5 = f.\-readline()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a542b7f777a8421d2fe7d0d9a3bd2e34d}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!lin6@{lin6}}
+\index{lin6@{lin6}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{lin6}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin6 = f.\-readline()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a81d0ddbd1240542531bdda4020070c0a}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!linea\-\_\-fichero@{linea\-\_\-fichero}}
+\index{linea\-\_\-fichero@{linea\-\_\-fichero}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{linea\-\_\-fichero}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-linea\-\_\-fichero = len(f.\-readlines())}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aeba50cfe6aa5a65711d6ff016fb38c14}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!linea\-\_\-fichero\-\_\-b@{linea\-\_\-fichero\-\_\-b}}
+\index{linea\-\_\-fichero\-\_\-b@{linea\-\_\-fichero\-\_\-b}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{linea\-\_\-fichero\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}int Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-linea\-\_\-fichero\-\_\-b = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_abb7b5239266454dde45a70b194404dd1}
+
+
+print(linea\-\_\-fichero) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Lis\-Lat@{Lis\-Lat}}
+\index{Lis\-Lat@{Lis\-Lat}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Lis\-Lat}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lis\-Lat = [({\bf Lat0}+i$\ast${\bf tcel}) for i in range(int({\bf nrow}))]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_afccb16d516ed49bdbe56c0c1c90675b1}
+
+
+print(\-Alat,\-Alon) print(rows,cols) Lista con las latitudes y longitudes exactas de las que se disponen. 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Lis\-Lon@{Lis\-Lon}}
+\index{Lis\-Lon@{Lis\-Lon}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Lis\-Lon}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lis\-Lon = [({\bf Lon0}+i$\ast${\bf tcel}) for i in range(int({\bf ncol}))]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a510053c9abd86dfe4a120151d1e1200a}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Lon0@{Lon0}}
+\index{Lon0@{Lon0}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Lon0}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lon0 = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a3ec29522e067ce9943a5fea499e4ea77}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Lon\-\_\-inter@{Lon\-\_\-inter}}
+\index{Lon\-\_\-inter@{Lon\-\_\-inter}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Lon\-\_\-inter}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lon\-\_\-inter = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a915586001bdfcb559f945fade4038167}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Lpost@{Lpost}}
+\index{Lpost@{Lpost}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Lpost}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lpost = {\bf Lis\-Lat}[{\bf rows}+1]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a85d41445b6a22c83d6bf5d7e6ae3a620}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!N12@{N12}}
+\index{N12@{N12}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{N12}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-N12 = {\bf dato1}[0]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a91d90cc45dd4e01f6e7a4bdcd1a11ca0}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!N34@{N34}}
+\index{N34@{N34}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{N34}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-N34 = {\bf dato3}[0]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a0f63b00f880079d70dc9579775c115e4}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!ncol@{ncol}}
+\index{ncol@{ncol}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{ncol}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-ncol = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a9884c46ae701b6399cfe4802f513102f}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!Nf@{Nf}}
+\index{Nf@{Nf}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{Nf}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Nf = {\bf N12}+{\bf dif\-N}$\ast${\bf dp}}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a7867d9f8afa6512cc0bf2d3b008fe7da}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!N\-O\-\_\-data@{N\-O\-\_\-data}}
+\index{N\-O\-\_\-data@{N\-O\-\_\-data}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{N\-O\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-N\-O\-\_\-data = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ad428a5ca893c905ac1d41220f3f31091}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!nrow@{nrow}}
+\index{nrow@{nrow}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{nrow}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-nrow = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ad0c698913ad85b5063e58e328bc2580d}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!p@{p}}
+\index{p@{p}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-p = (Latitud-\/{\bf dato1}[1])}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a19d8fc2526777f6e500ae828781b82fa}
+
+
+input() 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!q@{q}}
+\index{q@{q}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{q}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-q = (Longitud-\/{\bf dato1}[2])}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a6e9e36ec437ada99b5749b48181e073a}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!rango\-Lat@{rango\-Lat}}
+\index{rango\-Lat@{rango\-Lat}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{rango\-Lat}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-rango\-Lat = [$\,$]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a9dba9ef3dc7ae35ef55c6d88104e99e2}
+
+
+print(lin1,lin2,lin3,lin4,lin5,lin6) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!rango\-Lon@{rango\-Lon}}
+\index{rango\-Lon@{rango\-Lon}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{rango\-Lon}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-rango\-Lon = [$\,$]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_abfa49a40a6a6d7fccc963657d4ce623b}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!R\-Lat@{R\-Lat}}
+\index{R\-Lat@{R\-Lat}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{R\-Lat}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-R\-Lat = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ac8cfe22d8b90c794481b440fe06e33eb}
+
+
+print(rango\-Lat,rango\-Lon) print(\-Latitud$>$rango\-Lat[0]) print(\-Latitud$<$rango\-Lat[1]) print(\-Longitud$>$rango\-Lon[0]) print(\-Longitud$>$rango\-Lon[1]) print(\-Latitud$>$rango\-Lat[0] and Latitud$<$rango\-Lat[1] and Longitud$>$rango\-Lon[0] and Longitud$<$rango\-Lon[1]) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!R\-Lon@{R\-Lon}}
+\index{R\-Lon@{R\-Lon}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{R\-Lon}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-R\-Lon = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ab2aa0dea68f77609d881c7c4abc8ffc4}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!rows@{rows}}
+\index{rows@{rows}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{rows}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-rows = int(abs({\bf Alat})/{\bf tcel})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a4b17c348a0c188d48d9f2a72ebfd3939}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!rut@{rut}}
+\index{rut@{rut}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{rut}]{\setlength{\rightskip}{0pt plus 5cm}string Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-rut = path+\char`\"{}/\char`\"{}}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a8a991ac91b7609f5bafb9371e342effc}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!ruta\-\_\-b@{ruta\-\_\-b}}
+\index{ruta\-\_\-b@{ruta\-\_\-b}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{ruta\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-ruta\-\_\-b = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_abe3f39cc19eca6ce8ccf14c9e8f5b5c9}
+
+
+print(validos) Leer la cabecera de ambos archivos y comprobar en cual de los dos se situa el punto. 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!sal1@{sal1}}
+\index{sal1@{sal1}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{sal1}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-sal1 = [$\,$]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_aa7f1aa3cbe323019eb2053ad4d5fc623}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!sal2@{sal2}}
+\index{sal2@{sal2}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{sal2}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-sal2 = [$\,$]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ade0aa5410b78fef9910f81cb0aa6dc90}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!seccion1@{seccion1}}
+\index{seccion1@{seccion1}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{seccion1}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-seccion1 = f.\-readlines()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_abf889c4301151c38b505f3b8e9c1de15}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!seccion2@{seccion2}}
+\index{seccion2@{seccion2}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{seccion2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-seccion2 = f.\-readlines()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_a6c19863fc89c2561d709b161fe10d7b7}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}!tcel@{tcel}}
+\index{tcel@{tcel}!Geodesia::EMG::CalcularOndulacion@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion}}
+\subsubsection[{tcel}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-tcel = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion_ad61e88030791a5a8cc8e87b34d975b8b}

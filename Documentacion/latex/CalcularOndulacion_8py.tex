@@ -1,0 +1,147 @@
+\section{Referencia del Archivo /home/toni/\-Dropbox/py\-Geo/\-Geodesia/\-E\-M\-G/\-Calcular\-Ondulacion.py}
+\label{CalcularOndulacion_8py}\index{/home/toni/\-Dropbox/py\-Geo/\-Geodesia/\-E\-M\-G/\-Calcular\-Ondulacion.\-py@{/home/toni/\-Dropbox/py\-Geo/\-Geodesia/\-E\-M\-G/\-Calcular\-Ondulacion.\-py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Calcular\-Ondulacion}
+\item 
+def {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-main}
+\begin{DoxyCompactList}\small\item\em Interpolado=a1+a2$\ast$\-Latitud+a3$\ast$\-Longitud+a4$\ast$\-Latitud$\ast$\-Longitud. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-ruta\-\_\-b} = None
+\begin{DoxyCompactList}\small\item\em print(validos) Leer la cabecera de ambos archivos y comprobar en cual de los dos se situa el punto. \end{DoxyCompactList}\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-R\-Lat} = None
+\begin{DoxyCompactList}\small\item\em print(rango\-Lat,rango\-Lon) print(\-Latitud$>$rango\-Lat[0]) print(\-Latitud$<$rango\-Lat[1]) print(\-Longitud$>$rango\-Lon[0]) print(\-Longitud$>$rango\-Lon[1]) print(\-Latitud$>$rango\-Lat[0] and Latitud$<$rango\-Lat[1] and Longitud$>$rango\-Lon[0] and Longitud$<$rango\-Lon[1]) \end{DoxyCompactList}\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-R\-Lon} = None
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lat0} = None
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lon0} = None
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-nrow} = None
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-ncol} = None
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-tcel} = None
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-N\-O\-\_\-data} = None
+\item 
+string {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-rut} = path+\char`\"{}/\char`\"{}
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-f} = open(rut,'r')
+\begin{DoxyCompactList}\small\item\em print(len(\-Lis\-Lat),len(\-Lis\-Lon)) \end{DoxyCompactList}\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin1} = f.\-readline()
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin2} = f.\-readline()
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin3} = f.\-readline()
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin4} = f.\-readline()
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin5} = f.\-readline()
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-lin6} = f.\-readline()
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-rango\-Lat} = [$\,$]
+\begin{DoxyCompactList}\small\item\em print(lin1,lin2,lin3,lin4,lin5,lin6) \end{DoxyCompactList}\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-l2} = float(lin4[1])
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-rango\-Lon} = [$\,$]
+\item 
+int {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-const} = 85
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Alat} = Lat0-\/Latitud
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Alon} = Lon0-\/Longitud
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-rows} = int(abs(Alat)/tcel)
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-cols} = int(abs(Alon)/tcel)
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lis\-Lat} = [(Lat0+i$\ast$tcel) for i in range(int(nrow))]
+\begin{DoxyCompactList}\small\item\em print(\-Alat,\-Alon) print(rows,cols) Lista con las latitudes y longitudes exactas de las que se disponen. \end{DoxyCompactList}\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lis\-Lon} = [(Lon0+i$\ast$tcel) for i in range(int(ncol))]
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-linea\-\_\-fichero} = len(f.\-readlines())
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-linea\-\_\-fichero\-\_\-b} = None
+\begin{DoxyCompactList}\small\item\em print(linea\-\_\-fichero) \end{DoxyCompactList}\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lant} = Lis\-Lat[rows-\/1]
+\begin{DoxyCompactList}\small\item\em print(j1) \end{DoxyCompactList}\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lpost} = Lis\-Lat[rows+1]
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d1\-L} = abs(Lant-\/Latitud)
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d2\-L} = abs(Lpost-\/Latitud)
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lat\-\_\-inter} = None
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-seccion1} = f.\-readlines()
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-seccion2} = f.\-readlines()
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-sal1} = [$\,$]
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-sal2} = [$\,$]
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-j1} = i1.\-split()
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-j2} = i2.\-split()
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-col\-\_\-b} = None
+\begin{DoxyCompactList}\small\item\em print(\-Lant,\-Lpost) \end{DoxyCompactList}\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Lon\-\_\-inter} = None
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dato1} = [float(sal1[cols]),Lat0+rows$\ast$tcel,Lon0+cols$\ast$tcel]
+\begin{DoxyCompactList}\small\item\em print(cols,col\-\_\-b) Obtener los cuatro valores necesarios para la interpolación [val,lat,lon] dato1 dato2  la linea original dato dato3 dato4  la linea anterior o siguiente. \end{DoxyCompactList}\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dato2} = [float(sal1[col\-\_\-b]),Lat0+rows$\ast$tcel,Lon\-\_\-inter]
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dato3} = [float(sal2[cols]),Lat\-\_\-inter,Lon0+cols$\ast$tcel]
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dato4} = [float(sal2[col\-\_\-b]),Lat\-\_\-inter,Lon\-\_\-inter]
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dif\-N} = (dato2[0]-\/dato1[0])
+\begin{DoxyCompactList}\small\item\em print(dato1) print(dato2) print(dato3) print(dato4) \end{DoxyCompactList}\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-dp} = abs(Longitud-\/dato1[2])
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-N12} = dato1[0]
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-N34} = dato3[0]
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Nf} = N12+dif\-N$\ast$dp
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-delta\-\_\-lat} = abs(Latitud-\/dato1[1])
+\begin{DoxyCompactList}\small\item\em Interpolado=Nf. \end{DoxyCompactList}\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-delta\-\_\-lon} = abs(Longitud-\/dato1[2])
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d1} = delta\-\_\-lat$\ast$delta\-\_\-lon
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d2} = delta\-\_\-lat$\ast$delta\-\_\-lon
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d3} = delta\-\_\-lat$\ast$delta\-\_\-lon
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-d4} = delta\-\_\-lat$\ast$delta\-\_\-lon
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Interpolado1} = (dato1[0]$\ast$d1+dato2[0]$\ast$d2+dato3[0]$\ast$d3+dato4[0]$\ast$d4)
+\begin{DoxyCompactList}\small\item\em print(d4) \end{DoxyCompactList}\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-p} = (Latitud-\/dato1[1])
+\begin{DoxyCompactList}\small\item\em input() \end{DoxyCompactList}\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-q} = (Longitud-\/dato1[2])
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-a1} = (1-\/p)
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-a2} = p$\ast$(1-\/q)
+\item 
+tuple {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-a3} = q$\ast$(1-\/p)
+\item 
+{\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-a4} = q$\ast$p
+\item 
+list {\bf Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion.\-Interpolado} = dato1[0]
+\begin{DoxyCompactList}\small\item\em print(a1,a2,a3,a4) \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\section{Referencia del Namespace G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader}
+\label{namespaceGNSS_1_1RINEXObservationReader}\index{G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader@{G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader}}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf R\-I\-N\-E\-X\-Observation\-Reader}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf main}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple {\bf ficheros} = listdir(rutasample)
+\begin{DoxyCompactList}\small\item\em print(rutasample) \end{DoxyCompactList}\item 
+list {\bf val} = [i for i in {\bf ficheros} if i.\-endswith(\char`\"{}o\char`\"{})]
+\item 
+{\bf seleccionado} = None
+\begin{DoxyCompactList}\small\item\em print(val) \end{DoxyCompactList}\item 
+string {\bf rutadescom} = rutasample+\char`\"{}/\char`\"{}
+\item 
+tuple {\bf rin} = {\bf R\-I\-N\-E\-X\-Observation\-Reader}({\bf rutadescom})
+\item 
+tuple {\bf obs} = rin.\-get\-Observation([\char`\"{}C1\char`\"{},\char`\"{}P2\char`\"{}])
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\index{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}!main@{main}}
+\index{main@{main}!GNSS::RINEXObservationReader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespaceGNSS_1_1RINEXObservationReader_ab92f6ece27cea3b4e2d7ebf41bcc1ab6}
+
+
+\subsection{Documentación de las variables}
+\index{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}!ficheros@{ficheros}}
+\index{ficheros@{ficheros}!GNSS::RINEXObservationReader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}}
+\subsubsection[{ficheros}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-ficheros = listdir(rutasample)}\label{namespaceGNSS_1_1RINEXObservationReader_af575bb088eddc52add927167ebb505f3}
+
+
+print(rutasample) 
+
+\index{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}!obs@{obs}}
+\index{obs@{obs}!GNSS::RINEXObservationReader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}}
+\subsubsection[{obs}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-obs = rin.\-get\-Observation([\char`\"{}C1\char`\"{},\char`\"{}P2\char`\"{}])}\label{namespaceGNSS_1_1RINEXObservationReader_af31c11edc205348a775251dbccb87635}
+\index{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}!rin@{rin}}
+\index{rin@{rin}!GNSS::RINEXObservationReader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}}
+\subsubsection[{rin}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-rin = {\bf R\-I\-N\-E\-X\-Observation\-Reader}({\bf rutadescom})}\label{namespaceGNSS_1_1RINEXObservationReader_a34947deb0617cf3df9fa050b1685f496}
+\index{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}!rutadescom@{rutadescom}}
+\index{rutadescom@{rutadescom}!GNSS::RINEXObservationReader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}}
+\subsubsection[{rutadescom}]{\setlength{\rightskip}{0pt plus 5cm}string G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-rutadescom = rutasample+\char`\"{}/\char`\"{}}\label{namespaceGNSS_1_1RINEXObservationReader_a8ff076414ffc7b55f7bfbca86cc98b95}
+\index{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}!seleccionado@{seleccionado}}
+\index{seleccionado@{seleccionado}!GNSS::RINEXObservationReader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}}
+\subsubsection[{seleccionado}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-seleccionado = None}\label{namespaceGNSS_1_1RINEXObservationReader_a4f16bfead9bd5de2ab8ade811b37a688}
+
+
+print(val) 
+
+\index{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}!val@{val}}
+\index{val@{val}!GNSS::RINEXObservationReader@{G\-N\-S\-S\-::\-R\-I\-N\-E\-X\-Observation\-Reader}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-R\-I\-N\-E\-X\-Observation\-Reader.\-val = [i for i in {\bf ficheros} if i.\-endswith(\char`\"{}o\char`\"{})]}\label{namespaceGNSS_1_1RINEXObservationReader_a8bd526fb49990377afa3e18e2838093b}

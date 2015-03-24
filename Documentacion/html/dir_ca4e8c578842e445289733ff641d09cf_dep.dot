@@ -1,0 +1,9 @@
+digraph "/home/toni/Dropbox/pyGeo/BasesDeDatos/SQLite" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d1f7c693b0d68a89043c4a936e56d15c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="BasesDeDatos" fontname="Helvetica", fontsize="10", URL="dir_d1f7c693b0d68a89043c4a936e56d15c.html"]
+  dir_ca4e8c578842e445289733ff641d09cf [shape=box, label="SQLite", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ca4e8c578842e445289733ff641d09cf.html"];
+  }
+}

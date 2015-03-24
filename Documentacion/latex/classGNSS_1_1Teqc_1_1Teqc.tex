@@ -1,0 +1,117 @@
+\section{Referencia de la Clase G\-N\-S\-S.\-Teqc.\-Teqc}
+\label{classGNSS_1_1Teqc_1_1Teqc}\index{G\-N\-S\-S.\-Teqc.\-Teqc@{G\-N\-S\-S.\-Teqc.\-Teqc}}
+
+
+Diagrama de herencias de G\-N\-S\-S.\-Teqc.\-Teqc
+
+
+Diagrama de colaboración para G\-N\-S\-S.\-Teqc.\-Teqc\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf quality\-Check}
+\begin{DoxyCompactList}\small\item\em \-:  Ruta\-R\-I\-N\-E\-Xstandard str\-: Ruta del fichero rinex standard de extensión \char`\"{}.\-o\char`\"{}  borrar bool\-: Borra los ficheros intermedios que genera teqc al realizar el quality check conservando el fichero de extensión $\ast$.yy\-S. \end{DoxyCompactList}\item 
+def {\bf Unir\-Rinex}
+\begin{DoxyCompactList}\small\item\em \-: Une varios fichero rinex en uno. \end{DoxyCompactList}\item 
+def {\bf Cabecera\-Rinex}
+\begin{DoxyCompactList}\small\item\em \-: Devuelve la información de la cabecera del fichero R\-I\-N\-E\-X standard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-rutabin}
+\item 
+{\bf \-\_\-\-\_\-exe}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}classdocs
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación del constructor y destructor}
+\index{G\-N\-S\-S\-::\-Teqc\-::\-Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!GNSS::Teqc::Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-Teqc.\-Teqc.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1Teqc_1_1Teqc_a967a8145c1288917e7ef411d14839f57}
+\begin{DoxyVerb}Constructor de la clase TEqc
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{G\-N\-S\-S\-::\-Teqc\-::\-Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}!Cabecera\-Rinex@{Cabecera\-Rinex}}
+\index{Cabecera\-Rinex@{Cabecera\-Rinex}!GNSS::Teqc::Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}}
+\subsubsection[{Cabecera\-Rinex}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-Teqc.\-Teqc.\-Cabecera\-Rinex (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Fichero\-Rinex}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1Teqc_1_1Teqc_aed924436bee91d0d23336ee92b9f00c4}
+
+
+\-: Devuelve la información de la cabecera del fichero R\-I\-N\-E\-X standard. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Fichero\-Rinex} & str\-: Ruta del fichero R\-I\-N\-E\-X del que se quiere obtener la información.\\
+\hline
+\end{DoxyParams}
+La función devuelve un diccionario con el contenido de la cabecera. \begin{DoxyReturn}{Devuelve}
+\-: dict 
+\end{DoxyReturn}
+\index{G\-N\-S\-S\-::\-Teqc\-::\-Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}!quality\-Check@{quality\-Check}}
+\index{quality\-Check@{quality\-Check}!GNSS::Teqc::Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}}
+\subsubsection[{quality\-Check}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-Teqc.\-Teqc.\-quality\-Check (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Ruta\-R\-I\-N\-E\-Xstandard, }
+\item[{}]{borrar = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1Teqc_1_1Teqc_aa1aee4129ba44909ffe21103d3804b54}
+
+
+\-:  Ruta\-R\-I\-N\-E\-Xstandard str\-: Ruta del fichero rinex standard de extensión \char`\"{}.\-o\char`\"{}  borrar bool\-: Borra los ficheros intermedios que genera teqc al realizar el quality check conservando el fichero de extensión $\ast$.yy\-S. 
+
+En caso contrario no borrara ningún fichero. \index{G\-N\-S\-S\-::\-Teqc\-::\-Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}!Unir\-Rinex@{Unir\-Rinex}}
+\index{Unir\-Rinex@{Unir\-Rinex}!GNSS::Teqc::Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}}
+\subsubsection[{Unir\-Rinex}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-Teqc.\-Teqc.\-Unir\-Rinex (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Ficheros\-Unir, }
+\item[{}]{intervalo, }
+\item[{}]{nombre\-Salida, }
+\item[{}]{ordenar = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1Teqc_1_1Teqc_a9312ed3e6abd255b38ca7dd2e2a67fc6}
+
+
+\-: Une varios fichero rinex en uno. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Ficheros\-Unir} & []\-: Ruta de todos los ficheros rinex a unir. \\
+\hline
+{\em intervalo} & int$\vert$str\-: Muestreo de épocas del nuevo fichero. \\
+\hline
+{\em nombres\-Salida} & str\-: Nombre del fichero resultante de la unión. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de los datos miembro}
+\index{G\-N\-S\-S\-::\-Teqc\-::\-Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}!\-\_\-\-\_\-exe@{\-\_\-\-\_\-exe}}
+\index{\-\_\-\-\_\-exe@{\-\_\-\-\_\-exe}!GNSS::Teqc::Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}}
+\subsubsection[{\-\_\-\-\_\-exe}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Teqc.\-Teqc.\-\_\-\-\_\-exe\hspace{0.3cm}{\ttfamily [private]}}\label{classGNSS_1_1Teqc_1_1Teqc_a4d305440444d3a218a896892878d1eaa}
+\index{G\-N\-S\-S\-::\-Teqc\-::\-Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}!\-\_\-\-\_\-rutabin@{\-\_\-\-\_\-rutabin}}
+\index{\-\_\-\-\_\-rutabin@{\-\_\-\-\_\-rutabin}!GNSS::Teqc::Teqc@{G\-N\-S\-S\-::\-Teqc\-::\-Teqc}}
+\subsubsection[{\-\_\-\-\_\-rutabin}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Teqc.\-Teqc.\-\_\-\-\_\-rutabin\hspace{0.3cm}{\ttfamily [private]}}\label{classGNSS_1_1Teqc_1_1Teqc_a5781e29f2389186a97a8a6936a103894}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/{\bf Teqc.\-py}\end{DoxyCompactItemize}

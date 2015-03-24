@@ -1,0 +1,17 @@
+digraph "Representación gráfica de la clase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="QWidget",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Controladores.CalcAng.CalcAng",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classControladores_1_1CalcAng_1_1CalcAng.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Controladores.Geo2UTM.Geo2UTM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classControladores_1_1Geo2UTM_1_1Geo2UTM.html",tooltip="classdocs "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Controladores.PDGeodesia.\lPDGeodesia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classControladores_1_1PDGeodesia_1_1PDGeodesia.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Controladores.PIGeodesia.\lPIGeodesia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classControladores_1_1PIGeodesia_1_1PIGeodesia.html",tooltip="classdocs "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Controladores.UTM2Geo.UTM2Geo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classControladores_1_1UTM2Geo_1_1UTM2Geo.html"];
+}

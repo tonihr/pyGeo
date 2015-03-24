@@ -1,0 +1,9 @@
+digraph "/home/toni/Dropbox/pyGeo/Topografia" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0734785625f6d91adae6835e38aa8da5 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="pyGeo" fontname="Helvetica", fontsize="10", URL="dir_0734785625f6d91adae6835e38aa8da5.html"]
+  dir_15251017b11e736d85864dfcc810f037 [shape=box, label="Topografia", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_15251017b11e736d85864dfcc810f037.html"];
+  }
+}

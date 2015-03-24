@@ -1,0 +1,197 @@
+\section{Referencia de la Clase G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning}
+\label{classGNSS_1_1SatPositioning_1_1SatPositioning}\index{G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning@{G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning}}
+
+
+Diagrama de herencias de G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning
+
+
+Diagrama de colaboración para G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf get\-Position}
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf ef}
+\item 
+{\bf obs}
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+list {\bf Dif} = [$\,$]
+\begin{DoxyCompactList}\small\item\em print(\-X,\-Y,\-Z) print(i[1],\-E\-\_\-sig,true\-\_\-anom,alfa,\-Omega1,incli,r,\-O\-M\-E\-G\-A\-\_\-\-F\-I\-N,float(j[2][0])) \end{DoxyCompactList}\item 
+tuple {\bf t\-\_\-obs} = u2g.\-U\-T\-C2\-G\-P\-S(j[0])
+\item 
+tuple {\bf t\-\_\-efem} = u2g.\-U\-T\-C2\-G\-P\-S(i[0])
+\item 
+list {\bf vali} = {\bf Dif}[0]
+\item 
+{\bf vali} = i
+\item 
+list {\bf tefem} = {\bf vali}[0]
+\item 
+list {\bf tobs} = j[0]
+\item 
+list {\bf tau} = {\bf vali}[2]
+\item 
+list {\bf gamma} = {\bf vali}[2]
+\item 
+list {\bf tk} = {\bf vali}[2]
+\item 
+list {\bf X} = {\bf vali}[2]
+\item 
+list {\bf vx} = {\bf vali}[2]
+\item 
+list {\bf ax} = {\bf vali}[2]
+\item 
+list {\bf health} = {\bf vali}[2]
+\item 
+list {\bf Y} = {\bf vali}[2]
+\item 
+list {\bf vy} = {\bf vali}[2]
+\item 
+list {\bf ay} = {\bf vali}[2]
+\item 
+list {\bf f} = {\bf vali}[2]
+\item 
+list {\bf Z} = {\bf vali}[2]
+\item 
+list {\bf vz} = {\bf vali}[2]
+\item 
+list {\bf az} = {\bf vali}[2]
+\item 
+list {\bf age} = {\bf vali}[2]
+\item 
+tuple {\bf t} = (u2g.\-U\-T\-C2\-G\-P\-S({\bf tobs})-\/u2g.\-U\-T\-C2\-G\-P\-S({\bf tefem}))
+\item 
+{\bf Atsv} = -\/{\bf tau}+{\bf gamma}$\ast${\bf t}
+\item 
+{\bf t} = t-\/{\bf Atsv}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}classdocs
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación del constructor y destructor}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Efems, }
+\item[{}]{Obs}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_af8d94ee1854c87922ffd19bfe3eb4ccb}
+\begin{DoxyVerb}Constructor 
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-get\-Position (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_adffb0f2be6474ed28f92336e1fc23f2f}
+
+
+\subsection{Documentación de los datos miembro}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!age@{age}}
+\index{age@{age}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{age}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-age = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_aa698726f92db5d9590bc6ca72a975e45}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!Atsv@{Atsv}}
+\index{Atsv@{Atsv}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{Atsv}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-Atsv = -\/{\bf tau}+{\bf gamma}$\ast${\bf t}\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_ae724ccc30bd5d58194afdb7802af1c1d}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!ax@{ax}}
+\index{ax@{ax}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{ax}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-ax = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a27d465a47037a750763ea55caa19826c}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!ay@{ay}}
+\index{ay@{ay}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{ay}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-ay = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_ada5532199ba55f05af50b9fa172c0b48}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!az@{az}}
+\index{az@{az}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{az}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-az = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_aac3b2873e2148c1407fc8df2c999bc43}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!Dif@{Dif}}
+\index{Dif@{Dif}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{Dif}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-Dif = [$\,$]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a04716d4e46aa3aad5e08682b735a56f7}
+
+
+print(\-X,\-Y,\-Z) print(i[1],\-E\-\_\-sig,true\-\_\-anom,alfa,\-Omega1,incli,r,\-O\-M\-E\-G\-A\-\_\-\-F\-I\-N,float(j[2][0])) 
+
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!ef@{ef}}
+\index{ef@{ef}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{ef}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-ef}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a323b4692629d6d50495c1b26152b6681}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!f@{f}}
+\index{f@{f}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-f = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_ac2523a038ea1c4e30a83e91f54070535}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!gamma@{gamma}}
+\index{gamma@{gamma}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{gamma}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-gamma = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_ae02d0bd3315f00e5d16f721a4a7230da}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!health@{health}}
+\index{health@{health}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{health}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-health = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_afc6739ac0c26e7beec612b5d7bc435f9}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!obs@{obs}}
+\index{obs@{obs}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{obs}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-obs}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a110b573c0503117e7594b377a54b6713}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!t@{t}}
+\index{t@{t}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{t}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-t = (u2g.\-U\-T\-C2\-G\-P\-S({\bf tobs})-\/u2g.\-U\-T\-C2\-G\-P\-S({\bf tefem}))\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_aaeaad5cbf19059e2a2087adcccd30ccf}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!t@{t}}
+\index{t@{t}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{t}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-t = t-\/{\bf Atsv}\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_adc81d1c1558a3d31a175c3c7f5addf26}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!t\-\_\-efem@{t\-\_\-efem}}
+\index{t\-\_\-efem@{t\-\_\-efem}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{t\-\_\-efem}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-t\-\_\-efem = u2g.\-U\-T\-C2\-G\-P\-S(i[0])\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_ad7e92f5012647282daae766fd9b7c963}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!t\-\_\-obs@{t\-\_\-obs}}
+\index{t\-\_\-obs@{t\-\_\-obs}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{t\-\_\-obs}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-t\-\_\-obs = u2g.\-U\-T\-C2\-G\-P\-S(j[0])\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a430c987cd27baba6340920667f516b18}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!tau@{tau}}
+\index{tau@{tau}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{tau}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-tau = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a001802e1b0760576df5bd4c8448a604f}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!tefem@{tefem}}
+\index{tefem@{tefem}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{tefem}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-tefem = {\bf vali}[0]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_ab662885f940f68d792eb5f335cf285ef}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!tk@{tk}}
+\index{tk@{tk}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{tk}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-tk = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_aa2dd0ee5e2ac1ea2d6ff7d420e30152b}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!tobs@{tobs}}
+\index{tobs@{tobs}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{tobs}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-tobs = j[0]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a9c7ed5bbe71fdfa8a1a966744d763158}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!vali@{vali}}
+\index{vali@{vali}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{vali}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-vali = {\bf Dif}[0]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_ae069db656557b98ae22210a9312d26c0}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!vali@{vali}}
+\index{vali@{vali}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{vali}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-vali = i\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a7d975adb25605ecfb081b62d160d399f}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!vx@{vx}}
+\index{vx@{vx}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{vx}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-vx = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a244a741a2ad62da9cd659f3b092ca75f}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!vy@{vy}}
+\index{vy@{vy}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{vy}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-vy = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a893abcd584565225433a90c99fe77661}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!vz@{vz}}
+\index{vz@{vz}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{vz}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-vz = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a8b0e254b5e62147b5ab11fe5d8a1cdb8}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!X@{X}}
+\index{X@{X}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-X = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a56a835fdc3cfdf5c092cde9b10792d73}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!Y@{Y}}
+\index{Y@{Y}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-Y = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a40278bc6aa56c03fda110afe8165c507}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}!Z@{Z}}
+\index{Z@{Z}!GNSS::SatPositioning::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning\-::\-Sat\-Positioning}}
+\subsubsection[{Z}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-Sat\-Positioning.\-Sat\-Positioning.\-Z = {\bf vali}[2]\hspace{0.3cm}{\ttfamily [static]}}\label{classGNSS_1_1SatPositioning_1_1SatPositioning_a5afe04025a56065826847bdb2a98edea}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/{\bf Sat\-Positioning.\-py}\end{DoxyCompactItemize}

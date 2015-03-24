@@ -1,0 +1,221 @@
+\section{Referencia de la Clase Geometrias.\-Punto3\-D.\-Punto3\-D}
+\label{classGeometrias_1_1Punto3D_1_1Punto3D}\index{Geometrias.\-Punto3\-D.\-Punto3\-D@{Geometrias.\-Punto3\-D.\-Punto3\-D}}
+
+
+Clase destinada al almacenamiento de la información espacial de un punto tridimensional.  
+
+
+
+
+Diagrama de herencias de Geometrias.\-Punto3\-D.\-Punto3\-D
+
+
+Diagrama de colaboración para Geometrias.\-Punto3\-D.\-Punto3\-D\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}. \end{DoxyCompactList}\item 
+def {\bf set\-Z}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir el valor de la coordenada Z de un punto. \end{DoxyCompactList}\item 
+def {\bf get\-Z}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la coordenada Z. \end{DoxyCompactList}\item 
+def {\bf to\-Punto2\-D}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve un objeto de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}, equivalente al \doxyref{Punto3\-D}{p.}{classGeometrias_1_1Punto3D_1_1Punto3D} de la clase. \end{DoxyCompactList}\item 
+def {\bf get\-Negativos}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor actual de la propiedad negativos. \end{DoxyCompactList}\item 
+def {\bf set\-Negativos}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir la propiedad Negativos. \end{DoxyCompactList}\item 
+def {\bf to\-String}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato str. \end{DoxyCompactList}\item 
+def {\bf to\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. \end{DoxyCompactList}\item 
+def {\bf to\-Geo\-J\-S\-O\-N}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-\-Z} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase destinada al almacenamiento de la información espacial de un punto tridimensional. 
+
+Ejemplos de declaración del un objeto de la clase\-:\par
+p=Punto3\-D()--$>$Constructor vacío.\par
+p=Punto3\-D(10,20,30)\par
+p=\doxyref{Punto3\-D}{p.}{classGeometrias_1_1Punto3D_1_1Punto3D}(10,20,30,negativos=True)\par
+p=\doxyref{Punto3\-D}{p.}{classGeometrias_1_1Punto3D_1_1Punto3D}(10,20,30,negativos=False)\par
+p=Punto3\-D(\-Punto2\-D(10,20),30)\par
+p=\doxyref{Punto3\-D}{p.}{classGeometrias_1_1Punto3D_1_1Punto3D}(Punto2\-D(10,20),30,negativos=True)--$>$negativos sobreescribe a negativos de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}.\par
+p=\doxyref{Punto3\-D}{p.}{classGeometrias_1_1Punto3D_1_1Punto3D}(Punto2\-D(10,20),30,negativos=False)--$>$negativos sobreescribe a negativos de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}.\par
+p=\doxyref{Punto3\-D}{p.}{classGeometrias_1_1Punto3D_1_1Punto3D}(\doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}(10,20,negativos=False),30,negativos=True)--$>$negativos sobreescribe a negativos de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}.\par
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args, }
+\item[{}]{kwargs}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_a979792aa53fb8d884f5c03c0a137d952}
+
+
+Constructor de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}. 
+
+$\ast$args\-: La clase admite en el constructor dos o tres argumentos.\par
+Dos argumentos\-:\par
+args1\-: Punto \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}\-: \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D} con el valor de las coordenadas X e Y. args2\-: Z float$\vert$int$\vert$str\-: Valor de la coordenada Z.\par
+Tres argumentos\-:\par
+args1 X float\-: Valor de la coordenada X.\par
+args2 Y float\-: Valor de la coordenada Y.\par
+args3 Z float\-: Valor de la coordenada Z.\par
+Parametros de tipo kwargs(para todos los constructores)\-:\par
+kwargs negativos bool\-: Estado de la propiedad negativos. 
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se producira una excepción si se introducen más o menos argumentos de los admitidos por la clase. \\
+\hline
+{\em } & Se producira una excepción si no se reconoce el kwarg introducido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!get\-Negativos@{get\-Negativos}}
+\index{get\-Negativos@{get\-Negativos}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{get\-Negativos}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-get\-Negativos (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_abc5023dd6c305237e6f87ffead73b60c}
+
+
+\-: Método que devuelve el valor actual de la propiedad negativos. 
+
+\begin{DoxyReturn}{Devuelve}
+bool\-: Estado de la propiedad Negativos. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!get\-Z@{get\-Z}}
+\index{get\-Z@{get\-Z}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{get\-Z}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-get\-Z (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_a7caa372ebbc85047c407b3b865646abc}
+
+
+\-: Método que devuelve el valor de la coordenada Z. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Valor de la coordenada Z. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!set\-Negativos@{set\-Negativos}}
+\index{set\-Negativos@{set\-Negativos}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{set\-Negativos}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-set\-Negativos (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Negativos}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_ada129c78b0f54839f321a9f7726d2efa}
+
+
+\-: Método para introducir la propiedad Negativos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Neagativos} & bool$\vert$str$\vert$int\-: Estado de la propiedad Negativos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+Neagativos True\-: Permite alojar números negativos. 
+
+Neagativos False\-: No permite alojar números negativos. 
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se producira una excepción si el valor introducido no se puede convertir a bool. \\
+\hline
+{\em } & Se producira una excepcion si se cambia la propiedad negativos a Flase y existen coordenadas negativas en la clase. \\
+\hline
+\end{DoxyExceptions}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!set\-Z@{set\-Z}}
+\index{set\-Z@{set\-Z}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{set\-Z}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-set\-Z (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Z}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_a1a8dd240276b45e3f72ac494ab734057}
+
+
+\-: Método para introducir el valor de la coordenada Z de un punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Z} & float\-: Valor de la coordenada \\
+\hline
+\end{DoxyParams}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!to\-Geo\-J\-S\-O\-N@{to\-Geo\-J\-S\-O\-N}}
+\index{to\-Geo\-J\-S\-O\-N@{to\-Geo\-J\-S\-O\-N}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{to\-Geo\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-to\-Geo\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_a25190ac6488aa51cf2711fea9060c266}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!to\-J\-S\-O\-N@{to\-J\-S\-O\-N}}
+\index{to\-J\-S\-O\-N@{to\-J\-S\-O\-N}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{to\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-to\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_aed02b507757f97d177c8ee9a4651b659}
+
+
+\-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!to\-Punto2\-D@{to\-Punto2\-D}}
+\index{to\-Punto2\-D@{to\-Punto2\-D}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{to\-Punto2\-D}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-to\-Punto2\-D (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_a1ea5706851bb06813d61b145a54e55a9}
+
+
+\-: Método que devuelve un objeto de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}, equivalente al \doxyref{Punto3\-D}{p.}{classGeometrias_1_1Punto3D_1_1Punto3D} de la clase. 
+
+\begin{DoxyReturn}{Devuelve}
+\doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}\-: \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D} equivalente 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto3\-D.\-Punto3\-D.\-to\-String (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto3D_1_1Punto3D_a7edea7545589f74f76980b2636dccd1d}
+
+
+\-: Método que devuleve toda la información del punto en formato str. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string con toda la información del punto. 
+\end{DoxyReturn}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}!\-\_\-\-\_\-\-Z@{\-\_\-\-\_\-\-Z}}
+\index{\-\_\-\-\_\-\-Z@{\-\_\-\-\_\-\-Z}!Geometrias::Punto3D::Punto3D@{Geometrias\-::\-Punto3\-D\-::\-Punto3\-D}}
+\subsubsection[{\-\_\-\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto3\-D.\-Punto3\-D.\-\_\-\-\_\-\-Z = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Punto3D_1_1Punto3D_afb4d92a15d8e372bad5110df2990bd70}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Geometrias/{\bf Punto3\-D.\-py}\end{DoxyCompactItemize}

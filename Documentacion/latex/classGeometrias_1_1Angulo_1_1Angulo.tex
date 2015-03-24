@@ -1,0 +1,345 @@
+\section{Referencia de la Clase Geometrias.\-Angulo.\-Angulo}
+\label{classGeometrias_1_1Angulo_1_1Angulo}\index{Geometrias.\-Angulo.\-Angulo@{Geometrias.\-Angulo.\-Angulo}}
+
+
+Clase destinada al almacenamiento de la información angular.  
+
+
+
+
+Diagrama de herencias de Geometrias.\-Angulo.\-Angulo
+
+
+Diagrama de colaboración para Geometrias.\-Angulo.\-Angulo\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxyref{Angulo}{p.}{classGeometrias_1_1Angulo_1_1Angulo}. \end{DoxyCompactList}\item 
+def {\bf set\-Angulo}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir el ángulo. \end{DoxyCompactList}\item 
+def {\bf set\-Formato}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir el formato del ángulo. \end{DoxyCompactList}\item 
+def {\bf set\-Negativos}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir la propiedad Negativos. \end{DoxyCompactList}\item 
+def {\bf set\-Girar}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir la propiedad Girar. \end{DoxyCompactList}\item 
+def {\bf get\-Formato}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor actual del formato angular de la clase. \end{DoxyCompactList}\item 
+def {\bf get\-Angulo}
+\begin{DoxyCompactList}\small\item\em \-: Método que decuelve el valor del ángulo introducido. \end{DoxyCompactList}\item 
+def {\bf get\-Negativos}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve el estado actual de la propiedad negativos. \end{DoxyCompactList}\item 
+def {\bf get\-Girar}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve el estado actual de la propiedad girar. \end{DoxyCompactList}\item 
+def {\bf Convertir}
+\begin{DoxyCompactList}\small\item\em \-: Convierte el ángulo a otro formato disponible. \end{DoxyCompactList}\item 
+def {\bf Convert2\-Min}
+\item 
+def {\bf Convert2\-Seconds}
+\item 
+def {\bf get\-Formatos\-Disponibles}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve los formatos de ángulos disponibles. \end{DoxyCompactList}\item 
+def {\bf to\-String}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve toda la información del ángulo en un str. \end{DoxyCompactList}\item 
+def {\bf to\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve toda la información del ángulo en un J\-S\-O\-N. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-ang} = None
+\item 
+{\bf \-\_\-\-\_\-g} = None
+\item 
+{\bf \-\_\-\-\_\-m} = None
+\item 
+{\bf \-\_\-\-\_\-s} = None
+\item 
+{\bf \-\_\-\-\_\-f} = None
+\item 
+{\bf \-\_\-\-\_\-negativo} = True
+\item 
+{\bf \-\_\-\-\_\-girar} = False
+\item 
+list {\bf \-\_\-\-\_\-ftype} = [\char`\"{}radian\char`\"{},\char`\"{}sexagesimal\char`\"{},\char`\"{}pseudosexagesimal\char`\"{},\char`\"{}centesimal\char`\"{},\char`\"{}latitud\char`\"{},\char`\"{}longitud180\char`\"{},\char`\"{}longitud360\char`\"{}]
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase destinada al almacenamiento de la información angular. 
+
+Ejemplos de declaración del un objeto de la clase\-:\par
+ang=Angulo()--$>$Construtor vacío.\par
+ang=\doxyref{Angulo}{p.}{classGeometrias_1_1Angulo_1_1Angulo}(0.\-1)--$>$ radianes.\par
+ang=\doxyref{Angulo}{p.}{classGeometrias_1_1Angulo_1_1Angulo}(10,40,50.\-4533)--$>$sexagesimal.\par
+ang=\doxyref{Angulo}{p.}{classGeometrias_1_1Angulo_1_1Angulo}(54,formato='pseudosexagesimal')\par
+ang=\doxyref{Angulo}{p.}{classGeometrias_1_1Angulo_1_1Angulo}(54,formato='centesimal')\par
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args, }
+\item[{}]{kwargs}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_afc9ef0c36d0f7ae2b1f15a2abd5a6f0e}
+
+
+Constructor de la clase \doxyref{Angulo}{p.}{classGeometrias_1_1Angulo_1_1Angulo}. 
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!Convert2\-Min@{Convert2\-Min}}
+\index{Convert2\-Min@{Convert2\-Min}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{Convert2\-Min}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-Convert2\-Min (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_abb4465528872fdddec3770f3b6f610b8}
+\begin{DoxyVerb}@brief: Método que convierte el ángulo almacenado a minutos
+@return float: ángulo convertido a minutos.
+@excepcion: Se producira una excepción si se intenta convertir a minutos un ángulo en formato radian.
+\end{DoxyVerb}
+ \index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!Convert2\-Seconds@{Convert2\-Seconds}}
+\index{Convert2\-Seconds@{Convert2\-Seconds}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{Convert2\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-Convert2\-Seconds (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_ab23d5cb55daa70c8a6961a2031bc5761}
+\begin{DoxyVerb}@brief: Método que convierte el ángulo almacenado a segundos.Para ello el ángulo debe ser de formato Sexagesimal, PseudoSexagesimal o Centesimal.
+@return float: Ángulo convertido a segundos.
+@excepcion: Se producira una excepción si se intenta convertir a segundos un ángulo en formato radian.
+\end{DoxyVerb}
+ \index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!Convertir@{Convertir}}
+\index{Convertir@{Convertir}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{Convertir}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-Convertir (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Formato}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_a2e07d7bb5bc3c6246afe3f0326e43ca5}
+
+
+\-: Convierte el ángulo a otro formato disponible. 
+
+Formato str\-: Formato al que se quiere convertir el ángulo. \begin{DoxyNote}{Nota}
+\-: Formatos a los que se puede convertir un ángulo\-:. 
+\end{DoxyNote}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!get\-Angulo@{get\-Angulo}}
+\index{get\-Angulo@{get\-Angulo}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{get\-Angulo}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-get\-Angulo (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_a5f5b0336518635a75cbc7385a86d616b}
+
+
+\-: Método que decuelve el valor del ángulo introducido. 
+
+\begin{DoxyReturn}{Devuelve}
+float$\vert$[]\-: \doxyref{Angulo}{p.}{classGeometrias_1_1Angulo_1_1Angulo} introducido. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!get\-Formato@{get\-Formato}}
+\index{get\-Formato@{get\-Formato}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{get\-Formato}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-get\-Formato (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_a45aa55b51bd7472b08a752a1f6b1abfd}
+
+
+\-: Método que devuelve el valor actual del formato angular de la clase. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Formato del ángulo. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!get\-Formatos\-Disponibles@{get\-Formatos\-Disponibles}}
+\index{get\-Formatos\-Disponibles@{get\-Formatos\-Disponibles}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{get\-Formatos\-Disponibles}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-get\-Formatos\-Disponibles (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_aac625c9c6c7785e02225ab892202c471}
+
+
+\-: Método que devuelve los formatos de ángulos disponibles. 
+
+\begin{DoxyReturn}{Devuelve}
+[]\-: Lista con los formatos disponibles. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!get\-Girar@{get\-Girar}}
+\index{get\-Girar@{get\-Girar}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{get\-Girar}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-get\-Girar (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_a5399e0f65b12149a6f7e1f06a8af7666}
+
+
+\-: Método que devuleve el estado actual de la propiedad girar. 
+
+\begin{DoxyReturn}{Devuelve}
+bool\-: Estado de la propiedad girar. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!get\-Negativos@{get\-Negativos}}
+\index{get\-Negativos@{get\-Negativos}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{get\-Negativos}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-get\-Negativos (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_aedcb2c1f69b72bce3feb7eba405f7ea1}
+
+
+\-: Método que devuleve el estado actual de la propiedad negativos. 
+
+\begin{DoxyReturn}{Devuelve}
+bool\-: Estado de la propiedad negativos. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!set\-Angulo@{set\-Angulo}}
+\index{set\-Angulo@{set\-Angulo}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{set\-Angulo}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-set\-Angulo (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_a3f2bff0da5d4310a062efe296b52d478}
+
+
+\-: Método para introducir el ángulo. 
+
+$\ast$args\-: El valor del ángulo se puede introducir de dos formas\-:\par
+Un argumento\-:\par
+\doxyref{Angulo}{p.}{classGeometrias_1_1Angulo_1_1Angulo} float\-: Valor del ángulo.\par
+Tres argumentos\-:\par
+Grados float\-: Valor de los grados.\par
+Minutos float\-: Valor de los minutos.\par
+Segundos float\-: Valor de los segundos.\par
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!set\-Formato@{set\-Formato}}
+\index{set\-Formato@{set\-Formato}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{set\-Formato}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-set\-Formato (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Formato}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_a1f944bb1f56f54b4b9def8b7135d7d23}
+
+
+\-: Método para introducir el formato del ángulo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Formato} & str\-: Formato del ángulo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+Formato\-: Formatos válidos\-: radian,sexagesimal,pseudosexagesimal,centesimal,latitud,longitud180,longitud360 \-: Se producira una excepción si el formato no es uno de los listados. 
+\end{DoxyNote}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!set\-Girar@{set\-Girar}}
+\index{set\-Girar@{set\-Girar}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{set\-Girar}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-set\-Girar (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Girar}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_ad60407836c76135d9a51c139fc574d54}
+
+
+\-: Método para introducir la propiedad Girar. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Girar} & bool\-: Estado de la propiedad Girar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+True\-: Permite agirar el ángulo hasta el rango. 
+
+False\-: No permite girar el ángulo hasta el rango. \-: Se producira una excepción si el valor no es de tipo bool. 
+\end{DoxyNote}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!set\-Negativos@{set\-Negativos}}
+\index{set\-Negativos@{set\-Negativos}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{set\-Negativos}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-set\-Negativos (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Negativos}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_aca0636352295005a56b0c35e76de4533}
+
+
+\-: Método para introducir la propiedad Negativos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Neagativos} & bool\-: Estado de la propiedad Negativos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+True\-: Permite alojar números negativos. 
+
+False\-: No permite alojar números negativos. \-: Se producira una excepción si el valor no es de tipo bool. 
+\end{DoxyNote}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!to\-J\-S\-O\-N@{to\-J\-S\-O\-N}}
+\index{to\-J\-S\-O\-N@{to\-J\-S\-O\-N}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{to\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-to\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_a02b71a8eac4d714c5bc88974fd5ab0b1}
+
+
+\-: Método que devuelve toda la información del ángulo en un J\-S\-O\-N. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N con la información del ángulo. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Angulo.\-Angulo.\-to\-String (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Angulo_1_1Angulo_aa3277a58fc30817c96345969ceb1b220}
+
+
+\-: Método que devuelve toda la información del ángulo en un str. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string con la información del ángulo. 
+\end{DoxyReturn}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-ang@{\-\_\-\-\_\-ang}}
+\index{\-\_\-\-\_\-ang@{\-\_\-\-\_\-ang}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-ang}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-ang = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Angulo_1_1Angulo_abd9a3433bbaff7309756cc2254c8808a}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-f@{\-\_\-\-\_\-f}}
+\index{\-\_\-\-\_\-f@{\-\_\-\-\_\-f}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-f}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-f = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Angulo_1_1Angulo_af7016e1c2c1aa32873daddf94e320dbf}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-ftype@{\-\_\-\-\_\-ftype}}
+\index{\-\_\-\-\_\-ftype@{\-\_\-\-\_\-ftype}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-ftype}]{\setlength{\rightskip}{0pt plus 5cm}list Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-ftype = [\char`\"{}radian\char`\"{},\char`\"{}sexagesimal\char`\"{},\char`\"{}pseudosexagesimal\char`\"{},\char`\"{}centesimal\char`\"{},\char`\"{}latitud\char`\"{},\char`\"{}longitud180\char`\"{},\char`\"{}longitud360\char`\"{}]\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Angulo_1_1Angulo_ae997f90aa5b09c3eced1d29f3103fc39}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-g@{\-\_\-\-\_\-g}}
+\index{\-\_\-\-\_\-g@{\-\_\-\-\_\-g}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-g}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-g = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Angulo_1_1Angulo_aa906e28ee1a6d4dbb10d53fc006b4f83}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-girar@{\-\_\-\-\_\-girar}}
+\index{\-\_\-\-\_\-girar@{\-\_\-\-\_\-girar}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-girar}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-girar = False\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Angulo_1_1Angulo_a967decd7f95f3b4f2ef9aef459130762}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-m@{\-\_\-\-\_\-m}}
+\index{\-\_\-\-\_\-m@{\-\_\-\-\_\-m}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-m}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-m = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Angulo_1_1Angulo_a0ccc8d657536f3fff53c00097388e1e4}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-negativo@{\-\_\-\-\_\-negativo}}
+\index{\-\_\-\-\_\-negativo@{\-\_\-\-\_\-negativo}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-negativo}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-negativo = True\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Angulo_1_1Angulo_aa971debd5f848fb9850a102d85963bfa}
+\index{Geometrias\-::\-Angulo\-::\-Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}!\-\_\-\-\_\-s@{\-\_\-\-\_\-s}}
+\index{\-\_\-\-\_\-s@{\-\_\-\-\_\-s}!Geometrias::Angulo::Angulo@{Geometrias\-::\-Angulo\-::\-Angulo}}
+\subsubsection[{\-\_\-\-\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Angulo.\-Angulo.\-\_\-\-\_\-s = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Angulo_1_1Angulo_a4dfb6f6abd49b66913ab6e1ac4513a1b}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Geometrias/{\bf Angulo.\-py}\end{DoxyCompactItemize}

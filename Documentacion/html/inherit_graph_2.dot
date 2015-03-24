@@ -1,0 +1,9 @@
+digraph "Representación gráfica de la clase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Punto2D",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Geometrias.Punto3D.Punto3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGeometrias_1_1Punto3D_1_1Punto3D.html",tooltip="Clase destinada al almacenamiento de la información espacial de un punto tridimensional. "];
+}

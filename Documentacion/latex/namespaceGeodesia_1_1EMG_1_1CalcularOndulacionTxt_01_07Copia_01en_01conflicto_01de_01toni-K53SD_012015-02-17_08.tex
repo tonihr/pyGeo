@@ -1,0 +1,188 @@
+\section{Referencia del Namespace Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}
+\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08}\index{Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf Calcular\-Ondulacion}
+\item 
+def {\bf main}
+\begin{DoxyCompactList}\small\item\em print(fila,columna) lin\-\_\-fila=(fila$\ast$const)+1 print(lin\-\_\-fila) \#\-Que fila esta mas prxima a la elegida la anterior o la siguiente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf const} = 85
+\begin{DoxyCompactList}\small\item\em print(val) \end{DoxyCompactList}\item 
+{\bf Alat} = Lat\-\_\-rejilla-\/Latitud
+\begin{DoxyCompactList}\small\item\em print(fila,columna) print(\-Rango\-\_\-\-Lat[fila]) print(\-Rango\-\_\-\-Lon[columna]) \end{DoxyCompactList}\item 
+{\bf Alon} = Lon\-\_\-rejilla-\/Longitud
+\item 
+tuple {\bf fila} = round(abs({\bf Alat})/ancho\-\_\-fil)
+\begin{DoxyCompactList}\small\item\em print(\-Alat,\-Alon) \end{DoxyCompactList}\item 
+tuple {\bf columna} = round(abs({\bf Alon})/ancho\-\_\-col)
+\item 
+tuple {\bf lin\-\_\-fila} = ({\bf fila}$\ast${\bf const})
+\item 
+tuple {\bf f} = open(rut,'r')
+\begin{DoxyCompactList}\small\item\em print(lin\-\_\-fila) input() \end{DoxyCompactList}\item 
+list {\bf val} = [$\,$]
+\item 
+tuple {\bf seccion} = f.\-readlines()
+\item 
+tuple {\bf i} = i.\-split()
+\item 
+{\bf lin\-\_\-fila2} = None
+\item 
+tuple {\bf seccion1} = f.\-readlines()
+\item 
+tuple {\bf seccion2} = f.\-readlines()
+\item 
+list {\bf val1} = [$\,$]
+\item 
+list {\bf val2} = [$\,$]
+\item 
+tuple {\bf j1} = i1.\-split()
+\item 
+tuple {\bf j2} = i2.\-split()
+\item 
+tuple {\bf fact} = ({\bf val2}-\/{\bf val1})
+\item 
+{\bf vala} = None
+\item 
+{\bf valb} = None
+\item 
+{\bf valc} = None
+\item 
+{\bf vald} = None
+\item 
+tuple {\bf v1} = {\bf valc}$\ast$({\bf Alon}$\ast${\bf Alat})
+\item 
+tuple {\bf v2} = {\bf vald}$\ast$((1-\/{\bf Alon})$\ast${\bf Alat})
+\item 
+tuple {\bf v3} = {\bf vala}$\ast${\bf Alon}$\ast$(1-\/{\bf Alat})
+\item 
+tuple {\bf v4} = {\bf valb}$\ast$(1-\/{\bf Alon})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!Calcular\-Ondulacion@{Calcular\-Ondulacion}}
+\index{Calcular\-Ondulacion@{Calcular\-Ondulacion}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{Calcular\-Ondulacion}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).Calcular\-Ondulacion (
+\begin{DoxyParamCaption}
+\item[{}]{Punto\-Geodesico}
+\end{DoxyParamCaption}
+)}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a0d0e25b39528328adf374c3023d4775b}
+\begin{DoxyVerb}Función para realizar la interpolación de la ondulación del geoide a traves de la rejilla en formato txt.
+\end{DoxyVerb}
+ \index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!main@{main}}
+\index{main@{main}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_acc6dfc73dbfde44b3c164edb8518dd9d}
+
+
+print(fila,columna) lin\-\_\-fila=(fila$\ast$const)+1 print(lin\-\_\-fila) \#\-Que fila esta mas prxima a la elegida la anterior o la siguiente. 
+
+Lpost=Rango\-\_\-\-Lat[fila-\/1] Lant=Rango\-\_\-\-Lat[fila+1] d1\-L=abs(Lant-\/\-Latitud) d2\-L=abs(Lpost-\/\-Latitud) Escogida=None Lat\-\_\-inter=None linea\-\_\-fichero\-\_\-b=None if d1\-L$<$d2\-L\-: Lat\-\_\-inter=Lant linea\-\_\-fichero\-\_\-b=1+(fila-\/1)$\ast$const Escogido=\char`\"{}\-Anteior\char`\"{} else\-: Lat\-\_\-inter=Lpost linea\-\_\-fichero\-\_\-b=1+(fila+1)$\ast$const Escogido=\char`\"{}\-Posteior\char`\"{}
+
+print(\-Lat\-\_\-inter,\-Escogido,linea\-\_\-fichero\-\_\-b)
+
+\#[......$\ast$$\ast$.....]-\/1 \#[......$\ast$$\ast$.....] \#[......$\ast$$\ast$.....]+1 \#\-Hay que analizar que linea conviene coger, la anterior o la siguiente para realizar la interpolacion f=open(ruta\-\_\-b,'r') seccion1=f.\-readlines()[linea\-\_\-fichero\-:linea\-\_\-fichero+85] f.\-seek(0) seccion2=f.\-readlines()[linea\-\_\-fichero\-\_\-b\-:linea\-\_\-fichero\-\_\-b+85] f.\-close() \#\-Se arreglan los datos y se convierten en una única fila. sal1=[] sal2=[] for i1,i2 in zip(seccion1,seccion2)\-: j1=i1.\-split() j2=i2.\-split() print(j1) for k1,k2 in zip(j1,j2)\-: print(k1) sal1.\-append(k1) sal2.\-append(k2) input() 
+
+\subsection{Documentación de las variables}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!Alat@{Alat}}
+\index{Alat@{Alat}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{Alat}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).Alat = Lat\-\_\-rejilla-\/Latitud}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a2e3882161f4b3632f6645f1897f1f3c4}
+
+
+print(fila,columna) print(\-Rango\-\_\-\-Lat[fila]) print(\-Rango\-\_\-\-Lon[columna]) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!Alon@{Alon}}
+\index{Alon@{Alon}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{Alon}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).Alon = Lon\-\_\-rejilla-\/Longitud}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a3930066a0e2d7fc1f9e290e838c6d97e}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!columna@{columna}}
+\index{columna@{columna}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{columna}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).columna = round(abs({\bf Alon})/ancho\-\_\-col)}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_ae0351e28d8e7da8c212a3222b86caf17}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!const@{const}}
+\index{const@{const}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{const}]{\setlength{\rightskip}{0pt plus 5cm}int Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).const = 85}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a25a92e16840b128960d91c501977e1ae}
+
+
+print(val) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!f@{f}}
+\index{f@{f}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).f = open(rut,'r')}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_ae9a8c1f2491d4c95946bcf76397da84a}
+
+
+print(lin\-\_\-fila) input() 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!fact@{fact}}
+\index{fact@{fact}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{fact}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).fact = ({\bf val2}-\/{\bf val1})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a0ff3442a808597b3b62b7ed511769419}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!fila@{fila}}
+\index{fila@{fila}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{fila}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).fila = round(abs({\bf Alat})/ancho\-\_\-fil)}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a8e4945fcd2bc649bad050160ae338a1b}
+
+
+print(\-Alat,\-Alon) 
+
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!i@{i}}
+\index{i@{i}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).i = i.\-split()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_ad2c8965966f09f6e2da9aea02368d7b9}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!j1@{j1}}
+\index{j1@{j1}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{j1}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).j1 = i1.\-split()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a2375670afa07d67e1e9214cb2bb3cd8d}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!j2@{j2}}
+\index{j2@{j2}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{j2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).j2 = i2.\-split()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a1f336a8e85591d7b31c9ee969e03e915}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!lin\-\_\-fila@{lin\-\_\-fila}}
+\index{lin\-\_\-fila@{lin\-\_\-fila}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{lin\-\_\-fila}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).lin\-\_\-fila = ({\bf fila}$\ast${\bf const})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a8f108a224b0f24683ca94e1f96b2f2e6}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!lin\-\_\-fila2@{lin\-\_\-fila2}}
+\index{lin\-\_\-fila2@{lin\-\_\-fila2}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{lin\-\_\-fila2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).lin\-\_\-fila2 = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a152c3b6081534c695ea3a8cbdc75f2b1}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!seccion@{seccion}}
+\index{seccion@{seccion}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{seccion}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).seccion = f.\-readlines()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a3d306fed0737c6c1895c244b1cc6abfd}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!seccion1@{seccion1}}
+\index{seccion1@{seccion1}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{seccion1}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).seccion1 = f.\-readlines()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_ada56d7ec954d5650fa55c73ae7d09ad8}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!seccion2@{seccion2}}
+\index{seccion2@{seccion2}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{seccion2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).seccion2 = f.\-readlines()}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a775870a9b3adcb9ebf13b24245d8321c}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!v1@{v1}}
+\index{v1@{v1}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{v1}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).v1 = {\bf valc}$\ast$({\bf Alon}$\ast${\bf Alat})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_aedf07bacecb5d0d06ca462fbfd1bb9e8}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!v2@{v2}}
+\index{v2@{v2}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{v2}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).v2 = {\bf vald}$\ast$((1-\/{\bf Alon})$\ast${\bf Alat})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a9b0aeb00ed5c7aa55bbc894b174cff52}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!v3@{v3}}
+\index{v3@{v3}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{v3}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).v3 = {\bf vala}$\ast${\bf Alon}$\ast$(1-\/{\bf Alat})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a2a476af8b55fa271e1a753f393629377}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!v4@{v4}}
+\index{v4@{v4}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{v4}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).v4 = {\bf valb}$\ast$(1-\/{\bf Alon})}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a3233cf85111a6782c2615aa8720451dd}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!val@{val}}
+\index{val@{val}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).val = [$\,$]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_ace74246a6e64b67498796f1822d7f975}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!val1@{val1}}
+\index{val1@{val1}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{val1}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).val1 = [$\,$]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a57481fb36d333774b9139a3be0de8b12}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!val2@{val2}}
+\index{val2@{val2}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{val2}]{\setlength{\rightskip}{0pt plus 5cm}list Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).val2 = [$\,$]}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a97e2080b8df4efe9bb187971e69002a3}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!vala@{vala}}
+\index{vala@{vala}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{vala}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).vala = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a126a97b1c78f2dbb35ed5975b12e71a4}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!valb@{valb}}
+\index{valb@{valb}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{valb}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).valb = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_a6b6b9fcdf0bd534d7df7f30fb2845fdd}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!valc@{valc}}
+\index{valc@{valc}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{valc}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).valc = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_ad324223973efa34148051ac7c74f9a89}
+\index{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}!vald@{vald}}
+\index{vald@{vald}!Geodesia::EMG::CalcularOndulacionTxt (Copia en conflicto de toni-K53SD 2015-02-17)@{Geodesia\-::\-E\-M\-G\-::\-Calcular\-Ondulacion\-Txt (\-Copia en conflicto de toni-\/\-K53\-S\-D 2015-\/02-\/17)}}
+\subsubsection[{vald}]{\setlength{\rightskip}{0pt plus 5cm}tuple Geodesia.\-E\-M\-G.\-Calcular\-Ondulacion\-Txt (Copia en conflicto de toni-\/K53\-S\-D 2015-\/02-\/17).vald = None}\label{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_ac6d828d53d663dc545bf076e14b21014}

@@ -1,0 +1,9 @@
+digraph "/home/toni/Dropbox/pyGeo/Geometrias" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0734785625f6d91adae6835e38aa8da5 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="pyGeo" fontname="Helvetica", fontsize="10", URL="dir_0734785625f6d91adae6835e38aa8da5.html"]
+  dir_0cdfd5b776f63408fad74813cf250bef [shape=box, label="Geometrias", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_0cdfd5b776f63408fad74813cf250bef.html"];
+  }
+}

@@ -1,0 +1,265 @@
+\section{Referencia de la Clase Geometrias.\-Punto2\-D.\-Punto2\-D}
+\label{classGeometrias_1_1Punto2D_1_1Punto2D}\index{Geometrias.\-Punto2\-D.\-Punto2\-D@{Geometrias.\-Punto2\-D.\-Punto2\-D}}
+
+
+Clase destinada al almacenamiento de la información espacial de un punto bidimensional.  
+
+
+
+
+Diagrama de herencias de Geometrias.\-Punto2\-D.\-Punto2\-D
+
+
+Diagrama de colaboración para Geometrias.\-Punto2\-D.\-Punto2\-D\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf set\-X}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir el valor de la coordenada X de un punto. \end{DoxyCompactList}\item 
+def {\bf set\-Y}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir el valor de la coordenada Y de un punto. \end{DoxyCompactList}\item 
+def {\bf set\-Negativos}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir la propiedad Negativos. \end{DoxyCompactList}\item 
+def {\bf get\-X}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la coordenada X almacenada. \end{DoxyCompactList}\item 
+def {\bf get\-Y}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la coordenada Y almacenada. \end{DoxyCompactList}\item 
+def {\bf get\-Negativos}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor actual de la propiedad negativos. \end{DoxyCompactList}\item 
+def {\bf to\-String}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato str. \end{DoxyCompactList}\item 
+def {\bf to\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. \end{DoxyCompactList}\item 
+def {\bf to\-Geo\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve un Geo\-J\-S\-O\-N del punto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-\-X} = None
+\item 
+{\bf \-\_\-\-\_\-\-Y} = None
+\item 
+{\bf \-\_\-\-\_\-neg} = True
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase destinada al almacenamiento de la información espacial de un punto bidimensional. 
+
+Ejemplos de declaración del un objeto de la clase\-:\par
+p=Punto2\-D()--$>$Constructor vacío.\par
+p=Punto2\-D(10,10)\par
+p=\doxyref{Punto2\-D}{p.}{classGeometrias_1_1Punto2D_1_1Punto2D}(10,10,negativos=True)\par
+p=\doxyref{Punto2\-D}{p.}{classGeometrias_1_1Punto2D_1_1Punto2D}(10,10,negativos=False)\par
+p=\doxyref{Punto2\-D}{p.}{classGeometrias_1_1Punto2D_1_1Punto2D}(-\/10,-\/10,negativos=False)--$>$Error.\par
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args, }
+\item[{}]{kwargs}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_aa6356cbeae58101f5b312bed3b95045b}
+\begin{DoxyVerb}Constructor de la clase Punto2D.
+
+Args:
+    param1 (float): Valor de la coordenada X.
+                    X coordinate value.
+    param2 (float):
+Valor de la coordenada Y.
+Y coordinate value.
+
+Kwargs:
+    negativos (bool): Estado de la propiedad negativos.
+    
+Raises:
+    ArgumentError: Se producira una excepción si se introducen más o menos argumentos de los admitidos por la clase.
+    KeyWordError: Se producira una excepción si no se reconoce el kwarg introducido.
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!get\-Negativos@{get\-Negativos}}
+\index{get\-Negativos@{get\-Negativos}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{get\-Negativos}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-get\-Negativos (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_abcd2c5154b2a1684c0abdc3075136f85}
+
+
+\-: Método que devuelve el valor actual de la propiedad negativos. 
+
+\begin{DoxyReturn}{Devuelve}
+bool\-: Estado de la propiedad Negativos. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-get\-X (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_aec56731f9211f807941fe5d7d60474b5}
+
+
+\-: Método que devuelve el valor de la coordenada X almacenada. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Valor de la coordenada X. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-get\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_adada09d17d873cf13c8d7450fa716df5}
+
+
+\-: Método que devuelve el valor de la coordenada Y almacenada. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Valor de la coordenada Y. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!set\-Negativos@{set\-Negativos}}
+\index{set\-Negativos@{set\-Negativos}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{set\-Negativos}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-set\-Negativos (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Negativos}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_a766854c823861c9261b87603dc50f3be}
+
+
+\-: Método para introducir la propiedad Negativos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Neagativos} & bool$\vert$str$\vert$int\-: Estado de la propiedad Negativos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+Neagativos True\-: Permite alojar números negativos. 
+
+Neagativos False\-: No permite alojar números negativos. 
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se producira una excepción si el valor introducido no se puede convertir a bool. \\
+\hline
+{\em } & Se producira una excepcion si se cambia la propiedad negativos a Flase y existen coordenadas negativas en la clase. \\
+\hline
+\end{DoxyExceptions}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!set\-X@{set\-X}}
+\index{set\-X@{set\-X}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{set\-X}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-set\-X (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{X}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_a8a299cd7748bdbddd9f2288a733bcf6e}
+
+
+\-: Método para introducir el valor de la coordenada X de un punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em X} & float\-: Valor de la coordenada. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se producira una excepción si el valor introducido no se puede convertir a un número. \\
+\hline
+{\em } & Se producira una excepción si se introduce un valor negativo con la propiedad negativos=False. \\
+\hline
+\end{DoxyExceptions}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!set\-Y@{set\-Y}}
+\index{set\-Y@{set\-Y}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{set\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-set\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Y}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_a667d8756b65fb7ac3e8b2aae8e129895}
+
+
+\-: Método para introducir el valor de la coordenada Y de un punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Y} & float\-: Valor de la coordenada. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se producira una excepción si el valor introducido no se puede convertir a un número. \\
+\hline
+{\em } & Se producira una excepción si se introduce un valor negativo con la propiedad negativos=False. \\
+\hline
+\end{DoxyExceptions}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!to\-Geo\-J\-S\-O\-N@{to\-Geo\-J\-S\-O\-N}}
+\index{to\-Geo\-J\-S\-O\-N@{to\-Geo\-J\-S\-O\-N}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{to\-Geo\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-to\-Geo\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_af2282451da4ef6c52e98d91ce084c514}
+
+
+\-: Método que devuleve un Geo\-J\-S\-O\-N del punto. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!to\-J\-S\-O\-N@{to\-J\-S\-O\-N}}
+\index{to\-J\-S\-O\-N@{to\-J\-S\-O\-N}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{to\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-to\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_a774bc5211fe63c7db8b1695334877435}
+
+
+\-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto2\-D.\-Punto2\-D.\-to\-String (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Punto2D_1_1Punto2D_a21741f44e7356e23e4ee30cf160a4aab}
+
+
+\-: Método que devuleve toda la información del punto en formato str. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string con toda la información del punto. 
+\end{DoxyReturn}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!\-\_\-\-\_\-neg@{\-\_\-\-\_\-neg}}
+\index{\-\_\-\-\_\-neg@{\-\_\-\-\_\-neg}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{\-\_\-\-\_\-neg}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto2\-D.\-Punto2\-D.\-\_\-\-\_\-neg = True\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Punto2D_1_1Punto2D_a4c52d431042d598affadb3373d8de26d}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!\-\_\-\-\_\-\-X@{\-\_\-\-\_\-\-X}}
+\index{\-\_\-\-\_\-\-X@{\-\_\-\-\_\-\-X}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{\-\_\-\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto2\-D.\-Punto2\-D.\-\_\-\-\_\-\-X = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Punto2D_1_1Punto2D_a74ae3cd5f270e00d3d616d2c9724e976}
+\index{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}!\-\_\-\-\_\-\-Y@{\-\_\-\-\_\-\-Y}}
+\index{\-\_\-\-\_\-\-Y@{\-\_\-\-\_\-\-Y}!Geometrias::Punto2D::Punto2D@{Geometrias\-::\-Punto2\-D\-::\-Punto2\-D}}
+\subsubsection[{\-\_\-\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto2\-D.\-Punto2\-D.\-\_\-\-\_\-\-Y = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Punto2D_1_1Punto2D_ae40e6a34bcdcdff6465ac03713c8ee51}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Geometrias/{\bf Punto2\-D.\-py}\end{DoxyCompactItemize}

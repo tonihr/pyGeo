@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>PyGeo: Referencia de la Clase Geometrias.Linea3D.Linea3D</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PyGeo
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classGeometrias_1_1Linea3D_1_1Linea3D.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-static-attribs">Atributos privados estáticos</a> &#124;
+<a href="classGeometrias_1_1Linea3D_1_1Linea3D-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase Geometrias.Linea3D.Linea3D</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase destinada a almacenar la información de una línea tridimensional.  
+ <a href="classGeometrias_1_1Linea3D_1_1Linea3D.html#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencias de Geometrias.Linea3D.Linea3D</div>
+<div class="dyncontent">
+<div class="center"><img src="classGeometrias_1_1Linea3D_1_1Linea3D__inherit__graph.png" border="0" usemap="#Geometrias_8Linea3D_8Linea3D_inherit__map" alt="Inheritance graph"/></div>
+<map name="Geometrias_8Linea3D_8Linea3D_inherit__map" id="Geometrias_8Linea3D_8Linea3D_inherit__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboración para Geometrias.Linea3D.Linea3D:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGeometrias_1_1Linea3D_1_1Linea3D__coll__graph.png" border="0" usemap="#Geometrias_8Linea3D_8Linea3D_coll__map" alt="Collaboration graph"/></div>
+<map name="Geometrias_8Linea3D_8Linea3D_coll__map" id="Geometrias_8Linea3D_8Linea3D_coll__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:aa36a1f62b16715ef243ca8cbbc4276ea"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#aa36a1f62b16715ef243ca8cbbc4276ea">__init__</a></td></tr>
+<tr class="memdesc:aa36a1f62b16715ef243ca8cbbc4276ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html" title="Clase destinada a almacenar la información de una línea tridimensional. ">Linea3D</a>.  <a href="#aa36a1f62b16715ef243ca8cbbc4276ea">Más...</a><br/></td></tr>
+<tr class="separator:aa36a1f62b16715ef243ca8cbbc4276ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c859a196f97e0db37f30c6ccb365412"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a1c859a196f97e0db37f30c6ccb365412">setPuntoInicial</a></td></tr>
+<tr class="memdesc:a1c859a196f97e0db37f30c6ccb365412"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método para introducir o modificar el punto inicial de la linea.  <a href="#a1c859a196f97e0db37f30c6ccb365412">Más...</a><br/></td></tr>
+<tr class="separator:a1c859a196f97e0db37f30c6ccb365412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af416f47c0387c5330085eb2a2cb4ab"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a2af416f47c0387c5330085eb2a2cb4ab">setPuntoFinal</a></td></tr>
+<tr class="memdesc:a2af416f47c0387c5330085eb2a2cb4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método para introducir o modificar el punto final de la linea.  <a href="#a2af416f47c0387c5330085eb2a2cb4ab">Más...</a><br/></td></tr>
+<tr class="separator:a2af416f47c0387c5330085eb2a2cb4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac66959812366c3197d25c59fda24d51"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#aac66959812366c3197d25c59fda24d51">getPuntoInicial</a></td></tr>
+<tr class="memdesc:aac66959812366c3197d25c59fda24d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuelve el Puno inicial de la línea.  <a href="#aac66959812366c3197d25c59fda24d51">Más...</a><br/></td></tr>
+<tr class="separator:aac66959812366c3197d25c59fda24d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ed4acea2b15f5a26a94318dc8bf8cb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a98ed4acea2b15f5a26a94318dc8bf8cb">getPuntoFinal</a></td></tr>
+<tr class="memdesc:a98ed4acea2b15f5a26a94318dc8bf8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuelve el Puno final de la línea.  <a href="#a98ed4acea2b15f5a26a94318dc8bf8cb">Más...</a><br/></td></tr>
+<tr class="separator:a98ed4acea2b15f5a26a94318dc8bf8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0ca994b4edeb8211a9cc3bd7cd0015"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#aef0ca994b4edeb8211a9cc3bd7cd0015">getAX</a></td></tr>
+<tr class="memdesc:aef0ca994b4edeb8211a9cc3bd7cd0015"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuelve el incremento de coordenadas en el eje X de la línea.  <a href="#aef0ca994b4edeb8211a9cc3bd7cd0015">Más...</a><br/></td></tr>
+<tr class="separator:aef0ca994b4edeb8211a9cc3bd7cd0015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e24373ccf7c65d078ddeaabdc5264a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a40e24373ccf7c65d078ddeaabdc5264a">getAY</a></td></tr>
+<tr class="memdesc:a40e24373ccf7c65d078ddeaabdc5264a"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuelve el incremento de coordenadas en el eje Y de la línea.  <a href="#a40e24373ccf7c65d078ddeaabdc5264a">Más...</a><br/></td></tr>
+<tr class="separator:a40e24373ccf7c65d078ddeaabdc5264a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa327823e17339abb29ee8cea73544052"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#aa327823e17339abb29ee8cea73544052">getAZ</a></td></tr>
+<tr class="memdesc:aa327823e17339abb29ee8cea73544052"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuelve el incremento de coordenadas en el eje Z de la línea.  <a href="#aa327823e17339abb29ee8cea73544052">Más...</a><br/></td></tr>
+<tr class="separator:aa327823e17339abb29ee8cea73544052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a13cbf6b68747a7ffd5db855962635"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a05a13cbf6b68747a7ffd5db855962635">getDistancia</a></td></tr>
+<tr class="memdesc:a05a13cbf6b68747a7ffd5db855962635"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuelve la distancia de la línea.  <a href="#a05a13cbf6b68747a7ffd5db855962635">Más...</a><br/></td></tr>
+<tr class="separator:a05a13cbf6b68747a7ffd5db855962635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa017b0bb133ea82d91aa021f6b2a4448"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#aa017b0bb133ea82d91aa021f6b2a4448">getAzimut</a></td></tr>
+<tr class="memdesc:aa017b0bb133ea82d91aa021f6b2a4448"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Devuleve el azimut de la linea.  <a href="#aa017b0bb133ea82d91aa021f6b2a4448">Más...</a><br/></td></tr>
+<tr class="separator:aa017b0bb133ea82d91aa021f6b2a4448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5086194ce7d3c9a8f0178bca28e334a4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a5086194ce7d3c9a8f0178bca28e334a4">getAnguloElevacion</a></td></tr>
+<tr class="memdesc:a5086194ce7d3c9a8f0178bca28e334a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Devuleve el ángulo de elevación de la línea.  <a href="#a5086194ce7d3c9a8f0178bca28e334a4">Más...</a><br/></td></tr>
+<tr class="separator:a5086194ce7d3c9a8f0178bca28e334a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd9fbd85ac58c5389dd2a837885e559"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a1fd9fbd85ac58c5389dd2a837885e559">toString</a></td></tr>
+<tr class="memdesc:a1fd9fbd85ac58c5389dd2a837885e559"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuleve toda la información del punto en formato str.  <a href="#a1fd9fbd85ac58c5389dd2a837885e559">Más...</a><br/></td></tr>
+<tr class="separator:a1fd9fbd85ac58c5389dd2a837885e559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eefaf48c60fd7070a1c6297eb242f46"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a9eefaf48c60fd7070a1c6297eb242f46">toLinea2D</a></td></tr>
+<tr class="memdesc:a9eefaf48c60fd7070a1c6297eb242f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Devuelve el objeto <a class="el" href="namespaceGeometrias_1_1Linea2D.html">Linea2D</a> equivalente a la <a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html" title="Clase destinada a almacenar la información de una línea tridimensional. ">Linea3D</a> introducida.  <a href="#a9eefaf48c60fd7070a1c6297eb242f46">Más...</a><br/></td></tr>
+<tr class="separator:a9eefaf48c60fd7070a1c6297eb242f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c21ddd43a6dc672fbcd29fdc2adcbc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#ae6c21ddd43a6dc672fbcd29fdc2adcbc">toJSON</a></td></tr>
+<tr class="memdesc:ae6c21ddd43a6dc672fbcd29fdc2adcbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuleve toda la información del punto en formato JSON.  <a href="#ae6c21ddd43a6dc672fbcd29fdc2adcbc">Más...</a><br/></td></tr>
+<tr class="separator:ae6c21ddd43a6dc672fbcd29fdc2adcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2a60141859ce620cb2f20779f9544c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#ada2a60141859ce620cb2f20779f9544c">toGeoJSON</a></td></tr>
+<tr class="memdesc:ada2a60141859ce620cb2f20779f9544c"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuleve un GeoJSON del punto.  <a href="#ada2a60141859ce620cb2f20779f9544c">Más...</a><br/></td></tr>
+<tr class="separator:ada2a60141859ce620cb2f20779f9544c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:ac89e2cd2fd7c77227c38d68f889b61d8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#ac89e2cd2fd7c77227c38d68f889b61d8">__checkLinea</a></td></tr>
+<tr class="memdesc:ac89e2cd2fd7c77227c38d68f889b61d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método para comprobar que el punto inicial y final de la línea son distintos.  <a href="#ac89e2cd2fd7c77227c38d68f889b61d8">Más...</a><br/></td></tr>
+<tr class="separator:ac89e2cd2fd7c77227c38d68f889b61d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Atributos privados estáticos</h2></td></tr>
+<tr class="memitem:a681c5ccdef708644ce331b2f43b88aae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#a681c5ccdef708644ce331b2f43b88aae">__pini</a> = None</td></tr>
+<tr class="separator:a681c5ccdef708644ce331b2f43b88aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace52d4393e156f2f3ed1ae494116cb09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html#ace52d4393e156f2f3ed1ae494116cb09">__pfin</a> = None</td></tr>
+<tr class="separator:ace52d4393e156f2f3ed1ae494116cb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase destinada a almacenar la información de una línea tridimensional. </p>
+<p>Ejemplos de declaración del un objeto de la clase:<br/>
+l=Linea3D()&ndash;&gt;Constructor vacío.<br/>
+l=<a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html" title="Clase destinada a almacenar la información de una línea tridimensional. ">Linea3D</a>(Punto3D(10,10,10),Punto3D(20,20,20)) </p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="aa36a1f62b16715ef243ca8cbbc4276ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de la clase <a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html" title="Clase destinada a almacenar la información de una línea tridimensional. ">Linea3D</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args1</td><td><a class="el" href="namespaceGeometrias_1_1Punto3D.html">Punto3D</a>: Punto inicial de la linea. </td></tr>
+    <tr><td class="paramname">args2</td><td><a class="el" href="namespaceGeometrias_1_1Punto3D.html">Punto3D</a>: Punto final de la línea. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"></td><td>Se producira una excepción si se introducen más o menos argumentos de los admitidos por la clase. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="ac89e2cd2fd7c77227c38d68f889b61d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.__checkLinea </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>: Método para comprobar que el punto inicial y final de la línea son distintos. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5086194ce7d3c9a8f0178bca28e334a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.getAnguloElevacion </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Devuleve el ángulo de elevación de la línea. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>float: Ángulo de elevación. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aef0ca994b4edeb8211a9cc3bd7cd0015"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.getAX </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuelve el incremento de coordenadas en el eje X de la línea. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>float: Incremento X. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a40e24373ccf7c65d078ddeaabdc5264a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.getAY </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuelve el incremento de coordenadas en el eje Y de la línea. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>float: Incremento Y. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa327823e17339abb29ee8cea73544052"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.getAZ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuelve el incremento de coordenadas en el eje Z de la línea. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>float: Incremento Z. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa017b0bb133ea82d91aa021f6b2a4448"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.getAzimut </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Devuleve el azimut de la linea. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>float: Azimut. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a05a13cbf6b68747a7ffd5db855962635"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.getDistancia </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuelve la distancia de la línea. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>float: Distancia. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98ed4acea2b15f5a26a94318dc8bf8cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.getPuntoFinal </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuelve el Puno final de la línea. </p>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="namespaceGeometrias_1_1Punto3D.html">Punto3D</a>: Punto final. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac66959812366c3197d25c59fda24d51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.getPuntoInicial </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuelve el Puno inicial de la línea. </p>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="namespaceGeometrias_1_1Punto3D.html">Punto3D</a>: Punto inicial. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2af416f47c0387c5330085eb2a2cb4ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.setPuntoFinal </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>PuntoFinal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método para introducir o modificar el punto final de la linea. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PuntoFinal</td><td><a class="el" href="namespaceGeometrias_1_1Punto3D.html">Punto3D</a>: Punto final de la línea. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"></td><td>Se producira una excepción si no se introduce un objeto de la clase <a class="el" href="namespaceGeometrias_1_1Punto3D.html">Punto3D</a> como valor de entrada del método. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c859a196f97e0db37f30c6ccb365412"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.setPuntoInicial </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>PuntoInicial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método para introducir o modificar el punto inicial de la linea. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PuntoInicial</td><td><a class="el" href="namespaceGeometrias_1_1Punto3D.html">Punto3D</a>: Punto inicial de la línea. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"></td><td>Se producira una excepción si no se introduce un objeto de la clase <a class="el" href="namespaceGeometrias_1_1Punto3D.html">Punto3D</a> como valor de entrada del método. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ada2a60141859ce620cb2f20779f9544c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.toGeoJSON </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuleve un GeoJSON del punto. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>str: Un string en formato JSON. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae6c21ddd43a6dc672fbcd29fdc2adcbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.toJSON </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuleve toda la información del punto en formato JSON. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>str: Un string en formato JSON. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9eefaf48c60fd7070a1c6297eb242f46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.toLinea2D </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Devuelve el objeto <a class="el" href="namespaceGeometrias_1_1Linea2D.html">Linea2D</a> equivalente a la <a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html" title="Clase destinada a almacenar la información de una línea tridimensional. ">Linea3D</a> introducida. </p>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="namespaceGeometrias_1_1Linea2D.html">Linea2D</a>: <a class="el" href="namespaceGeometrias_1_1Linea2D.html">Linea2D</a> equivalente. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1fd9fbd85ac58c5389dd2a837885e559"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Geometrias.Linea3D.Linea3D.toString </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuleve toda la información del punto en formato str. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>str: Un string con toda la información de la linea. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="ace52d4393e156f2f3ed1ae494116cb09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Geometrias.Linea3D.Linea3D.__pfin = None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a681c5ccdef708644ce331b2f43b88aae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Geometrias.Linea3D.Linea3D.__pini = None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>/home/toni/Dropbox/pyGeo/Geometrias/<a class="el" href="Linea3D_8py.html">Linea3D.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGeometrias.html">Geometrias</a></li><li class="navelem"><a class="el" href="namespaceGeometrias_1_1Linea3D.html">Linea3D</a></li><li class="navelem"><a class="el" href="classGeometrias_1_1Linea3D_1_1Linea3D.html">Linea3D</a></li>
+    <li class="footer">Generado el Lunes, 23 de Marzo de 2015 10:57:10 para PyGeo por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

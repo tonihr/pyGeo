@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>PyGeo: Referencia de la Clase Ficheros.LASFile.LASFile</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PyGeo
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classFicheros_1_1LASFile_1_1LASFile.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-static-attribs">Atributos privados estáticos</a> &#124;
+<a href="classFicheros_1_1LASFile_1_1LASFile-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase Ficheros.LASFile.LASFile</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>classdocs  
+ <a href="classFicheros_1_1LASFile_1_1LASFile.html#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencias de Ficheros.LASFile.LASFile</div>
+<div class="dyncontent">
+<div class="center"><img src="classFicheros_1_1LASFile_1_1LASFile__inherit__graph.png" border="0" usemap="#Ficheros_8LASFile_8LASFile_inherit__map" alt="Inheritance graph"/></div>
+<map name="Ficheros_8LASFile_8LASFile_inherit__map" id="Ficheros_8LASFile_8LASFile_inherit__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboración para Ficheros.LASFile.LASFile:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFicheros_1_1LASFile_1_1LASFile__coll__graph.png" border="0" usemap="#Ficheros_8LASFile_8LASFile_coll__map" alt="Collaboration graph"/></div>
+<map name="Ficheros_8LASFile_8LASFile_coll__map" id="Ficheros_8LASFile_8LASFile_coll__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a49abc0e1bfa4c4343b55bb614a0cd95d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a49abc0e1bfa4c4343b55bb614a0cd95d">__init__</a></td></tr>
+<tr class="memdesc:a49abc0e1bfa4c4343b55bb614a0cd95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html" title="classdocs ">LASFile</a>.  <a href="#a49abc0e1bfa4c4343b55bb614a0cd95d">Más...</a><br/></td></tr>
+<tr class="separator:a49abc0e1bfa4c4343b55bb614a0cd95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac2de4a31767a59c88e2511545b27a7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#aaac2de4a31767a59c88e2511545b27a7">setRutaTxt</a></td></tr>
+<tr class="separator:aaac2de4a31767a59c88e2511545b27a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a31ff6a5e58caf3cb39f2621386dff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a12a31ff6a5e58caf3cb39f2621386dff">incluirIntensidad</a></td></tr>
+<tr class="separator:a12a31ff6a5e58caf3cb39f2621386dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb13dcdbd0529e8c16a1ec89f56eb39"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a3fb13dcdbd0529e8c16a1ec89f56eb39">incluirRojo</a></td></tr>
+<tr class="separator:a3fb13dcdbd0529e8c16a1ec89f56eb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f539953d9b3303672e042f12d7287f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#ab0f539953d9b3303672e042f12d7287f">incluirVerde</a></td></tr>
+<tr class="separator:ab0f539953d9b3303672e042f12d7287f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa90e779e012ed7eb6fc3cf4eaed6c1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a5fa90e779e012ed7eb6fc3cf4eaed6c1">incluirAzul</a></td></tr>
+<tr class="separator:a5fa90e779e012ed7eb6fc3cf4eaed6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f188b6eef94a10078afaf760745ef57"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a1f188b6eef94a10078afaf760745ef57">Convertir</a></td></tr>
+<tr class="separator:a1f188b6eef94a10078afaf760745ef57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:ab8eed01c62ce59fdea3f21dba9f87e61"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#ab8eed01c62ce59fdea3f21dba9f87e61">__CheckFichero</a></td></tr>
+<tr class="separator:ab8eed01c62ce59fdea3f21dba9f87e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Atributos privados estáticos</h2></td></tr>
+<tr class="memitem:a1c50abd4f31d15dc494bb60410ba6e26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a1c50abd4f31d15dc494bb60410ba6e26">__rutaLAS</a> = None</td></tr>
+<tr class="separator:a1c50abd4f31d15dc494bb60410ba6e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e4a2f6c344e62f7d3c343570c3fdab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a86e4a2f6c344e62f7d3c343570c3fdab">__rutaTXT</a> = None</td></tr>
+<tr class="separator:a86e4a2f6c344e62f7d3c343570c3fdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edeb489ebefa371dc2dd8bd29e70862"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a1edeb489ebefa371dc2dd8bd29e70862">__intensidad</a> = True</td></tr>
+<tr class="separator:a1edeb489ebefa371dc2dd8bd29e70862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3070b4852b078911cc298a0d1e1e647f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a3070b4852b078911cc298a0d1e1e647f">__rojo</a> = True</td></tr>
+<tr class="separator:a3070b4852b078911cc298a0d1e1e647f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ebfba279869321428ff391065700b75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a0ebfba279869321428ff391065700b75">__verde</a> = True</td></tr>
+<tr class="separator:a0ebfba279869321428ff391065700b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643870c1c747e4f149371072c9120342"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html#a643870c1c747e4f149371072c9120342">__azul</a> = True</td></tr>
+<tr class="separator:a643870c1c747e4f149371072c9120342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>classdocs </p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="a49abc0e1bfa4c4343b55bb614a0cd95d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Ficheros.LASFile.LASFile.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>FicheroLAS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de la clase <a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html" title="classdocs ">LASFile</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="ab8eed01c62ce59fdea3f21dba9f87e61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Ficheros.LASFile.LASFile.__CheckFichero </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>FicheroLAS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f188b6eef94a10078afaf760745ef57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Ficheros.LASFile.LASFile.Convertir </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5fa90e779e012ed7eb6fc3cf4eaed6c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Ficheros.LASFile.LASFile.incluirAzul </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>Incluir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a12a31ff6a5e58caf3cb39f2621386dff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Ficheros.LASFile.LASFile.incluirIntensidad </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>Incluir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3fb13dcdbd0529e8c16a1ec89f56eb39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Ficheros.LASFile.LASFile.incluirRojo </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>Incluir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0f539953d9b3303672e042f12d7287f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Ficheros.LASFile.LASFile.incluirVerde </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>Incluir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaac2de4a31767a59c88e2511545b27a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Ficheros.LASFile.LASFile.setRutaTxt </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rutaTXT</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="a643870c1c747e4f149371072c9120342"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ficheros.LASFile.LASFile.__azul = True</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1edeb489ebefa371dc2dd8bd29e70862"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ficheros.LASFile.LASFile.__intensidad = True</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3070b4852b078911cc298a0d1e1e647f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ficheros.LASFile.LASFile.__rojo = True</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1c50abd4f31d15dc494bb60410ba6e26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ficheros.LASFile.LASFile.__rutaLAS = None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a86e4a2f6c344e62f7d3c343570c3fdab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ficheros.LASFile.LASFile.__rutaTXT = None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0ebfba279869321428ff391065700b75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ficheros.LASFile.LASFile.__verde = True</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>/home/toni/Dropbox/pyGeo/Ficheros/<a class="el" href="LASFile_8py.html">LASFile.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceFicheros.html">Ficheros</a></li><li class="navelem"><a class="el" href="namespaceFicheros_1_1LASFile.html">LASFile</a></li><li class="navelem"><a class="el" href="classFicheros_1_1LASFile_1_1LASFile.html">LASFile</a></li>
+    <li class="footer">Generado el Lunes, 23 de Marzo de 2015 10:57:10 para PyGeo por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

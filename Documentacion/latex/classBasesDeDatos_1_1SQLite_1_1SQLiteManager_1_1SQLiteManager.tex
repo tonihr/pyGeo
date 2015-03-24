@@ -1,0 +1,341 @@
+\section{Referencia de la Clase Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager}
+\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager}\index{Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager}}
+
+
+Establece una conexión a una base de datos \doxyref{S\-Q\-Lite}{p.}{namespaceBasesDeDatos_1_1SQLite}.  
+
+
+
+
+Diagrama de herencias de Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager
+
+
+Diagrama de colaboración para Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor de la clase Conexion. \end{DoxyCompactList}\item 
+def {\bf \-\_\-\-\_\-del\-\_\-\-\_\-}
+\item 
+def {\bf set\-Path\-D\-B}
+\begin{DoxyCompactList}\small\item\em \-: Método que establece el path de la base de datos. \end{DoxyCompactList}\item 
+def {\bf Crear\-Tabla}
+\begin{DoxyCompactList}\small\item\em \-: Método para crear una tabla en la base de datos, a la que se ha establecido la conexión. \end{DoxyCompactList}\item 
+def {\bf Consulta}
+\begin{DoxyCompactList}\small\item\em \-: Método que ejecuta una consulta S\-Q\-L sobre la base de datos. \end{DoxyCompactList}\item 
+def {\bf Add\-Row}
+\begin{DoxyCompactList}\small\item\em \-: Método que añade una nueva fila (registro) a una tabla de la base de datos. \end{DoxyCompactList}\item 
+def {\bf Add\-Column}
+\begin{DoxyCompactList}\small\item\em \-: Método que añade una nueva columna (campo) a la base de datos. \end{DoxyCompactList}\item 
+def {\bf Modify\-Value}
+\begin{DoxyCompactList}\small\item\em \-: Método que modifica un valor de un registro de la base de datos. \end{DoxyCompactList}\item 
+def {\bf Obtener\-Todo}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve toda la información de una tabla de la base de datos. \end{DoxyCompactList}\item 
+def {\bf Obtener\-Columna}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve todos los valores de una columna (campo). \end{DoxyCompactList}\item 
+def {\bf Borrar\-D\-B}
+\begin{DoxyCompactList}\small\item\em \-: Método que borra la base de datos a la que se está conectado. \end{DoxyCompactList}\item 
+def {\bf Borrar\-Tabla}
+\begin{DoxyCompactList}\small\item\em \-: Método que borra una tabla de la base de datos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-\-Conectar}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-pathdb} = None
+\item 
+{\bf \-\_\-\-\_\-con} = None
+\item 
+{\bf \-\_\-\-\_\-cursor} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Establece una conexión a una base de datos \doxyref{S\-Q\-Lite}{p.}{namespaceBasesDeDatos_1_1SQLite}. 
+
+\subsection{Documentación del constructor y destructor}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_a7e66df94830a778817e10c2066ba6b43}
+
+
+Constructor de la clase Conexion. 
+
+{\bfseries init}(path) 
+\begin{DoxyParams}{Parámetros}
+{\em path} & str\-: Ruta a la base de datos a la que se quiere conectar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+path\-: Si la ruta a la base de datos o la base de datos no existe, esta se creara automáticamente. 
+\end{DoxyNote}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!\-\_\-\-\_\-del\-\_\-\-\_\-@{\-\_\-\-\_\-del\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-del\-\_\-\-\_\-@{\-\_\-\-\_\-del\-\_\-\-\_\-}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{\-\_\-\-\_\-del\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-\_\-\-\_\-del\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_ad8e62349a23803d539ac5710d16ec079}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!\-\_\-\-\_\-\-Conectar@{\-\_\-\-\_\-\-Conectar}}
+\index{\-\_\-\-\_\-\-Conectar@{\-\_\-\-\_\-\-Conectar}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{\-\_\-\-\_\-\-Conectar}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-\_\-\-\_\-\-Conectar (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_ae61810bf6500d4141746fe6a8d819aac}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Add\-Column@{Add\-Column}}
+\index{Add\-Column@{Add\-Column}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Add\-Column}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Add\-Column (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_ab2a3e5c429fcdbf4c0a5719ef0f36bf9}
+
+
+\-: Método que añade una nueva columna (campo) a la base de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\-\_\-tabla} & str\-: Nombre tabla a la que se quiere añadir la columna (campo). \\
+\hline
+{\em nombre\-\_\-columna} & Nombre de columna (campo) a añadir. \\
+\hline
+{\em tipo\-\_\-dato} & Tipo de datos de la columna.\\
+\hline
+\end{DoxyParams}
+Ejemplo\-:\par
+Add\-Colum('Tabla','Potencia','real') \index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Add\-Row@{Add\-Row}}
+\index{Add\-Row@{Add\-Row}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Add\-Row}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Add\-Row (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_a0d2f8373b604c35f48b209ac104a669e}
+
+
+\-: Método que añade una nueva fila (registro) a una tabla de la base de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\-\_\-tabla} & str\-: Nombre de la tabla a la que se quiere añadir la fila (registro). \\
+\hline
+{\em valores} & [str]\-: Valores que se quieren insertar en la nueva fila (registro).\\
+\hline
+\end{DoxyParams}
+Ejemplo\-:\par
+Add\-Row('Tabla',['Bombilla','110','null']) \index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Borrar\-D\-B@{Borrar\-D\-B}}
+\index{Borrar\-D\-B@{Borrar\-D\-B}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Borrar\-D\-B}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Borrar\-D\-B (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_a66e08bceb65cdc2a697146842ea5d203}
+
+
+\-: Método que borra la base de datos a la que se está conectado. 
+
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Borrar\-Tabla@{Borrar\-Tabla}}
+\index{Borrar\-Tabla@{Borrar\-Tabla}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Borrar\-Tabla}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Borrar\-Tabla (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tabla}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_add82880bef2b7910e6c14334f03cd3a7}
+
+
+\-: Método que borra una tabla de la base de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em tabla} & str\-: Nombre de la tabla a borrar. \\
+\hline
+\end{DoxyParams}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Consulta@{Consulta}}
+\index{Consulta@{Consulta}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Consulta}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Consulta (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{consulta}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_abb4252c3b1a163c227c02ae15e26e8db}
+
+
+\-: Método que ejecuta una consulta S\-Q\-L sobre la base de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em consulta} & str\-: Consulta a realizar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\-: Resultado de la consulta. 
+\end{DoxyReturn}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Crear\-Tabla@{Crear\-Tabla}}
+\index{Crear\-Tabla@{Crear\-Tabla}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Crear\-Tabla}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Crear\-Tabla (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_adf3dbff479048449dd17ac59c66f6b5e}
+
+
+\-: Método para crear una tabla en la base de datos, a la que se ha establecido la conexión. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\-\_\-tb} & str \-: Nombre de la talba a crear. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+nombre\-\_\-tb\-: ejemplo\-: Tabla
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\-\_\-campos} & [str]\-: Nombre de los campos que se van a crear en la tabla. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+nombre\-\_\-campos\-: ejemplo\-: [campo\-\_\-1,campo\-\_\-2,campo\-\_\-3,...,campo\-\_\-n]
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parámetros}
+{\em tipo\-\_\-campos} & [str]\-: Tipo de formato de los campos que se crearan en la tabla. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+tipo\-\_\-campos\-: ejemplo\-: [real,integer,text,...,blob] 
+
+tipo\-\_\-campos\-: Tiene que haber tantos tipos como capos creados en la tabla.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parámetros}
+{\em restricciones} & [str]\-: Restricciones de los campos creados en la tabla. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+restricciones\-: ejemplo\-: [not null,,primery key,..,] 
+
+restricciones\-: Tiene que haber tantas restricciones como campos creados en la tabla. 
+
+restricciones\-: si un campo no tiene restricción introducir un str vacío.
+\end{DoxyNote}
+Ejemplo\-:\par
+Crear\-Tabla(nombre\-\_\-tb,nombre\-\_\-campos,tipo\-\_\-campos,restricciones)\par
+Crear\-Tabla('Tabla',['campo1','campo2'],['text','real'],['primary key','']) \index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Modify\-Value@{Modify\-Value}}
+\index{Modify\-Value@{Modify\-Value}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Modify\-Value}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Modify\-Value (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_a052a6eb64965f650b16f1dab6aadfdbf}
+
+
+\-: Método que modifica un valor de un registro de la base de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\-\_\-tabla} & str\-: Nombre tabla. \\
+\hline
+{\em nombre\-\_\-columna} & str\-: Nombre columna. \\
+\hline
+{\em numero\-\_\-registro} & str\-: id del elemento. \\
+\hline
+{\em nuevo\-\_\-valor} & str\-: Nuevo valor Ejemplo\-:\par
+Modify\-Value('Tabla','Columna','25','Coche') \\
+\hline
+\end{DoxyParams}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Obtener\-Columna@{Obtener\-Columna}}
+\index{Obtener\-Columna@{Obtener\-Columna}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Obtener\-Columna}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Obtener\-Columna (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tabla, }
+\item[{}]{columna}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_a3b04d1c15a961f7b0dd8bbaadcb4f6f4}
+
+
+\-: Método que devuleve todos los valores de una columna (campo). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em tabla} & str\-: Nombre de la tabla de la que se quere obtener la columna. \\
+\hline
+{\em columna} & str\-: Nombre de la columna a obtener. Ejemplo\-:\par
+Obtener\-Columna('Tabla','Columna') \\
+\hline
+\end{DoxyParams}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!Obtener\-Todo@{Obtener\-Todo}}
+\index{Obtener\-Todo@{Obtener\-Todo}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{Obtener\-Todo}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-Obtener\-Todo (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tabla}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_a9230c9a74c56e67aba57fac1f1fc24bd}
+
+
+\-: Método que devuelve toda la información de una tabla de la base de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em tabla} & str\-: Nombre de la tabla de la que se quiere obtener la información. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\-: Todos los registros de la tabla. 
+\end{DoxyReturn}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!set\-Path\-D\-B@{set\-Path\-D\-B}}
+\index{set\-Path\-D\-B@{set\-Path\-D\-B}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{set\-Path\-D\-B}]{\setlength{\rightskip}{0pt plus 5cm}def Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-set\-Path\-D\-B (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{path}
+\end{DoxyParamCaption}
+)}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_abeace1f6c4a986167994754583b5bfa1}
+
+
+\-: Método que establece el path de la base de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & str\-: Ruta a la base de datos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+\-: Si no existe el path a la base de datos se creara automaticamente. 
+\end{DoxyNote}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!\-\_\-\-\_\-con@{\-\_\-\-\_\-con}}
+\index{\-\_\-\-\_\-con@{\-\_\-\-\_\-con}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{\-\_\-\-\_\-con}]{\setlength{\rightskip}{0pt plus 5cm}Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-\_\-\-\_\-con = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_a368c3641f401a8259005e0cc8b9ae7a2}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!\-\_\-\-\_\-cursor@{\-\_\-\-\_\-cursor}}
+\index{\-\_\-\-\_\-cursor@{\-\_\-\-\_\-cursor}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{\-\_\-\-\_\-cursor}]{\setlength{\rightskip}{0pt plus 5cm}Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-\_\-\-\_\-cursor = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_a6ae78a42f06070ca68128a46b2a88c83}
+\index{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}!\-\_\-\-\_\-pathdb@{\-\_\-\-\_\-pathdb}}
+\index{\-\_\-\-\_\-pathdb@{\-\_\-\-\_\-pathdb}!BasesDeDatos::SQLite::SQLiteManager::SQLiteManager@{Bases\-De\-Datos\-::\-S\-Q\-Lite\-::\-S\-Q\-Lite\-Manager\-::\-S\-Q\-Lite\-Manager}}
+\subsubsection[{\-\_\-\-\_\-pathdb}]{\setlength{\rightskip}{0pt plus 5cm}Bases\-De\-Datos.\-S\-Q\-Lite.\-S\-Q\-Lite\-Manager.\-S\-Q\-Lite\-Manager.\-\_\-\-\_\-pathdb = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager_aa8f378bf2d458a6ef49ad3aeb16476b9}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Bases\-De\-Datos/\-S\-Q\-Lite/{\bf S\-Q\-Lite\-Manager.\-py}\end{DoxyCompactItemize}

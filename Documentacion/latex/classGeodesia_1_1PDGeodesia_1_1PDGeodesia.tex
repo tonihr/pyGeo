@@ -1,0 +1,163 @@
+\section{Referencia de la Clase Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia}
+\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia}\index{Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia@{Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia}}
+
+
+Diagrama de herencias de Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia
+
+
+Diagrama de colaboración para Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\item 
+def {\bf set\-Punto\-Geodesico}
+\begin{DoxyCompactList}\small\item\em \-: Método que establece y asigna el Punto geodesico. \end{DoxyCompactList}\item 
+def {\bf set\-Distancia}
+\begin{DoxyCompactList}\small\item\em \-: Método que establece y comprueba la distancia. \end{DoxyCompactList}\item 
+def {\bf set\-Azimut}
+\begin{DoxyCompactList}\small\item\em \-: Método que establece y asigna el azimut\-: \end{DoxyCompactList}\item 
+def {\bf Calcular\-Legendre}
+\begin{DoxyCompactList}\small\item\em \-: Método que cálcula el punto geodesico final. \end{DoxyCompactList}\item 
+def {\bf Rk4o}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-pgeo} = None
+\item 
+{\bf \-\_\-\-\_\-d} = None
+\item 
+{\bf \-\_\-\-\_\-az} = None
+\item 
+{\bf \-\_\-\-\_\-lat} = None
+\item 
+{\bf \-\_\-\-\_\-lon} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}classdocs
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación del constructor y destructor}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Punto\-Geodesico, }
+\item[{}]{Distancia, }
+\item[{}]{Azimut}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_aa58226ba404b8dce232f5dd4dae91248}
+\begin{DoxyVerb}Constructor de la clase PDGeodesia.
+
+@param PuntoGeodesico PuntoGeodesico: Punto Geodésico inicial.
+@param Distancia float|int|str: Distancia observada al siguiente punto.
+@param Azimut float|int|str: Azimut de la línea observada.
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones miembro}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!Calcular\-Legendre@{Calcular\-Legendre}}
+\index{Calcular\-Legendre@{Calcular\-Legendre}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{Calcular\-Legendre}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-Calcular\-Legendre (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Nombre\-Elipsoide}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_af589028341ffeaa93511122c746e1910}
+
+
+\-: Método que cálcula el punto geodesico final. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Nombre\-Elipsoide} & str\-: Elipsoide de calculo. \\
+\hline
+\end{DoxyParams}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!Rk4o@{Rk4o}}
+\index{Rk4o@{Rk4o}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{Rk4o}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-Rk4o (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Nombre\-Elipsoide, }
+\item[{}]{pasos = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_a6f3c393cad1955933dfb32403dd583ce}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!set\-Azimut@{set\-Azimut}}
+\index{set\-Azimut@{set\-Azimut}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{set\-Azimut}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-set\-Azimut (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Azimut}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_af0378c858d50b65d8990a98b8f4a5165}
+
+
+\-: Método que establece y asigna el azimut\-: 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Azimut} & float$\vert$int$\vert$str\-: Azimut de la línea entre el punto inicila y final en grados pseudoxesagesimales. \\
+\hline
+\end{DoxyParams}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!set\-Distancia@{set\-Distancia}}
+\index{set\-Distancia@{set\-Distancia}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{set\-Distancia}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-set\-Distancia (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Distancia}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_a6de006dbf59408fb1a296aae5ccef172}
+
+
+\-: Método que establece y comprueba la distancia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Distancia} & float$\vert$int$\vert$str\-: Distancia del punto incial al final. \\
+\hline
+\end{DoxyParams}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!set\-Punto\-Geodesico@{set\-Punto\-Geodesico}}
+\index{set\-Punto\-Geodesico@{set\-Punto\-Geodesico}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{set\-Punto\-Geodesico}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-set\-Punto\-Geodesico (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Punto\-Geodesico}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_a95ba59945ec279b06e689fe4d66b2ebd}
+
+
+\-: Método que establece y asigna el Punto geodesico. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Punto\-Geodesico} & Punto\-Geodesico\-: Punto\-Geodesico inicial. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!\-\_\-\-\_\-az@{\-\_\-\-\_\-az}}
+\index{\-\_\-\-\_\-az@{\-\_\-\-\_\-az}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-az}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-\_\-\-\_\-az = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_a46e0f625947d83dcea35b7f9d7cf7cd1}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!\-\_\-\-\_\-d@{\-\_\-\-\_\-d}}
+\index{\-\_\-\-\_\-d@{\-\_\-\-\_\-d}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-d}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-\_\-\-\_\-d = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_a06a8f07ba86968c4c72597174eff3642}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!\-\_\-\-\_\-lat@{\-\_\-\-\_\-lat}}
+\index{\-\_\-\-\_\-lat@{\-\_\-\-\_\-lat}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-lat}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-\_\-\-\_\-lat = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_abc289a6c9b69548c7a6fcd5deda905de}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!\-\_\-\-\_\-lon@{\-\_\-\-\_\-lon}}
+\index{\-\_\-\-\_\-lon@{\-\_\-\-\_\-lon}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-lon}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-\_\-\-\_\-lon = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_a33abd852e74a9b5be54328694db2d08e}
+\index{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}!\-\_\-\-\_\-pgeo@{\-\_\-\-\_\-pgeo}}
+\index{\-\_\-\-\_\-pgeo@{\-\_\-\-\_\-pgeo}!Geodesia::PDGeodesia::PDGeodesia@{Geodesia\-::\-P\-D\-Geodesia\-::\-P\-D\-Geodesia}}
+\subsubsection[{\-\_\-\-\_\-pgeo}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-P\-D\-Geodesia.\-P\-D\-Geodesia.\-\_\-\-\_\-pgeo = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1PDGeodesia_1_1PDGeodesia_ac609d54975dde73655b1977a0b095d29}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Geodesia/{\bf P\-D\-Geodesia.\-py}\end{DoxyCompactItemize}

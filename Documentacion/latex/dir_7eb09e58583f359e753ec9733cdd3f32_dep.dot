@@ -1,0 +1,10 @@
+digraph "/home/toni/Dropbox" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7eb09e58583f359e753ec9733cdd3f32 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7eb09e58583f359e753ec9733cdd3f32.html"];
+    dir_7eb09e58583f359e753ec9733cdd3f32 [shape=plaintext label="Dropbox"];
+    dir_0734785625f6d91adae6835e38aa8da5 [shape=box label="pyGeo" color="red" fillcolor="white" style="filled" URL="dir_0734785625f6d91adae6835e38aa8da5.html"];
+  }
+}

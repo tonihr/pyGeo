@@ -1,0 +1,451 @@
+\section{Referencia de la Clase Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M}
+\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM}\index{Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M@{Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M}}
+
+
+Diagrama de herencias de Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M
+
+
+Diagrama de colaboración para Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxyref{Punto\-U\-T\-M}{p.}{classGeometrias_1_1PuntoUTM_1_1PuntoUTM}. \end{DoxyCompactList}\item 
+def {\bf set\-X}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir y comprobar el valor de la Coordenada X U\-T\-M introducida. \end{DoxyCompactList}\item 
+def {\bf set\-Y}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir y comprobar el valor de la Coordenada Y U\-T\-M introducida. \end{DoxyCompactList}\item 
+def {\bf set\-Hemisferio\-Y}
+\begin{DoxyCompactList}\small\item\em Método para introducir y comprobar el valor del Hemisferio donde está situada la coordenada Y. \end{DoxyCompactList}\item 
+def {\bf set\-Altura\-Elipsoidal}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir y comprobar la Altura Elipsoidal. \end{DoxyCompactList}\item 
+def {\bf set\-Huso}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir el Huso geografico de la coordenada U\-T\-M. \end{DoxyCompactList}\item 
+def {\bf set\-Convergencia\-Meridianos}
+\begin{DoxyCompactList}\small\item\em \-: Método para asignar la convergencia de meridianos del punto. \end{DoxyCompactList}\item 
+def {\bf set\-Escala\-Local\-Punto}
+\begin{DoxyCompactList}\small\item\em \-: Método para asignar la escala local del punto. \end{DoxyCompactList}\item 
+def {\bf get\-X}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la coordenada X U\-T\-M. \end{DoxyCompactList}\item 
+def {\bf get\-Y}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la coordenada Y U\-T\-M. \end{DoxyCompactList}\item 
+def {\bf get\-Hemisferio\-Y}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la posición del Hemisferio de la coordenada Y. \end{DoxyCompactList}\item 
+def {\bf get\-Altura\-Elipsoidal}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la altura elipsoidal. \end{DoxyCompactList}\item 
+def {\bf get\-Huso}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor del Huso geográfico de las coordenadas. \end{DoxyCompactList}\item 
+def {\bf get\-Convergencia\-Meridianos}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la convergencia de meridianos. \end{DoxyCompactList}\item 
+def {\bf get\-Escala\-Local\-Punto}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el valor de la escala local del punto. \end{DoxyCompactList}\item 
+def {\bf get\-Zona\-U\-T\-M}
+\begin{DoxyCompactList}\small\item\em \-: Método que cálcula la zona U\-T\-M a la que pertenece el Punto. \end{DoxyCompactList}\item 
+def {\bf to\-String}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato str. \end{DoxyCompactList}\item 
+def {\bf to\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. \end{DoxyCompactList}\item 
+def {\bf to\-Geo\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve un Geo\-J\-S\-O\-N del punto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-h}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-\-X} = None
+\item 
+{\bf \-\_\-\-\_\-\-Y} = None
+\item 
+{\bf \-\_\-\-\_\-\-Hemis} = None
+\item 
+{\bf \-\_\-\-\_\-\-H} = None
+\item 
+int {\bf \-\_\-\-\_\-h\-\_\-elip} = 0
+\item 
+{\bf \-\_\-\-\_\-conmed} = None
+\item 
+{\bf \-\_\-\-\_\-kpunto} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}Clase destinada a lamacenar la información espacial de un punto en proyección UTM
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación del constructor y destructor}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args, }
+\item[{}]{kwargs}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a5bdabfa89433cdb679d9fa885aba33a6}
+
+
+Constructor de la clase \doxyref{Punto\-U\-T\-M}{p.}{classGeometrias_1_1PuntoUTM_1_1PuntoUTM}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em args1} & X float$\vert$int$\vert$str\-: Valor de la coordenada X U\-T\-M. \\
+\hline
+{\em args2} & Y float$\vert$int$\vert$str\-: Valor de la coordenada Y U\-T\-M. \\
+\hline
+{\em kwargs} & huso int\-: Huso geográfico de las coordenadas del punto U\-T\-M. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+kwargs huso\-: Valor por defecto 30. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parámetros}
+{\em kwargs} & hemisferio\-Y str\-: Posición geográfica de la coordenada Y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+kwargs hemisferio\-Y\-: Valor por defecto N. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parámetros}
+{\em kwargs} & helip float$\vert$int$\vert$str\-: Valor de la altura elipsoidal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+kwargs helip\-: Valor por defecto 0. 
+\end{DoxyNote}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!get\-Altura\-Elipsoidal@{get\-Altura\-Elipsoidal}}
+\index{get\-Altura\-Elipsoidal@{get\-Altura\-Elipsoidal}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{get\-Altura\-Elipsoidal}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-get\-Altura\-Elipsoidal (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a8e96b8e2363e4d5a1f27731fcdbe173d}
+
+
+\-: Método que devuelve el valor de la altura elipsoidal. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Altura elipsoidal. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!get\-Convergencia\-Meridianos@{get\-Convergencia\-Meridianos}}
+\index{get\-Convergencia\-Meridianos@{get\-Convergencia\-Meridianos}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{get\-Convergencia\-Meridianos}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-get\-Convergencia\-Meridianos (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_ae365689e17fc809c1888685f19df9cbc}
+
+
+\-: Método que devuelve el valor de la convergencia de meridianos. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: convergencia de meridianos. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!get\-Escala\-Local\-Punto@{get\-Escala\-Local\-Punto}}
+\index{get\-Escala\-Local\-Punto@{get\-Escala\-Local\-Punto}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{get\-Escala\-Local\-Punto}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-get\-Escala\-Local\-Punto (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_addf080d2f33e29189ff0ae5fa6337888}
+
+
+\-: Método que devuelve el valor de la escala local del punto. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Escala local del punto. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!get\-Hemisferio\-Y@{get\-Hemisferio\-Y}}
+\index{get\-Hemisferio\-Y@{get\-Hemisferio\-Y}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{get\-Hemisferio\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-get\-Hemisferio\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a9ff5a56041e2e584bd0a7aeceac1bc1e}
+
+
+\-: Método que devuelve el valor de la posición del Hemisferio de la coordenada Y. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Hemisferio de la coordenada Y. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!get\-Huso@{get\-Huso}}
+\index{get\-Huso@{get\-Huso}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{get\-Huso}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-get\-Huso (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a7d6eaedcfa6f1a1d1d84d2e3f034f2e2}
+
+
+\-: Método que devuelve el valor del Huso geográfico de las coordenadas. 
+
+\begin{DoxyReturn}{Devuelve}
+int\-: Huso geográfico. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-get\-X (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a46b1f0214d9ad2fe5cc40ab621a937b0}
+
+
+\-: Método que devuelve el valor de la coordenada X U\-T\-M. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Valor de la coordenada X U\-T\-M. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-get\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a64dbbb7eb64fcbffcfe0b5bdbd81df01}
+
+
+\-: Método que devuelve el valor de la coordenada Y U\-T\-M. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Valor de la coordenada Y U\-T\-M. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!get\-Zona\-U\-T\-M@{get\-Zona\-U\-T\-M}}
+\index{get\-Zona\-U\-T\-M@{get\-Zona\-U\-T\-M}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{get\-Zona\-U\-T\-M}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-get\-Zona\-U\-T\-M (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a7cfe4215a2b90af0f045cb49ab2f6a9a}
+
+
+\-: Método que cálcula la zona U\-T\-M a la que pertenece el Punto. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Letra a correspondiente a la zona U\-T\-M del punto. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!set\-Altura\-Elipsoidal@{set\-Altura\-Elipsoidal}}
+\index{set\-Altura\-Elipsoidal@{set\-Altura\-Elipsoidal}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{set\-Altura\-Elipsoidal}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-set\-Altura\-Elipsoidal (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Altura\-Elipsoidal}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a6328bbe5e258d62a626e8cd7b8e4adc4}
+
+
+\-: Método para introducir y comprobar la Altura Elipsoidal. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Altura\-Elipsoidal} & float$\vert$int$\vert$str\-: Valor de la altura elipsoidal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+Altura\-Elipsoidal\-: El rango de definición de la longitud es de altura elipsoidal$>$=0. 
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em @exception} & \\
+\hline
+\end{DoxyExceptions}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!set\-Convergencia\-Meridianos@{set\-Convergencia\-Meridianos}}
+\index{set\-Convergencia\-Meridianos@{set\-Convergencia\-Meridianos}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{set\-Convergencia\-Meridianos}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-set\-Convergencia\-Meridianos (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Convergencia\-Meridianos}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a4ee9bf3571bb6006d45f3bf75f7d2cb5}
+
+
+\-: Método para asignar la convergencia de meridianos del punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Convergencia\-Meridianos} & float$\vert$int$\vert$str\-: Valor de la Convergencia de meridianos. \\
+\hline
+\end{DoxyParams}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!set\-Escala\-Local\-Punto@{set\-Escala\-Local\-Punto}}
+\index{set\-Escala\-Local\-Punto@{set\-Escala\-Local\-Punto}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{set\-Escala\-Local\-Punto}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-set\-Escala\-Local\-Punto (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Escala\-Local\-Punto}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_aa07de40c89eccca7615e70665285ca24}
+
+
+\-: Método para asignar la escala local del punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Escala\-Local\-Punto} & float$\vert$int$\vert$str\-: Valor de la escala local. \\
+\hline
+\end{DoxyParams}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!set\-Hemisferio\-Y@{set\-Hemisferio\-Y}}
+\index{set\-Hemisferio\-Y@{set\-Hemisferio\-Y}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{set\-Hemisferio\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-set\-Hemisferio\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Hemisferio\-Y}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_ae46b53c3f1e06c77f790c67c8b7f4768}
+
+
+Método para introducir y comprobar el valor del Hemisferio donde está situada la coordenada Y. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Hemisferio\-Y} & str\-: Situación del hemisferio de la coordenada Y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+Hemisferio\-Y\-: Los posibles valores para Hemisferio\-Y son N o S. 
+
+Hemisferio\-Y\-: Vaor por defecto N. 
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se pruducira una excepción si el valor introducido no es de tipo str. \\
+\hline
+{\em } & Se pruducira una excepción si el valor no es N o S. \\
+\hline
+\end{DoxyExceptions}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!set\-Huso@{set\-Huso}}
+\index{set\-Huso@{set\-Huso}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{set\-Huso}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-set\-Huso (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Huso}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a570d444c92865a7229c63b149663bfcc}
+
+
+\-: Método para introducir el Huso geografico de la coordenada U\-T\-M. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Huso} & int$\vert$str\-: Huso geográfico de la coordenada U\-T\-M. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+Huso\-: El Huso debe de estar comprendido entre los valores 0-\/60. 
+\end{DoxyNote}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!set\-X@{set\-X}}
+\index{set\-X@{set\-X}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{set\-X}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-set\-X (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{X}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a491e6c1b30c9895276e1a2f571100182}
+
+
+\-: Método para introducir y comprobar el valor de la Coordenada X U\-T\-M introducida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em X} & float\-: Valor de la coordenada X U\-T\-M en metros.   \\
+\hline
+\end{DoxyParams}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!set\-Y@{set\-Y}}
+\index{set\-Y@{set\-Y}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{set\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-set\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Y}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a701ed4855deb3f66777c1e029e0b32b8}
+
+
+\-: Método para introducir y comprobar el valor de la Coordenada Y U\-T\-M introducida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Y} & float\-: Valor de la coordenada Y U\-T\-M en metros.   \\
+\hline
+\end{DoxyParams}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!to\-Geo\-J\-S\-O\-N@{to\-Geo\-J\-S\-O\-N}}
+\index{to\-Geo\-J\-S\-O\-N@{to\-Geo\-J\-S\-O\-N}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{to\-Geo\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-to\-Geo\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_aa09811781beb956472c4d1234679cfac}
+
+
+\-: Método que devuleve un Geo\-J\-S\-O\-N del punto. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!to\-J\-S\-O\-N@{to\-J\-S\-O\-N}}
+\index{to\-J\-S\-O\-N@{to\-J\-S\-O\-N}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{to\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-to\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a7e5afa00e2ac9970bcf54c369a0773a9}
+
+
+\-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-to\-String (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a5f82a06cb3db887ec3536c3829a2fe4b}
+
+
+\-: Método que devuleve toda la información del punto en formato str. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string con toda la información del punto. 
+\end{DoxyReturn}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-conmed@{\-\_\-\-\_\-conmed}}
+\index{\-\_\-\-\_\-conmed@{\-\_\-\-\_\-conmed}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-conmed}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-conmed = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_ab451b54f421e818b8ca38a4cc9ff99f0}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-\-H@{\-\_\-\-\_\-\-H}}
+\index{\-\_\-\-\_\-\-H@{\-\_\-\-\_\-\-H}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-\-H = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_ad0fb16355cd77a819a1fb8a69f24f015}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-h@{\-\_\-\-\_\-h}}
+\index{\-\_\-\-\_\-h@{\-\_\-\-\_\-h}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-h\hspace{0.3cm}{\ttfamily [private]}}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_afab88520e0e8f97389e03dd92405a3a8}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-h\-\_\-elip@{\-\_\-\-\_\-h\-\_\-elip}}
+\index{\-\_\-\-\_\-h\-\_\-elip@{\-\_\-\-\_\-h\-\_\-elip}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-h\-\_\-elip}]{\setlength{\rightskip}{0pt plus 5cm}int Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-h\-\_\-elip = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_ad12a64d20fd9f369e227c716510b0e5f}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-\-Hemis@{\-\_\-\-\_\-\-Hemis}}
+\index{\-\_\-\-\_\-\-Hemis@{\-\_\-\-\_\-\-Hemis}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-\-Hemis}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-\-Hemis = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a3a27ebbd1d994fe7617b2773b68cd81b}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-kpunto@{\-\_\-\-\_\-kpunto}}
+\index{\-\_\-\-\_\-kpunto@{\-\_\-\-\_\-kpunto}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-kpunto}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-kpunto = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_aa94e65fabcf3f39977c6f0ff9bb4b8ad}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-\-X@{\-\_\-\-\_\-\-X}}
+\index{\-\_\-\-\_\-\-X@{\-\_\-\-\_\-\-X}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-\-X = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_a4d1afbb8d785bc409b3f753226d89a5d}
+\index{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}!\-\_\-\-\_\-\-Y@{\-\_\-\-\_\-\-Y}}
+\index{\-\_\-\-\_\-\-Y@{\-\_\-\-\_\-\-Y}!Geometrias::PuntoUTM::PuntoUTM@{Geometrias\-::\-Punto\-U\-T\-M\-::\-Punto\-U\-T\-M}}
+\subsubsection[{\-\_\-\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Punto\-U\-T\-M.\-Punto\-U\-T\-M.\-\_\-\-\_\-\-Y = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1PuntoUTM_1_1PuntoUTM_ab8b29cc3907cafe8c904f74c08757446}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Geometrias/{\bf Punto\-U\-T\-M.\-py}\end{DoxyCompactItemize}

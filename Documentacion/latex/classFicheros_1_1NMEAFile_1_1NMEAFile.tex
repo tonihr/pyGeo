@@ -1,0 +1,306 @@
+\section{Referencia de la Clase Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File}
+\label{classFicheros_1_1NMEAFile_1_1NMEAFile}\index{Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File@{Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File}}
+
+
+classdocs  
+
+
+
+
+Diagrama de herencias de Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File
+
+
+Diagrama de colaboración para Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor de la clase N\-M\-E\-A. \end{DoxyCompactList}\item 
+def {\bf get\-Horas}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve las horas de las épocas de observación. \end{DoxyCompactList}\item 
+def {\bf get\-Doys}
+\begin{DoxyCompactList}\small\item\em \-: Método que transformala fecha dia/mes/año a doy\-: day of year. \end{DoxyCompactList}\item 
+def {\bf get\-Fechas}
+\begin{DoxyCompactList}\small\item\em \-: Método que transformala fecha dia/mes/año a doy\-: day of year. \end{DoxyCompactList}\item 
+def {\bf get\-Segundos\-G\-P\-S}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve la hora de cada observacion en segundos de la semana G\-P\-S. \end{DoxyCompactList}\item 
+def {\bf get\-Latitud}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve la latitud de cada observación,en formato pseudosexagesimal. \end{DoxyCompactList}\item 
+def {\bf get\-Longitud}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve la latitud de cada observación,en formato pseudosexagesimal. \end{DoxyCompactList}\item 
+def {\bf get\-Altitud}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve la altitud de cada observación. \end{DoxyCompactList}\item 
+def {\bf get\-H\-D\-O\-P}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el H\-D\-O\-P de cada observación. \end{DoxyCompactList}\item 
+def {\bf get\-Numero\-Satelites}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el H\-D\-O\-P de cada observación. \end{DoxyCompactList}\item 
+def {\bf get\-Mensaje\-G\-G\-A}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el mensaje G\-G\-A completo. \end{DoxyCompactList}\item 
+def {\bf get\-Mensaje\-R\-M\-C}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el mensaje R\-M\-C completo. \end{DoxyCompactList}\item 
+def {\bf get\-Out\-List\-Values}
+\begin{DoxyCompactList}\small\item\em \-: Devuelve los parámetros de cálculo mas importantes en una úncia lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-check\-File\-Path}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-gga}
+\item 
+{\bf \-\_\-\-\_\-rmc}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-filepath} = None
+\item 
+{\bf \-\_\-\-\_\-path} = None
+\item 
+{\bf \-\_\-\-\_\-file} = None
+\item 
+list {\bf \-\_\-\-\_\-gga} = [$\,$]
+\item 
+list {\bf \-\_\-\-\_\-rmc} = [$\,$]
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+classdocs 
+
+\subsection{Documentación del constructor y destructor}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{File\-Path}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a961418f64171f5c3d9b0db86eb750e9e}
+
+
+Constructor de la clase N\-M\-E\-A. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em File\-Path} & str\-: Ruta del fichero N\-M\-E\-A. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-check\-File\-Path@{\-\_\-\-\_\-check\-File\-Path}}
+\index{\-\_\-\-\_\-check\-File\-Path@{\-\_\-\-\_\-check\-File\-Path}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-check\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-check\-File\-Path (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filepath}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_ab55f2e7131eb57dda36ea1d05d6f1fed}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Altitud@{get\-Altitud}}
+\index{get\-Altitud@{get\-Altitud}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Altitud}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Altitud (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a2ef4ccade1d35912191ac0af8ae55230}
+
+
+\-: Método que devuelve la altitud de cada observación. 
+
+\begin{DoxyReturn}{Devuelve}
+[float]\-: Lista con la altitud de cada observación. 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Doys@{get\-Doys}}
+\index{get\-Doys@{get\-Doys}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Doys}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Doys (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_af61d20fea12a8808176cc74ee03607b5}
+
+
+\-: Método que transformala fecha dia/mes/año a doy\-: day of year. 
+
+\begin{DoxyReturn}{Devuelve}
+[int]\-: Doys existentes en el fichero N\-M\-E\-A 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Fechas@{get\-Fechas}}
+\index{get\-Fechas@{get\-Fechas}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Fechas}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Fechas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a92b17c0e877af81d3fc9054e0d899612}
+
+
+\-: Método que transformala fecha dia/mes/año a doy\-: day of year. 
+
+\begin{DoxyReturn}{Devuelve}
+[datetime]\-: Lista de objetos datetime, con los doys existentes en el fichero N\-M\-E\-A. 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-H\-D\-O\-P@{get\-H\-D\-O\-P}}
+\index{get\-H\-D\-O\-P@{get\-H\-D\-O\-P}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-H\-D\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-H\-D\-O\-P (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a52cb0f90078b3802be93fe724f1b7e45}
+
+
+\-: Método que devuelve el H\-D\-O\-P de cada observación. 
+
+\begin{DoxyReturn}{Devuelve}
+[float]\-: Lista con el H\-D\-O\-P de cada observación. 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Horas@{get\-Horas}}
+\index{get\-Horas@{get\-Horas}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Horas}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Horas (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_ae75038014e530171637bfe8e77b3f430}
+
+
+\-: Método que devuelve las horas de las épocas de observación. 
+
+\begin{DoxyReturn}{Devuelve}
+[str]\-: Hora de cada observación 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Latitud@{get\-Latitud}}
+\index{get\-Latitud@{get\-Latitud}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Latitud}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Latitud (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a6fcce622dcf2850f76fa7b6673fb2858}
+
+
+\-: Método que devuelve la latitud de cada observación,en formato pseudosexagesimal. 
+
+\begin{DoxyReturn}{Devuelve}
+[float]\-: Lista con la latitud convertida a formato pseudosexagesimal de cada observación. 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Longitud@{get\-Longitud}}
+\index{get\-Longitud@{get\-Longitud}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Longitud}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Longitud (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a935ac88acdc32726816562bf3c67f2ac}
+
+
+\-: Método que devuelve la latitud de cada observación,en formato pseudosexagesimal. 
+
+\begin{DoxyReturn}{Devuelve}
+[float]\-: Lista con la longitud convertida a formato pseudosexagesimal de cada observación. 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Mensaje\-G\-G\-A@{get\-Mensaje\-G\-G\-A}}
+\index{get\-Mensaje\-G\-G\-A@{get\-Mensaje\-G\-G\-A}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Mensaje\-G\-G\-A}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Mensaje\-G\-G\-A (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_af81e694a6f9a6ef2c6bb5a6af4743f6e}
+
+
+\-: Método que devuelve el mensaje G\-G\-A completo. 
+
+\begin{DoxyReturn}{Devuelve}
+[str]\-: Lista con el mensaje G\-G\-A completo 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Mensaje\-R\-M\-C@{get\-Mensaje\-R\-M\-C}}
+\index{get\-Mensaje\-R\-M\-C@{get\-Mensaje\-R\-M\-C}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Mensaje\-R\-M\-C}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Mensaje\-R\-M\-C (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a88351fc45362ec7fdfeb608506f3854c}
+
+
+\-: Método que devuelve el mensaje R\-M\-C completo. 
+
+\begin{DoxyReturn}{Devuelve}
+[str]\-: Lista con el mensaje R\-M\-C completo. 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Numero\-Satelites@{get\-Numero\-Satelites}}
+\index{get\-Numero\-Satelites@{get\-Numero\-Satelites}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Numero\-Satelites}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Numero\-Satelites (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_ade66cac97362e29433e3621beabf25f1}
+
+
+\-: Método que devuelve el H\-D\-O\-P de cada observación. 
+
+\begin{DoxyReturn}{Devuelve}
+[int]\-: Lista con el número de satélites de cada observación. 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Out\-List\-Values@{get\-Out\-List\-Values}}
+\index{get\-Out\-List\-Values@{get\-Out\-List\-Values}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Out\-List\-Values}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Out\-List\-Values (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a6d64653cadabde444006e7bc9e132680}
+
+
+\-: Devuelve los parámetros de cálculo mas importantes en una úncia lista. 
+
+\begin{DoxyReturn}{Devuelve}
+[segundos G\-P\-S,latitud,longitud,Altitud,número satélites, H\-D\-O\-P] 
+\end{DoxyReturn}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!get\-Segundos\-G\-P\-S@{get\-Segundos\-G\-P\-S}}
+\index{get\-Segundos\-G\-P\-S@{get\-Segundos\-G\-P\-S}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{get\-Segundos\-G\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}def Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-get\-Segundos\-G\-P\-S (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a79ef53bb0e76450091691f82cec98e6b}
+
+
+\-: Método que devuelve la hora de cada observacion en segundos de la semana G\-P\-S. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Nombre\-Dia} & str\-: Nombre del día de observación. En mayusculas.  Valor Nombre Dia\-: Se produce una excepcion en el caso de que el nombre del día no se de tipo String.  Dia no valido\-: Se produce una excepcion en el caso de que el dia introducido no sea\-: L\-U\-N\-E\-S, M\-A\-R\-T\-E\-S, M\-I\-E\-R\-C\-O\-L\-E\-S, J\-U\-E\-V\-E\-S, V\-I\-E\-R\-N\-E\-S, S\-A\-B\-A\-D\-O, D\-O\-M\-I\-N\-G\-O. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+\-: si el archivo nmea esta en diferentes intervalos de tiempo 1, 5, 30 segundos la conversión a segundos de la semana G\-P\-S funciona bien. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Devuelve}
+[str]\-: Lista con los segundos G\-P\-S de cada observación. 
+\end{DoxyReturn}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-file@{\-\_\-\-\_\-file}}
+\index{\-\_\-\-\_\-file@{\-\_\-\-\_\-file}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-file = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a45e63bc5295b792be7eefef40622cd23}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-filepath@{\-\_\-\-\_\-filepath}}
+\index{\-\_\-\-\_\-filepath@{\-\_\-\-\_\-filepath}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-filepath}]{\setlength{\rightskip}{0pt plus 5cm}Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-filepath = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a61c4d27da8d1b531380edba375de6cc9}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-gga@{\-\_\-\-\_\-gga}}
+\index{\-\_\-\-\_\-gga@{\-\_\-\-\_\-gga}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-gga}]{\setlength{\rightskip}{0pt plus 5cm}list Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-gga = [$\,$]\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a5bafb1ffe1dcb08dc4f52c50444c8213}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-gga@{\-\_\-\-\_\-gga}}
+\index{\-\_\-\-\_\-gga@{\-\_\-\-\_\-gga}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-gga}]{\setlength{\rightskip}{0pt plus 5cm}Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-gga\hspace{0.3cm}{\ttfamily [private]}}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_acc6b4d8f69e70bc6fe6e84ceaab99da7}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-path@{\-\_\-\-\_\-path}}
+\index{\-\_\-\-\_\-path@{\-\_\-\-\_\-path}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-path = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_a225fbdcafc82613076aff92e82de16e0}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-rmc@{\-\_\-\-\_\-rmc}}
+\index{\-\_\-\-\_\-rmc@{\-\_\-\-\_\-rmc}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-rmc}]{\setlength{\rightskip}{0pt plus 5cm}list Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-rmc = [$\,$]\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_afec5d11e436e55e8b0f7beda1badb98e}
+\index{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}!\-\_\-\-\_\-rmc@{\-\_\-\-\_\-rmc}}
+\index{\-\_\-\-\_\-rmc@{\-\_\-\-\_\-rmc}!Ficheros::NMEAFile::NMEAFile@{Ficheros\-::\-N\-M\-E\-A\-File\-::\-N\-M\-E\-A\-File}}
+\subsubsection[{\-\_\-\-\_\-rmc}]{\setlength{\rightskip}{0pt plus 5cm}Ficheros.\-N\-M\-E\-A\-File.\-N\-M\-E\-A\-File.\-\_\-\-\_\-rmc\hspace{0.3cm}{\ttfamily [private]}}\label{classFicheros_1_1NMEAFile_1_1NMEAFile_ad57013b8121abb9ceec9c352d395c77b}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Ficheros/{\bf N\-M\-E\-A\-File.\-py}\end{DoxyCompactItemize}

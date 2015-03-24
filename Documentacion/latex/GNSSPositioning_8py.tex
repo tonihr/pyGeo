@@ -1,0 +1,84 @@
+\section{Referencia del Archivo /home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/\-G\-N\-S\-S\-Positioning.py}
+\label{GNSSPositioning_8py}\index{/home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/\-G\-N\-S\-S\-Positioning.\-py@{/home/toni/\-Dropbox/py\-Geo/\-G\-N\-S\-S/\-G\-N\-S\-S\-Positioning.\-py}}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-G\-N\-S\-S\-Positioning}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-main}
+\begin{DoxyCompactList}\small\item\em print(\-Ax,\-Ay,\-Az,\-At) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-fin} = True
+\begin{DoxyCompactList}\small\item\em print(j) \end{DoxyCompactList}\item 
+list {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Efemerides\-\_\-act} = [$\,$]
+\begin{DoxyCompactList}\small\item\em for j in Obs\-\_\-act\-: print(j) input() Buscar la efemeride que mejor se adecua al obserbable. \end{DoxyCompactList}\item 
+list {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-dif} = [$\,$]
+\item 
+list {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-util} = dif[0]
+\begin{DoxyCompactList}\small\item\em print(j) \end{DoxyCompactList}\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-pos\-\_\-sat} = sp.\-Sat\-Positioning(Efemerides\-\_\-act,Obs\-\_\-act)
+\begin{DoxyCompactList}\small\item\em print(util) print(util[1]) print(efem\-\_\-\-R[util[1]]) for t in efem\-\_\-\-R\-: print(t) input() \end{DoxyCompactList}\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-sats} = pos\-\_\-sat.\-get\-Position()
+\item 
+int {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Xest} = 0
+\item 
+int {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Yest} = 0
+\item 
+int {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Zest} = 0
+\item 
+int {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-At0} = 0
+\item 
+int {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-est} = 1
+\item 
+int {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-est\-\_\-ant} = 0
+\item 
+float {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-c} = 2.\-99792458e8
+\item 
+int {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-itera} = 0
+\item 
+list {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-A} = [$\,$]
+\item 
+list {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-K} = [$\,$]
+\item 
+{\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-A0} = None
+\begin{DoxyCompactList}\small\item\em l=j[5]-\/ro+j[6]$\ast$c+\-At0 \end{DoxyCompactList}\item 
+{\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-K0} = None
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-ro} = sqrt((float(j[2])-\/Xest)$\ast$$\ast$2+(float(j[3])-\/Yest)$\ast$$\ast$2+(float(j[4])-\/Zest)$\ast$$\ast$2)
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-dx} = (float(j[2])-\/Xest)
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-dy} = (float(j[3])-\/Yest)
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-dz} = (float(j[4])-\/Zest)
+\item 
+list {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-l} = j[5]
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-sol} = linalg.\-lstsq(A0, K0)
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-R} = dot(A0,sol[0])
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-val} = dot(R.\-transpose(),R)
+\begin{DoxyCompactList}\small\item\em print(\-R) \end{DoxyCompactList}\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-gdl} = shape(A0)
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Ax} = float(sol[0][0])
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Ay} = float(sol[0][1])
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Az} = float(sol[0][2])
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-At} = float(sol[0][3])
+\item 
+tuple {\bf G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-pos} = G\-N\-S\-S\-Positioning('/home/toni/Dropbox/Lib\-Geo/Ejemplos/V\-C\-I\-A2710.\-14o','/home/toni/Dropbox/Lib\-Geo/Ejemplos/V\-C\-I\-A2710.\-14n')
+\begin{DoxyCompactList}\small\item\em pos=G\-N\-S\-S\-\_\-\-Positioning('/home/toni/\-Dropbox/\-Lib\-Geo/\-Ejemplos/\-A\-L\-C\-O272\-A.14o','/home/toni/\-Dropbox/\-Lib\-Geo/\-Ejemplos/\-A\-L\-C\-O2720.14n') \end{DoxyCompactList}\end{DoxyCompactItemize}

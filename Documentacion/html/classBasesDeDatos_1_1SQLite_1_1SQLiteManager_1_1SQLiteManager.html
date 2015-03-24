@@ -1,0 +1,719 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>PyGeo: Referencia de la Clase BasesDeDatos.SQLite.SQLiteManager.SQLiteManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PyGeo
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-static-attribs">Atributos privados estáticos</a> &#124;
+<a href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase BasesDeDatos.SQLite.SQLiteManager.SQLiteManager</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Establece una conexión a una base de datos <a class="el" href="namespaceBasesDeDatos_1_1SQLite.html">SQLite</a>.  
+ <a href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencias de BasesDeDatos.SQLite.SQLiteManager.SQLiteManager</div>
+<div class="dyncontent">
+<div class="center"><img src="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager__inherit__graph.png" border="0" usemap="#BasesDeDatos_8SQLite_8SQLiteManager_8SQLiteManager_inherit__map" alt="Inheritance graph"/></div>
+<map name="BasesDeDatos_8SQLite_8SQLiteManager_8SQLiteManager_inherit__map" id="BasesDeDatos_8SQLite_8SQLiteManager_8SQLiteManager_inherit__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboración para BasesDeDatos.SQLite.SQLiteManager.SQLiteManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager__coll__graph.png" border="0" usemap="#BasesDeDatos_8SQLite_8SQLiteManager_8SQLiteManager_coll__map" alt="Collaboration graph"/></div>
+<map name="BasesDeDatos_8SQLite_8SQLiteManager_8SQLiteManager_coll__map" id="BasesDeDatos_8SQLite_8SQLiteManager_8SQLiteManager_coll__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a7e66df94830a778817e10c2066ba6b43"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#a7e66df94830a778817e10c2066ba6b43">__init__</a></td></tr>
+<tr class="memdesc:a7e66df94830a778817e10c2066ba6b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase Conexion.  <a href="#a7e66df94830a778817e10c2066ba6b43">Más...</a><br/></td></tr>
+<tr class="separator:a7e66df94830a778817e10c2066ba6b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e62349a23803d539ac5710d16ec079"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#ad8e62349a23803d539ac5710d16ec079">__del__</a></td></tr>
+<tr class="separator:ad8e62349a23803d539ac5710d16ec079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeace1f6c4a986167994754583b5bfa1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#abeace1f6c4a986167994754583b5bfa1">setPathDB</a></td></tr>
+<tr class="memdesc:abeace1f6c4a986167994754583b5bfa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que establece el path de la base de datos.  <a href="#abeace1f6c4a986167994754583b5bfa1">Más...</a><br/></td></tr>
+<tr class="separator:abeace1f6c4a986167994754583b5bfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3dbff479048449dd17ac59c66f6b5e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#adf3dbff479048449dd17ac59c66f6b5e">CrearTabla</a></td></tr>
+<tr class="memdesc:adf3dbff479048449dd17ac59c66f6b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método para crear una tabla en la base de datos, a la que se ha establecido la conexión.  <a href="#adf3dbff479048449dd17ac59c66f6b5e">Más...</a><br/></td></tr>
+<tr class="separator:adf3dbff479048449dd17ac59c66f6b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4252c3b1a163c227c02ae15e26e8db"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#abb4252c3b1a163c227c02ae15e26e8db">Consulta</a></td></tr>
+<tr class="memdesc:abb4252c3b1a163c227c02ae15e26e8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que ejecuta una consulta SQL sobre la base de datos.  <a href="#abb4252c3b1a163c227c02ae15e26e8db">Más...</a><br/></td></tr>
+<tr class="separator:abb4252c3b1a163c227c02ae15e26e8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2f8373b604c35f48b209ac104a669e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#a0d2f8373b604c35f48b209ac104a669e">AddRow</a></td></tr>
+<tr class="memdesc:a0d2f8373b604c35f48b209ac104a669e"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que añade una nueva fila (registro) a una tabla de la base de datos.  <a href="#a0d2f8373b604c35f48b209ac104a669e">Más...</a><br/></td></tr>
+<tr class="separator:a0d2f8373b604c35f48b209ac104a669e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a3e5c429fcdbf4c0a5719ef0f36bf9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#ab2a3e5c429fcdbf4c0a5719ef0f36bf9">AddColumn</a></td></tr>
+<tr class="memdesc:ab2a3e5c429fcdbf4c0a5719ef0f36bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que añade una nueva columna (campo) a la base de datos.  <a href="#ab2a3e5c429fcdbf4c0a5719ef0f36bf9">Más...</a><br/></td></tr>
+<tr class="separator:ab2a3e5c429fcdbf4c0a5719ef0f36bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052a6eb64965f650b16f1dab6aadfdbf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#a052a6eb64965f650b16f1dab6aadfdbf">ModifyValue</a></td></tr>
+<tr class="memdesc:a052a6eb64965f650b16f1dab6aadfdbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que modifica un valor de un registro de la base de datos.  <a href="#a052a6eb64965f650b16f1dab6aadfdbf">Más...</a><br/></td></tr>
+<tr class="separator:a052a6eb64965f650b16f1dab6aadfdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9230c9a74c56e67aba57fac1f1fc24bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#a9230c9a74c56e67aba57fac1f1fc24bd">ObtenerTodo</a></td></tr>
+<tr class="memdesc:a9230c9a74c56e67aba57fac1f1fc24bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuelve toda la información de una tabla de la base de datos.  <a href="#a9230c9a74c56e67aba57fac1f1fc24bd">Más...</a><br/></td></tr>
+<tr class="separator:a9230c9a74c56e67aba57fac1f1fc24bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b04d1c15a961f7b0dd8bbaadcb4f6f4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#a3b04d1c15a961f7b0dd8bbaadcb4f6f4">ObtenerColumna</a></td></tr>
+<tr class="memdesc:a3b04d1c15a961f7b0dd8bbaadcb4f6f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que devuleve todos los valores de una columna (campo).  <a href="#a3b04d1c15a961f7b0dd8bbaadcb4f6f4">Más...</a><br/></td></tr>
+<tr class="separator:a3b04d1c15a961f7b0dd8bbaadcb4f6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e08bceb65cdc2a697146842ea5d203"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#a66e08bceb65cdc2a697146842ea5d203">BorrarDB</a></td></tr>
+<tr class="memdesc:a66e08bceb65cdc2a697146842ea5d203"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que borra la base de datos a la que se está conectado.  <a href="#a66e08bceb65cdc2a697146842ea5d203">Más...</a><br/></td></tr>
+<tr class="separator:a66e08bceb65cdc2a697146842ea5d203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add82880bef2b7910e6c14334f03cd3a7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#add82880bef2b7910e6c14334f03cd3a7">BorrarTabla</a></td></tr>
+<tr class="memdesc:add82880bef2b7910e6c14334f03cd3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Método que borra una tabla de la base de datos.  <a href="#add82880bef2b7910e6c14334f03cd3a7">Más...</a><br/></td></tr>
+<tr class="separator:add82880bef2b7910e6c14334f03cd3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:ae61810bf6500d4141746fe6a8d819aac"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#ae61810bf6500d4141746fe6a8d819aac">__Conectar</a></td></tr>
+<tr class="separator:ae61810bf6500d4141746fe6a8d819aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Atributos privados estáticos</h2></td></tr>
+<tr class="memitem:aa8f378bf2d458a6ef49ad3aeb16476b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#aa8f378bf2d458a6ef49ad3aeb16476b9">__pathdb</a> = None</td></tr>
+<tr class="separator:aa8f378bf2d458a6ef49ad3aeb16476b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a368c3641f401a8259005e0cc8b9ae7a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#a368c3641f401a8259005e0cc8b9ae7a2">__con</a> = None</td></tr>
+<tr class="separator:a368c3641f401a8259005e0cc8b9ae7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae78a42f06070ca68128a46b2a88c83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html#a6ae78a42f06070ca68128a46b2a88c83">__cursor</a> = None</td></tr>
+<tr class="separator:a6ae78a42f06070ca68128a46b2a88c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Establece una conexión a una base de datos <a class="el" href="namespaceBasesDeDatos_1_1SQLite.html">SQLite</a>. </p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="a7e66df94830a778817e10c2066ba6b43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de la clase Conexion. </p>
+<p><b>init</b>(path) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>str: Ruta a la base de datos a la que se quiere conectar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>path: Si la ruta a la base de datos o la base de datos no existe, esta se creara automáticamente. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8e62349a23803d539ac5710d16ec079"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.__del__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="ae61810bf6500d4141746fe6a8d819aac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.__Conectar </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab2a3e5c429fcdbf4c0a5719ef0f36bf9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.AddColumn </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que añade una nueva columna (campo) a la base de datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre_tabla</td><td>str: Nombre tabla a la que se quiere añadir la columna (campo). </td></tr>
+    <tr><td class="paramname">nombre_columna</td><td>Nombre de columna (campo) a añadir. </td></tr>
+    <tr><td class="paramname">tipo_dato</td><td>Tipo de datos de la columna.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Ejemplo:<br/>
+AddColum('Tabla','Potencia','real') </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d2f8373b604c35f48b209ac104a669e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.AddRow </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que añade una nueva fila (registro) a una tabla de la base de datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre_tabla</td><td>str: Nombre de la tabla a la que se quiere añadir la fila (registro). </td></tr>
+    <tr><td class="paramname">valores</td><td>[str]: Valores que se quieren insertar en la nueva fila (registro).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Ejemplo:<br/>
+AddRow('Tabla',['Bombilla','110','null']) </p>
+
+</div>
+</div>
+<a class="anchor" id="a66e08bceb65cdc2a697146842ea5d203"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.BorrarDB </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que borra la base de datos a la que se está conectado. </p>
+
+</div>
+</div>
+<a class="anchor" id="add82880bef2b7910e6c14334f03cd3a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.BorrarTabla </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tabla</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que borra una tabla de la base de datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabla</td><td>str: Nombre de la tabla a borrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abb4252c3b1a163c227c02ae15e26e8db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.Consulta </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>consulta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que ejecuta una consulta SQL sobre la base de datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">consulta</td><td>str: Consulta a realizar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>: Resultado de la consulta. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adf3dbff479048449dd17ac59c66f6b5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.CrearTabla </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método para crear una tabla en la base de datos, a la que se ha establecido la conexión. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre_tb</td><td>str : Nombre de la talba a crear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>nombre_tb: ejemplo: Tabla</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre_campos</td><td>[str]: Nombre de los campos que se van a crear en la tabla. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>nombre_campos: ejemplo: [campo_1,campo_2,campo_3,...,campo_n]</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tipo_campos</td><td>[str]: Tipo de formato de los campos que se crearan en la tabla. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>tipo_campos: ejemplo: [real,integer,text,...,blob] </dd>
+<dd>
+tipo_campos: Tiene que haber tantos tipos como capos creados en la tabla.</dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">restricciones</td><td>[str]: Restricciones de los campos creados en la tabla. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>restricciones: ejemplo: [not null,,primery key,..,] </dd>
+<dd>
+restricciones: Tiene que haber tantas restricciones como campos creados en la tabla. </dd>
+<dd>
+restricciones: si un campo no tiene restricción introducir un str vacío.</dd></dl>
+<p>Ejemplo:<br/>
+CrearTabla(nombre_tb,nombre_campos,tipo_campos,restricciones)<br/>
+CrearTabla('Tabla',['campo1','campo2'],['text','real'],['primary key','']) </p>
+
+</div>
+</div>
+<a class="anchor" id="a052a6eb64965f650b16f1dab6aadfdbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.ModifyValue </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que modifica un valor de un registro de la base de datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre_tabla</td><td>str: Nombre tabla. </td></tr>
+    <tr><td class="paramname">nombre_columna</td><td>str: Nombre columna. </td></tr>
+    <tr><td class="paramname">numero_registro</td><td>str: id del elemento. </td></tr>
+    <tr><td class="paramname">nuevo_valor</td><td>str: Nuevo valor Ejemplo:<br/>
+ModifyValue('Tabla','Columna','25','Coche') </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b04d1c15a961f7b0dd8bbaadcb4f6f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.ObtenerColumna </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tabla</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>columna</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuleve todos los valores de una columna (campo). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabla</td><td>str: Nombre de la tabla de la que se quere obtener la columna. </td></tr>
+    <tr><td class="paramname">columna</td><td>str: Nombre de la columna a obtener. Ejemplo:<br/>
+ObtenerColumna('Tabla','Columna') </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9230c9a74c56e67aba57fac1f1fc24bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.ObtenerTodo </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tabla</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que devuelve toda la información de una tabla de la base de datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tabla</td><td>str: Nombre de la tabla de la que se quiere obtener la información. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>: Todos los registros de la tabla. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abeace1f6c4a986167994754583b5bfa1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.setPathDB </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>: Método que establece el path de la base de datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>str: Ruta a la base de datos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>: Si no existe el path a la base de datos se creara automaticamente. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="a368c3641f401a8259005e0cc8b9ae7a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.__con = None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6ae78a42f06070ca68128a46b2a88c83"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.__cursor = None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa8f378bf2d458a6ef49ad3aeb16476b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BasesDeDatos.SQLite.SQLiteManager.SQLiteManager.__pathdb = None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>/home/toni/Dropbox/pyGeo/BasesDeDatos/SQLite/<a class="el" href="SQLiteManager_8py.html">SQLiteManager.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceBasesDeDatos.html">BasesDeDatos</a></li><li class="navelem"><a class="el" href="namespaceBasesDeDatos_1_1SQLite.html">SQLite</a></li><li class="navelem"><a class="el" href="namespaceBasesDeDatos_1_1SQLite_1_1SQLiteManager.html">SQLiteManager</a></li><li class="navelem"><a class="el" href="classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager.html">SQLiteManager</a></li>
+    <li class="footer">Generado el Lunes, 23 de Marzo de 2015 10:57:10 para PyGeo por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

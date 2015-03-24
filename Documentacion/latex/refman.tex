@@ -1,0 +1,293 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[spanish]{babel}
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2cm}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generado el Lunes, 23 de Marzo de 2015 10\-:57\-:10 para Py\-Geo por Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generado el Lunes, 23 de Marzo de 2015 10\-:57\-:10 para Py\-Geo por Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Py\-Geo \\[1ex]\large 1.\-0.\-0 }\\
+\vspace*{1cm}
+{\large Generado por Doxygen 1.8.6}\\
+\vspace*{0.5cm}
+{\small Lunes, 23 de Marzo de 2015 10:57:10}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+
+%--- Begin generated contents ---
+\chapter{Indice de namespaces}
+\input{namespaces}
+\chapter{Indice jerárquico}
+\input{hierarchy}
+\chapter{Índice de clases}
+\input{annotated}
+\chapter{Indice de archivos}
+\input{files}
+\chapter{Documentación de namespaces}
+\input{namespaceBasesDeDatos}
+\input{namespaceBasesDeDatos_1_1SQLite}
+\input{namespaceBasesDeDatos_1_1SQLite_1_1SQLiteManager}
+\input{namespaceControladores}
+\input{namespaceControladores_1_1CalcAng}
+\input{namespaceControladores_1_1Geo2UTM}
+\input{namespaceControladores_1_1PDGeodesia}
+\input{namespaceControladores_1_1PIGeodesia}
+\input{namespaceControladores_1_1UTM2Geo}
+\input{namespaceFicheros}
+\input{namespaceFicheros_1_1LASFile}
+\input{namespaceFicheros_1_1NMEAFile}
+\input{namespaceFormularios}
+\input{namespaceGeodesia}
+\input{namespaceGeodesia_1_1Elipsoides}
+\input{namespaceGeodesia_1_1EMG}
+\input{namespaceGeodesia_1_1EMG_1_1CalcularOndulacion}
+\input{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt}
+\input{namespaceGeodesia_1_1EMG_1_1CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08}
+\input{namespaceGeodesia_1_1PDGeodesia}
+\input{namespaceGeodesia_1_1PIGeodesia}
+\input{namespaceGeodesia_1_1RadiosDeCurvatura}
+\input{namespaceGeometrias}
+\input{namespaceGeometrias_1_1Angulo}
+\input{namespaceGeometrias_1_1Linea2D}
+\input{namespaceGeometrias_1_1Linea3D}
+\input{namespaceGeometrias_1_1PoliLinea2D}
+\input{namespaceGeometrias_1_1Punto2D}
+\input{namespaceGeometrias_1_1Punto3D}
+\input{namespaceGeometrias_1_1PuntoGeodesico}
+\input{namespaceGeometrias_1_1PuntoUTM}
+\input{namespaceGNSS}
+\input{namespaceGNSS_1_1Crx2Rnx}
+\input{namespaceGNSS_1_1GLONASSNavigationReader}
+\input{namespaceGNSS_1_1GNSSPositioning}
+\input{namespaceGNSS_1_1GPSNavigationReader}
+\input{namespaceGNSS_1_1RINEXObservationReader}
+\input{namespaceGNSS_1_1Rnx2Crx}
+\input{namespaceGNSS_1_1SatPositioning}
+\input{namespaceGNSS_1_1Teqc}
+\input{namespaceIntersecciones}
+\input{namespaceIntersecciones_1_1Interseccion2D}
+\input{namespaceIntersecciones_1_1MultipleInterseccion2D}
+\input{namespaceProyecciones}
+\input{namespaceProyecciones_1_1Cargeo2Geo}
+\input{namespaceProyecciones_1_1Cartesian2Polar}
+\input{namespaceProyecciones_1_1Geo2Cargeo}
+\input{namespaceProyecciones_1_1Geo2UTM}
+\input{namespaceProyecciones_1_1Polar2Cartesian}
+\input{namespaceProyecciones_1_1UTM2Geo}
+\input{namespaceTiempo}
+\input{namespaceTiempo_1_1UTC2GPS}
+\input{namespaceTopografia}
+\input{namespaceTopografia_1_1AnguloElevacion}
+\input{namespaceTopografia_1_1Azimut}
+\input{namespaceTopografia_1_1Distancia2D}
+\input{namespaceTopografia_1_1Distancia3D}
+\input{namespaceTopografia_1_1Instrumento}
+\input{namespaceTopografia_1_1Radiacion2D}
+\input{namespaceTopografia_1_1Radiacion3D}
+\chapter{Documentación de las clases}
+\input{classGeometrias_1_1Angulo_1_1Angulo}
+\input{classTopografia_1_1AnguloElevacion_1_1AnguloElevacion}
+\input{classTopografia_1_1Azimut_1_1Azimut}
+\input{classControladores_1_1CalcAng_1_1CalcAng}
+\input{classTopografia_1_1Distancia2D_1_1Distancia2D}
+\input{classTopografia_1_1Distancia3D_1_1Distancia3D}
+\input{classGeodesia_1_1Elipsoides_1_1Elipsoides}
+\input{classControladores_1_1Geo2UTM_1_1Geo2UTM}
+\input{classGNSS_1_1GLONASSNavigationReader_1_1GLONASSNavigationReader}
+\input{classGNSS_1_1GNSSPositioning_1_1GNSSPositioning}
+\input{classGNSS_1_1GPSNavigationReader_1_1GPSNavigationReader}
+\input{classTopografia_1_1Instrumento_1_1Instrumento}
+\input{classIntersecciones_1_1Interseccion2D_1_1Interseccion2D}
+\input{classFicheros_1_1LASFile_1_1LASFile}
+\input{classGeometrias_1_1Linea2D_1_1Linea2D}
+\input{classGeometrias_1_1Linea3D_1_1Linea3D}
+\input{classIntersecciones_1_1MultipleInterseccion2D_1_1MultipleInterseccion2D}
+\input{classFicheros_1_1NMEAFile_1_1NMEAFile}
+\input{classControladores_1_1PDGeodesia_1_1PDGeodesia}
+\input{classGeodesia_1_1PDGeodesia_1_1PDGeodesia}
+\input{classControladores_1_1PIGeodesia_1_1PIGeodesia}
+\input{classGeodesia_1_1PIGeodesia_1_1PIGeodesia}
+\input{classGeometrias_1_1PoliLinea2D_1_1PoliLinea2D}
+\input{classGeometrias_1_1Punto2D_1_1Punto2D}
+\input{classGeometrias_1_1Punto3D_1_1Punto3D}
+\input{classGeometrias_1_1PuntoGeodesico_1_1PuntoGeodesico}
+\input{classGeometrias_1_1PuntoUTM_1_1PuntoUTM}
+\input{classTopografia_1_1Radiacion2D_1_1Radiacion2D}
+\input{classTopografia_1_1Radiacion3D_1_1Radiacion3D}
+\input{classGeodesia_1_1RadiosDeCurvatura_1_1RadiosDeCurvatura}
+\input{classGNSS_1_1RINEXObservationReader_1_1RINEXObservationReader}
+\input{classGNSS_1_1SatPositioning_1_1SatPositioning}
+\input{classBasesDeDatos_1_1SQLite_1_1SQLiteManager_1_1SQLiteManager}
+\input{classGNSS_1_1Teqc_1_1Teqc}
+\input{classControladores_1_1UTM2Geo_1_1UTM2Geo}
+\chapter{Documentación de archivos}
+\input{BasesDeDatos_2____init_____8py}
+\input{BasesDeDatos_2SQLite_2____init_____8py}
+\input{Controladores_2____init_____8py}
+\input{Ficheros_2____init_____8py}
+\input{Formularios_2____init_____8py}
+\input{Geodesia_2____init_____8py}
+\input{Geodesia_2EMG_2____init_____8py}
+\input{Geometrias_2____init_____8py}
+\input{GNSS_2____init_____8py}
+\input{Intersecciones_2____init_____8py}
+\input{Proyecciones_2____init_____8py}
+\input{Tiempo_2____init_____8py}
+\input{Topografia_2____init_____8py}
+\input{SQLiteManager_8py}
+\input{CalcAng_8py}
+\input{Controladores_2Geo2UTM_8py}
+\input{Proyecciones_2Geo2UTM_8py}
+\input{Controladores_2PDGeodesia_8py}
+\input{Geodesia_2PDGeodesia_8py}
+\input{Controladores_2PIGeodesia_8py}
+\input{Geodesia_2PIGeodesia_8py}
+\input{Controladores_2UTM2Geo_8py}
+\input{Proyecciones_2UTM2Geo_8py}
+\input{LASFile_8py}
+\input{NMEAFile_8py}
+\input{Elipsoides_8py}
+\input{CalcularOndulacion_8py}
+\input{CalcularOndulacionTxt_01_07Copia_01en_01conflicto_01de_01toni-K53SD_012015-02-17_08_8py}
+\input{CalcularOndulacionTxt_8py}
+\input{RadiosDeCurvatura_8py}
+\input{Angulo_8py}
+\input{Linea2D_8py}
+\input{Linea3D_8py}
+\input{PoliLinea2D_8py}
+\input{Punto2D_8py}
+\input{Punto3D_8py}
+\input{PuntoGeodesico_8py}
+\input{PuntoUTM_8py}
+\input{Crx2Rnx_8py}
+\input{GLONASSNavigationReader_8py}
+\input{GNSSPositioning_8py}
+\input{GPSNavigationReader_8py}
+\input{RINEXObservationReader_8py}
+\input{Rnx2Crx_8py}
+\input{SatPositioning_8py}
+\input{Teqc_8py}
+\input{Interseccion2D_8py}
+\input{MultipleInterseccion2D_8py}
+\input{Cargeo2Geo_8py}
+\input{Cartesian2Polar_8py}
+\input{Geo2Cargeo_8py}
+\input{Polar2Cartesian_8py}
+\input{UTC2GPS_8py}
+\input{AnguloElevacion_8py}
+\input{Azimut_8py}
+\input{Distancia2D_8py}
+\input{Distancia3D_8py}
+\input{Instrumento_8py}
+\input{Radiacion2D_8py}
+\input{Radiacion3D_8py}
+%--- End generated contents ---
+
+% Index
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Índice}
+\printindex
+
+\end{document}

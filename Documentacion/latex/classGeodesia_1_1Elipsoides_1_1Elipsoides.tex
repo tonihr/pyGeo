@@ -1,0 +1,277 @@
+\section{Referencia de la Clase Geodesia.\-Elipsoides.\-Elipsoides}
+\label{classGeodesia_1_1Elipsoides_1_1Elipsoides}\index{Geodesia.\-Elipsoides.\-Elipsoides@{Geodesia.\-Elipsoides.\-Elipsoides}}
+
+
+Clase destinada a almacenar información sobre un elipsoide.  
+
+
+
+
+Diagrama de herencias de Geodesia.\-Elipsoides.\-Elipsoides
+
+
+Diagrama de colaboración para Geodesia.\-Elipsoides.\-Elipsoides\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor de la clase Elipsoide. \end{DoxyCompactList}\item 
+def {\bf get\-Elipsoides\-Disponibles}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el listado de elipsoides disponibles en la base de datos. \end{DoxyCompactList}\item 
+def {\bf get\-Semi\-Eje\-Mayor}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el semieje mayor del elipsoide. \end{DoxyCompactList}\item 
+def {\bf get\-Semi\-Eje\-Menor}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el semieje menor del elipsoide. \end{DoxyCompactList}\item 
+def {\bf get\-Aplanamiento}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el aplanamiento del elipsoide. \end{DoxyCompactList}\item 
+def {\bf get\-Excentricidad\-Lineal}
+\item 
+def {\bf get\-Primera\-Excentricidad}
+\item 
+def {\bf get\-Segunda\-Excentricidad}
+\item 
+def {\bf get\-Velocidad\-Angular}
+\item 
+def {\bf get\-Producto\-G\-M}
+\item 
+def {\bf get\-Factor\-Forma\-Dinamico}
+\item 
+def {\bf to\-String}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato str. \end{DoxyCompactList}\item 
+def {\bf to\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-check\-Nombre\-Elipsoide}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-nom} = None
+\item 
+{\bf \-\_\-\-\_\-a} = None
+\item 
+{\bf \-\_\-\-\_\-b} = None
+\item 
+{\bf \-\_\-\-\_\-f} = None
+\item 
+{\bf \-\_\-\-\_\-\-G\-M} = None
+\item 
+{\bf \-\_\-\-\_\-we} = None
+\item 
+{\bf \-\_\-\-\_\-\-J2} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase destinada a almacenar información sobre un elipsoide. 
+
+Ejemplos de declaración del un objeto de la clase\-:\par
+elip=\doxyref{Elipsoides}{p.}{classGeodesia_1_1Elipsoides_1_1Elipsoides}('W\-G\-S 1984') 
+
+\subsection{Documentación del constructor y destructor}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Nombre\-Elipsoide}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a2b0bd57cb19b808a24b72f54f2d700b5}
+
+
+Constructor de la clase Elipsoide. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Nombre\-Elipsoide} & srt\-: Nombre del elipsoide a cargar. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-check\-Nombre\-Elipsoide@{\-\_\-\-\_\-check\-Nombre\-Elipsoide}}
+\index{\-\_\-\-\_\-check\-Nombre\-Elipsoide@{\-\_\-\-\_\-check\-Nombre\-Elipsoide}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-check\-Nombre\-Elipsoide}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-check\-Nombre\-Elipsoide (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Nombre}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_ab6460fd315d75a0b5c35bbc98ae0f790}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Aplanamiento@{get\-Aplanamiento}}
+\index{get\-Aplanamiento@{get\-Aplanamiento}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Aplanamiento}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Aplanamiento (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a92913c55fc933a3ba485f7ac199d5a57}
+
+
+\-: Método que devuelve el aplanamiento del elipsoide. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Aplanamiento del elipsoide. 
+\end{DoxyReturn}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Elipsoides\-Disponibles@{get\-Elipsoides\-Disponibles}}
+\index{get\-Elipsoides\-Disponibles@{get\-Elipsoides\-Disponibles}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Elipsoides\-Disponibles}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Elipsoides\-Disponibles (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_aa4d5a06e1f64ce40db6cd182865b087c}
+
+
+\-: Método que devuelve el listado de elipsoides disponibles en la base de datos. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Nombres de los elipsoide. 
+\end{DoxyReturn}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Excentricidad\-Lineal@{get\-Excentricidad\-Lineal}}
+\index{get\-Excentricidad\-Lineal@{get\-Excentricidad\-Lineal}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Excentricidad\-Lineal}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Excentricidad\-Lineal (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a8630fe92e5591d74b7e521f98c985fcb}
+\begin{DoxyVerb}@brief: Método que devuelve la excentricidad lineal del elipsoide.
+@return: float: Valor de la excentricidad lineal (E).
+\end{DoxyVerb}
+ \index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Factor\-Forma\-Dinamico@{get\-Factor\-Forma\-Dinamico}}
+\index{get\-Factor\-Forma\-Dinamico@{get\-Factor\-Forma\-Dinamico}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Factor\-Forma\-Dinamico}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Factor\-Forma\-Dinamico (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a8a7c0569a8c0f05a9f2ee5366b99c286}
+\begin{DoxyVerb}@brief: Método que devuelve el factor de forma dinámico del elipsoide, si esta está disponible.
+@return float, None: Valor del factor de forma dinámico (J2)
+@note: En el caso de que el factor de forma dinámico no esté disponible para el elipsoide, se devolvera None.
+\end{DoxyVerb}
+ \index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Primera\-Excentricidad@{get\-Primera\-Excentricidad}}
+\index{get\-Primera\-Excentricidad@{get\-Primera\-Excentricidad}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Primera\-Excentricidad}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Primera\-Excentricidad (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_aaee273fa6aae8a209e648f176a8f6b74}
+\begin{DoxyVerb}@brief: Método que devuelve la primera excntricidad del elipsoide.
+@return: float: Valor de la primera excentricidad (e).
+\end{DoxyVerb}
+ \index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Producto\-G\-M@{get\-Producto\-G\-M}}
+\index{get\-Producto\-G\-M@{get\-Producto\-G\-M}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Producto\-G\-M}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Producto\-G\-M (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a3a572b6790a1afca42764c1d2a4f46ef}
+\begin{DoxyVerb}@brief: Método que devuelve el producto de G*M del elipsoide, si esta está disponible.
+@return float, None: Valor del producto de G*M.
+@note: En el caso de que el producto de G*M no esté disponible para el elipsoide, se devolvera None.
+\end{DoxyVerb}
+ \index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Segunda\-Excentricidad@{get\-Segunda\-Excentricidad}}
+\index{get\-Segunda\-Excentricidad@{get\-Segunda\-Excentricidad}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Segunda\-Excentricidad}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Segunda\-Excentricidad (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a796a18adf61ed2b36d475fc187de01fa}
+\begin{DoxyVerb}@brief: Método que devuelve la segunda exentricidad del elipsoide.
+@return: float: Valor de la segunda excentricidad (e').
+\end{DoxyVerb}
+ \index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Semi\-Eje\-Mayor@{get\-Semi\-Eje\-Mayor}}
+\index{get\-Semi\-Eje\-Mayor@{get\-Semi\-Eje\-Mayor}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Semi\-Eje\-Mayor}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Semi\-Eje\-Mayor (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_abbf3fffbf70343e28ff08494960794b7}
+
+
+\-: Método que devuelve el semieje mayor del elipsoide. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Valor del semieje mayor del elipsoide. 
+\end{DoxyReturn}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Semi\-Eje\-Menor@{get\-Semi\-Eje\-Menor}}
+\index{get\-Semi\-Eje\-Menor@{get\-Semi\-Eje\-Menor}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Semi\-Eje\-Menor}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Semi\-Eje\-Menor (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a8fe239c7fb52ac794a231d478ffbf87d}
+
+
+\-: Método que devuelve el semieje menor del elipsoide. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Valor del semieje menor del elipsoide. 
+\end{DoxyReturn}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!get\-Velocidad\-Angular@{get\-Velocidad\-Angular}}
+\index{get\-Velocidad\-Angular@{get\-Velocidad\-Angular}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{get\-Velocidad\-Angular}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-get\-Velocidad\-Angular (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a8d4b5e0c80fad5a702e322b7ca9a55a5}
+\begin{DoxyVerb}@brief: Método que devuelve la velocidad angular del elipsoide, si esta está disponible.
+@return float, None: velocidad angular del elipsoide.
+@note: En el caso de que la velocidad angular no esté disponible para el elipsoide, se devolvera None.
+\end{DoxyVerb}
+ \index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!to\-J\-S\-O\-N@{to\-J\-S\-O\-N}}
+\index{to\-J\-S\-O\-N@{to\-J\-S\-O\-N}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{to\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-to\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a7f00acb35f30cbc08b21abc49fe2a271}
+
+
+\-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N. 
+\end{DoxyReturn}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}def Geodesia.\-Elipsoides.\-Elipsoides.\-to\-String (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_ad0d0553751c9654e16cf1af8f78c184e}
+
+
+\-: Método que devuleve toda la información del punto en formato str. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string con toda la información del punto. 
+\end{DoxyReturn}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-a@{\-\_\-\-\_\-a}}
+\index{\-\_\-\-\_\-a@{\-\_\-\-\_\-a}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-a = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a10ea66b26417063c198d7378d83a2407}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-b@{\-\_\-\-\_\-b}}
+\index{\-\_\-\-\_\-b@{\-\_\-\-\_\-b}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-b = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a0ba2c569bae8bbab9fb57aa931da5a15}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-f@{\-\_\-\-\_\-f}}
+\index{\-\_\-\-\_\-f@{\-\_\-\-\_\-f}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-f}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-f = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_ac7c1413bac22a0fb442d728f646bbefb}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-\-G\-M@{\-\_\-\-\_\-\-G\-M}}
+\index{\-\_\-\-\_\-\-G\-M@{\-\_\-\-\_\-\-G\-M}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-\-G\-M}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-\-G\-M = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a21fe2c6ef1ee7cef130fd4d165f9e3bd}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-\-J2@{\-\_\-\-\_\-\-J2}}
+\index{\-\_\-\-\_\-\-J2@{\-\_\-\-\_\-\-J2}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-\-J2}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-\-J2 = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a662f9a36566fcd825b04166d486d4750}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-nom@{\-\_\-\-\_\-nom}}
+\index{\-\_\-\-\_\-nom@{\-\_\-\-\_\-nom}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-nom}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-nom = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_af1e87b9f1c949720f5ab69526e381e72}
+\index{Geodesia\-::\-Elipsoides\-::\-Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}!\-\_\-\-\_\-we@{\-\_\-\-\_\-we}}
+\index{\-\_\-\-\_\-we@{\-\_\-\-\_\-we}!Geodesia::Elipsoides::Elipsoides@{Geodesia\-::\-Elipsoides\-::\-Elipsoides}}
+\subsubsection[{\-\_\-\-\_\-we}]{\setlength{\rightskip}{0pt plus 5cm}Geodesia.\-Elipsoides.\-Elipsoides.\-\_\-\-\_\-we = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeodesia_1_1Elipsoides_1_1Elipsoides_a2ff66a3c01ba355fb0c3a50fbe125eaf}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Geodesia/{\bf Elipsoides.\-py}\end{DoxyCompactItemize}

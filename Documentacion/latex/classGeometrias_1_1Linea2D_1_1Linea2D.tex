@@ -1,0 +1,284 @@
+\section{Referencia de la Clase Geometrias.\-Linea2\-D.\-Linea2\-D}
+\label{classGeometrias_1_1Linea2D_1_1Linea2D}\index{Geometrias.\-Linea2\-D.\-Linea2\-D@{Geometrias.\-Linea2\-D.\-Linea2\-D}}
+
+
+Clase destinada a almacenar la información de una línea bidimensional.  
+
+
+
+
+Diagrama de herencias de Geometrias.\-Linea2\-D.\-Linea2\-D
+
+
+Diagrama de colaboración para Geometrias.\-Linea2\-D.\-Linea2\-D\-:
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxyref{Linea2\-D}{p.}{classGeometrias_1_1Linea2D_1_1Linea2D}. \end{DoxyCompactList}\item 
+def {\bf set\-Punto\-Inicial}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir o modificar el punto inicial de la linea. \end{DoxyCompactList}\item 
+def {\bf set\-Punto\-Final}
+\begin{DoxyCompactList}\small\item\em \-: Método para introducir o modificar el punto final de la linea. \end{DoxyCompactList}\item 
+def {\bf get\-Punto\-Inicial}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el Puno inicial de la línea. \end{DoxyCompactList}\item 
+def {\bf get\-Punto\-Final}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el Puno final de la línea. \end{DoxyCompactList}\item 
+def {\bf get\-A\-X}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el incremento de coordenadas en el eje X de la línea. \end{DoxyCompactList}\item 
+def {\bf get\-A\-Y}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve el incremento de coordenadas en el eje Y de la línea. \end{DoxyCompactList}\item 
+def {\bf get\-Disnatcia}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuelve la distancia de la línea. \end{DoxyCompactList}\item 
+def {\bf get\-Azimut}
+\begin{DoxyCompactList}\small\item\em \-: Devuleve el aximut de la linea. \end{DoxyCompactList}\item 
+def {\bf to\-String}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato str. \end{DoxyCompactList}\item 
+def {\bf to\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. \end{DoxyCompactList}\item 
+def {\bf to\-Geo\-J\-S\-O\-N}
+\begin{DoxyCompactList}\small\item\em \-: Método que devuleve un Geo\-J\-S\-O\-N del punto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf \-\_\-\-\_\-check\-Linea}
+\begin{DoxyCompactList}\small\item\em \-: Método para comprobar que el punto inicial y final de la línea son distintos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-\_\-\-\_\-pini} = None
+\item 
+{\bf \-\_\-\-\_\-pfin} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase destinada a almacenar la información de una línea bidimensional. 
+
+Ejemplos de declaración del un objeto de la clase\-:\par
+l=Linea2\-D()--$>$Constructor vacío.\par
+l=\doxyref{Linea2\-D}{p.}{classGeometrias_1_1Linea2D_1_1Linea2D}(Punto2\-D(10,10),Punto2\-D(20,20)) 
+
+\subsection{Documentación del constructor y destructor}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a576fc1909145a50d8564a8ac8debd2ea}
+
+
+Constructor de la clase \doxyref{Linea2\-D}{p.}{classGeometrias_1_1Linea2D_1_1Linea2D}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em args1} & \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}\-: Punto inicial de la linea. \\
+\hline
+{\em args2} & \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}\-: Punto final de la línea. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se producira una excepción si se introducen más o menos argumentos de los admitidos por la clase. \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!\-\_\-\-\_\-check\-Linea@{\-\_\-\-\_\-check\-Linea}}
+\index{\-\_\-\-\_\-check\-Linea@{\-\_\-\-\_\-check\-Linea}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{\-\_\-\-\_\-check\-Linea}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-\_\-\-\_\-check\-Linea (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a98fc64118d3d67773cb9d6487a275076}
+
+
+\-: Método para comprobar que el punto inicial y final de la línea son distintos. 
+
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!get\-A\-X@{get\-A\-X}}
+\index{get\-A\-X@{get\-A\-X}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{get\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-get\-A\-X (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a6014632dc63a3b7f2473e5486ab43842}
+
+
+\-: Método que devuelve el incremento de coordenadas en el eje X de la línea. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Incremento X. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!get\-A\-Y@{get\-A\-Y}}
+\index{get\-A\-Y@{get\-A\-Y}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{get\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-get\-A\-Y (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a8281e8e9e06e4b9b689ac2541bd77145}
+
+
+\-: Método que devuelve el incremento de coordenadas en el eje Y de la línea. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Incremento Y. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!get\-Azimut@{get\-Azimut}}
+\index{get\-Azimut@{get\-Azimut}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{get\-Azimut}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-get\-Azimut (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_ad21e4edbfaa0f0677c814752f8c30fd9}
+
+
+\-: Devuleve el aximut de la linea. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Azimut. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!get\-Disnatcia@{get\-Disnatcia}}
+\index{get\-Disnatcia@{get\-Disnatcia}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{get\-Disnatcia}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-get\-Disnatcia (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a3729bafb97df03f738dbf3952c20ff96}
+
+
+\-: Método que devuelve la distancia de la línea. 
+
+\begin{DoxyReturn}{Devuelve}
+float\-: Distancia. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!get\-Punto\-Final@{get\-Punto\-Final}}
+\index{get\-Punto\-Final@{get\-Punto\-Final}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{get\-Punto\-Final}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-get\-Punto\-Final (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a622b1681d25bea83bd42518fd4e425f1}
+
+
+\-: Método que devuelve el Puno final de la línea. 
+
+\begin{DoxyReturn}{Devuelve}
+\doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}\-: Punto final. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!get\-Punto\-Inicial@{get\-Punto\-Inicial}}
+\index{get\-Punto\-Inicial@{get\-Punto\-Inicial}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{get\-Punto\-Inicial}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-get\-Punto\-Inicial (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a414bd1416d717df3e05e8fb1460a45c9}
+
+
+\-: Método que devuelve el Puno inicial de la línea. 
+
+\begin{DoxyReturn}{Devuelve}
+\doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}\-: Punto inicial. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!set\-Punto\-Final@{set\-Punto\-Final}}
+\index{set\-Punto\-Final@{set\-Punto\-Final}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{set\-Punto\-Final}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-set\-Punto\-Final (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Punto\-Final}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a789213c4ff69a46b193491b52fb5cacf}
+
+
+\-: Método para introducir o modificar el punto final de la linea. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Punto\-Final} & \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}\-: Punto final de la línea. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se producira una excepción si no se introduce un objeto de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D} como valor de entrada del método. \\
+\hline
+\end{DoxyExceptions}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!set\-Punto\-Inicial@{set\-Punto\-Inicial}}
+\index{set\-Punto\-Inicial@{set\-Punto\-Inicial}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{set\-Punto\-Inicial}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-set\-Punto\-Inicial (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Punto\-Inicial}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_af374e49d280096eaca5d1a0beb12de33}
+
+
+\-: Método para introducir o modificar el punto inicial de la linea. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Punto\-Inicial} & \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D}\-: Punto inicial de la línea. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em } & Se producira una excepción si no se introduce un objeto de la clase \doxyref{Punto2\-D}{p.}{namespaceGeometrias_1_1Punto2D} como valor de entrada del método. \\
+\hline
+\end{DoxyExceptions}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!to\-Geo\-J\-S\-O\-N@{to\-Geo\-J\-S\-O\-N}}
+\index{to\-Geo\-J\-S\-O\-N@{to\-Geo\-J\-S\-O\-N}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{to\-Geo\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-to\-Geo\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a6dfc4ad838755e606a59d751e3227ef6}
+
+
+\-: Método que devuleve un Geo\-J\-S\-O\-N del punto. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!to\-J\-S\-O\-N@{to\-J\-S\-O\-N}}
+\index{to\-J\-S\-O\-N@{to\-J\-S\-O\-N}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{to\-J\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-to\-J\-S\-O\-N (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a9aff52a27f825bafab5770d20955bb5f}
+
+
+\-: Método que devuleve toda la información del punto en formato J\-S\-O\-N. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string en formato J\-S\-O\-N. 
+\end{DoxyReturn}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}def Geometrias.\-Linea2\-D.\-Linea2\-D.\-to\-String (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a53cbee4be93f4507f006924cd9dcbd7b}
+
+
+\-: Método que devuleve toda la información del punto en formato str. 
+
+\begin{DoxyReturn}{Devuelve}
+str\-: Un string con toda la información de la linea. 
+\end{DoxyReturn}
+
+
+\subsection{Documentación de los datos miembro}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!\-\_\-\-\_\-pfin@{\-\_\-\-\_\-pfin}}
+\index{\-\_\-\-\_\-pfin@{\-\_\-\-\_\-pfin}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{\-\_\-\-\_\-pfin}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Linea2\-D.\-Linea2\-D.\-\_\-\-\_\-pfin = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Linea2D_1_1Linea2D_aea3cc41d36ea3cba47dd54b579eb9ebe}
+\index{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}!\-\_\-\-\_\-pini@{\-\_\-\-\_\-pini}}
+\index{\-\_\-\-\_\-pini@{\-\_\-\-\_\-pini}!Geometrias::Linea2D::Linea2D@{Geometrias\-::\-Linea2\-D\-::\-Linea2\-D}}
+\subsubsection[{\-\_\-\-\_\-pini}]{\setlength{\rightskip}{0pt plus 5cm}Geometrias.\-Linea2\-D.\-Linea2\-D.\-\_\-\-\_\-pini = None\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{classGeometrias_1_1Linea2D_1_1Linea2D_a00a67118c6ee0e17b24e5a9b70ceb816}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/toni/\-Dropbox/py\-Geo/\-Geometrias/{\bf Linea2\-D.\-py}\end{DoxyCompactItemize}

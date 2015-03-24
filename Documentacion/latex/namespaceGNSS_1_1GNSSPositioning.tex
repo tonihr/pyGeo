@@ -1,0 +1,222 @@
+\section{Referencia del Namespace G\-N\-S\-S.\-G\-N\-S\-S\-Positioning}
+\label{namespaceGNSS_1_1GNSSPositioning}\index{G\-N\-S\-S.\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S.\-G\-N\-S\-S\-Positioning}}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf G\-N\-S\-S\-Positioning}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf main}
+\begin{DoxyCompactList}\small\item\em print(\-Ax,\-Ay,\-Az,\-At) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf fin} = True
+\begin{DoxyCompactList}\small\item\em print(j) \end{DoxyCompactList}\item 
+list {\bf Efemerides\-\_\-act} = [$\,$]
+\begin{DoxyCompactList}\small\item\em for j in Obs\-\_\-act\-: print(j) input() Buscar la efemeride que mejor se adecua al obserbable. \end{DoxyCompactList}\item 
+list {\bf dif} = [$\,$]
+\item 
+list {\bf util} = {\bf dif}[0]
+\begin{DoxyCompactList}\small\item\em print(j) \end{DoxyCompactList}\item 
+tuple {\bf pos\-\_\-sat} = sp.\-Sat\-Positioning({\bf Efemerides\-\_\-act},Obs\-\_\-act)
+\begin{DoxyCompactList}\small\item\em print(util) print(util[1]) print(efem\-\_\-\-R[util[1]]) for t in efem\-\_\-\-R\-: print(t) input() \end{DoxyCompactList}\item 
+tuple {\bf sats} = pos\-\_\-sat.\-get\-Position()
+\item 
+int {\bf Xest} = 0
+\item 
+int {\bf Yest} = 0
+\item 
+int {\bf Zest} = 0
+\item 
+int {\bf At0} = 0
+\item 
+int {\bf est} = 1
+\item 
+int {\bf est\-\_\-ant} = 0
+\item 
+float {\bf c} = 2.\-99792458e8
+\item 
+int {\bf itera} = 0
+\item 
+list {\bf A} = [$\,$]
+\item 
+list {\bf K} = [$\,$]
+\item 
+{\bf A0} = None
+\begin{DoxyCompactList}\small\item\em l=j[5]-\/ro+j[6]$\ast$c+\-At0 \end{DoxyCompactList}\item 
+{\bf K0} = None
+\item 
+tuple {\bf ro} = sqrt((float(j[2])-\/{\bf Xest})$\ast$$\ast$2+(float(j[3])-\/{\bf Yest})$\ast$$\ast$2+(float(j[4])-\/{\bf Zest})$\ast$$\ast$2)
+\item 
+tuple {\bf dx} = (float(j[2])-\/{\bf Xest})
+\item 
+tuple {\bf dy} = (float(j[3])-\/{\bf Yest})
+\item 
+tuple {\bf dz} = (float(j[4])-\/{\bf Zest})
+\item 
+list {\bf l} = j[5]
+\item 
+tuple {\bf sol} = linalg.\-lstsq({\bf A0}, {\bf K0})
+\item 
+tuple {\bf R} = dot({\bf A0},{\bf sol}[0])
+\item 
+tuple {\bf val} = dot(R.\-transpose(),{\bf R})
+\begin{DoxyCompactList}\small\item\em print(\-R) \end{DoxyCompactList}\item 
+tuple {\bf gdl} = shape({\bf A0})
+\item 
+tuple {\bf Ax} = float({\bf sol}[0][0])
+\item 
+tuple {\bf Ay} = float({\bf sol}[0][1])
+\item 
+tuple {\bf Az} = float({\bf sol}[0][2])
+\item 
+tuple {\bf At} = float({\bf sol}[0][3])
+\item 
+tuple {\bf pos} = {\bf G\-N\-S\-S\-Positioning}('/home/toni/Dropbox/Lib\-Geo/Ejemplos/V\-C\-I\-A2710.\-14o','/home/toni/Dropbox/Lib\-Geo/Ejemplos/V\-C\-I\-A2710.\-14n')
+\begin{DoxyCompactList}\small\item\em pos=G\-N\-S\-S\-\_\-\-Positioning('/home/toni/\-Dropbox/\-Lib\-Geo/\-Ejemplos/\-A\-L\-C\-O272\-A.14o','/home/toni/\-Dropbox/\-Lib\-Geo/\-Ejemplos/\-A\-L\-C\-O2720.14n') \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!main@{main}}
+\index{main@{main}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespaceGNSS_1_1GNSSPositioning_ae9f1bb087ea45f9282c12ecc06863875}
+
+
+print(\-Ax,\-Ay,\-Az,\-At) 
+
+print(abs(est\-\_\-ant-\/est)) input() 
+
+\subsection{Documentación de las variables}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!A@{A}}
+\index{A@{A}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{A}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-A = [$\,$]}\label{namespaceGNSS_1_1GNSSPositioning_a7656adbbc53cc6b8b3539fa3756a2b8f}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!A0@{A0}}
+\index{A0@{A0}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{A0}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-A0 = None}\label{namespaceGNSS_1_1GNSSPositioning_ab3fa61a03cc7c1a232c0209a30797259}
+
+
+l=j[5]-\/ro+j[6]$\ast$c+\-At0 
+
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!At@{At}}
+\index{At@{At}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{At}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-At = float({\bf sol}[0][3])}\label{namespaceGNSS_1_1GNSSPositioning_a3e0691348bfaf89dd4b892d209c488b8}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!At0@{At0}}
+\index{At0@{At0}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{At0}]{\setlength{\rightskip}{0pt plus 5cm}int G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-At0 = 0}\label{namespaceGNSS_1_1GNSSPositioning_a6af8086ea6397193c30e37c3412cff7b}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!Ax@{Ax}}
+\index{Ax@{Ax}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{Ax}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Ax = float({\bf sol}[0][0])}\label{namespaceGNSS_1_1GNSSPositioning_a8294c59a515dca16e0e95aa611bd5474}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!Ay@{Ay}}
+\index{Ay@{Ay}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{Ay}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Ay = float({\bf sol}[0][1])}\label{namespaceGNSS_1_1GNSSPositioning_a16b87ce169d361ebdf4ef6b77dfd9c56}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!Az@{Az}}
+\index{Az@{Az}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{Az}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Az = float({\bf sol}[0][2])}\label{namespaceGNSS_1_1GNSSPositioning_a41a0ddb2da0152cc962b92c488f15022}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!c@{c}}
+\index{c@{c}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}float G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-c = 2.\-99792458e8}\label{namespaceGNSS_1_1GNSSPositioning_a2e7e5842b7f5f43fc7775340a6323637}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!dif@{dif}}
+\index{dif@{dif}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{dif}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-dif = [$\,$]}\label{namespaceGNSS_1_1GNSSPositioning_a91d09363f86d6fe981b8c60e49cf8221}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!dx@{dx}}
+\index{dx@{dx}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{dx}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-dx = (float(j[2])-\/{\bf Xest})}\label{namespaceGNSS_1_1GNSSPositioning_a3b5d64611a8036762947b2080509dd19}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!dy@{dy}}
+\index{dy@{dy}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{dy}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-dy = (float(j[3])-\/{\bf Yest})}\label{namespaceGNSS_1_1GNSSPositioning_ae967e0dfae03419b44fcc055fcd2dba7}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!dz@{dz}}
+\index{dz@{dz}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{dz}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-dz = (float(j[4])-\/{\bf Zest})}\label{namespaceGNSS_1_1GNSSPositioning_a7f5cca43a1541163e0bbaeac964fa70d}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!Efemerides\-\_\-act@{Efemerides\-\_\-act}}
+\index{Efemerides\-\_\-act@{Efemerides\-\_\-act}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{Efemerides\-\_\-act}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Efemerides\-\_\-act = [$\,$]}\label{namespaceGNSS_1_1GNSSPositioning_a279656bab7bcda1491edefd777a2975d}
+
+
+for j in Obs\-\_\-act\-: print(j) input() Buscar la efemeride que mejor se adecua al obserbable. 
+
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!est@{est}}
+\index{est@{est}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{est}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-est = 1}\label{namespaceGNSS_1_1GNSSPositioning_acac25f59fd66d54af2cad3a02a5f5f97}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!est\-\_\-ant@{est\-\_\-ant}}
+\index{est\-\_\-ant@{est\-\_\-ant}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{est\-\_\-ant}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-est\-\_\-ant = 0}\label{namespaceGNSS_1_1GNSSPositioning_afd6c3ba9f5434e2694c95fb28b8034dc}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!fin@{fin}}
+\index{fin@{fin}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{fin}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-fin = True}\label{namespaceGNSS_1_1GNSSPositioning_aaa773d8b45b3b3dec9988dfc7ec9d2bf}
+
+
+print(j) 
+
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!gdl@{gdl}}
+\index{gdl@{gdl}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{gdl}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-gdl = shape({\bf A0})}\label{namespaceGNSS_1_1GNSSPositioning_a260d4ab80a097b5bc3e5d9c068544d42}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!itera@{itera}}
+\index{itera@{itera}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{itera}]{\setlength{\rightskip}{0pt plus 5cm}int G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-itera = 0}\label{namespaceGNSS_1_1GNSSPositioning_a1086ca37ddfce4e2cccc9ae370d2d53c}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!K@{K}}
+\index{K@{K}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{K}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-K = [$\,$]}\label{namespaceGNSS_1_1GNSSPositioning_aa751f0c3d74a8344b131ded2d911e598}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!K0@{K0}}
+\index{K0@{K0}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{K0}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-K0 = None}\label{namespaceGNSS_1_1GNSSPositioning_a3e75da208a1ed4b340731d72bfc31dfe}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!l@{l}}
+\index{l@{l}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-l = j[5]}\label{namespaceGNSS_1_1GNSSPositioning_ab674e333d92cbfb7ad8d6e5b04fac27a}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!pos@{pos}}
+\index{pos@{pos}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-pos = {\bf G\-N\-S\-S\-Positioning}('/home/toni/Dropbox/Lib\-Geo/Ejemplos/V\-C\-I\-A2710.\-14o','/home/toni/Dropbox/Lib\-Geo/Ejemplos/V\-C\-I\-A2710.\-14n')}\label{namespaceGNSS_1_1GNSSPositioning_a895f7a0c44fc72cc0eaaef62907d83b9}
+
+
+pos=G\-N\-S\-S\-\_\-\-Positioning('/home/toni/\-Dropbox/\-Lib\-Geo/\-Ejemplos/\-A\-L\-C\-O272\-A.14o','/home/toni/\-Dropbox/\-Lib\-Geo/\-Ejemplos/\-A\-L\-C\-O2720.14n') 
+
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!pos\-\_\-sat@{pos\-\_\-sat}}
+\index{pos\-\_\-sat@{pos\-\_\-sat}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{pos\-\_\-sat}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-pos\-\_\-sat = sp.\-Sat\-Positioning({\bf Efemerides\-\_\-act},Obs\-\_\-act)}\label{namespaceGNSS_1_1GNSSPositioning_a0f13e3aa7849ca4b639f08fa3715db69}
+
+
+print(util) print(util[1]) print(efem\-\_\-\-R[util[1]]) for t in efem\-\_\-\-R\-: print(t) input() 
+
+for j in Efemerides\-\_\-act\-: print(j) input() \index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!R@{R}}
+\index{R@{R}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{R}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-R = dot({\bf A0},{\bf sol}[0])}\label{namespaceGNSS_1_1GNSSPositioning_a31907fb683f3fb4fd10ea27cf759e6fe}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!ro@{ro}}
+\index{ro@{ro}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{ro}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-ro = sqrt((float(j[2])-\/{\bf Xest})$\ast$$\ast$2+(float(j[3])-\/{\bf Yest})$\ast$$\ast$2+(float(j[4])-\/{\bf Zest})$\ast$$\ast$2)}\label{namespaceGNSS_1_1GNSSPositioning_a348ed340388506d607c9483ae85cb454}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!sats@{sats}}
+\index{sats@{sats}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{sats}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-sats = pos\-\_\-sat.\-get\-Position()}\label{namespaceGNSS_1_1GNSSPositioning_a7a227dae00b24f0cb47278c6294272d5}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!sol@{sol}}
+\index{sol@{sol}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{sol}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-sol = linalg.\-lstsq({\bf A0}, {\bf K0})}\label{namespaceGNSS_1_1GNSSPositioning_aa1b7f4bcd7dedae61f23703813ba6da2}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!util@{util}}
+\index{util@{util}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{util}]{\setlength{\rightskip}{0pt plus 5cm}list G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-util = {\bf dif}[0]}\label{namespaceGNSS_1_1GNSSPositioning_a406dea821859a158955f3e9e8688dae8}
+
+
+print(j) 
+
+print(util) print(efem\-\_\-\-G[util[1]]) input()
+
+for t in dif\-: print(t) \index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!val@{val}}
+\index{val@{val}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-val = dot(R.\-transpose(),{\bf R})}\label{namespaceGNSS_1_1GNSSPositioning_a6d8f142c469d5c2cc4610bff65b33aef}
+
+
+print(\-R) 
+
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!Xest@{Xest}}
+\index{Xest@{Xest}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{Xest}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Xest = 0}\label{namespaceGNSS_1_1GNSSPositioning_a77272d91252e576caaf9fc5d1956b4b1}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!Yest@{Yest}}
+\index{Yest@{Yest}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{Yest}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Yest = 0}\label{namespaceGNSS_1_1GNSSPositioning_ad0bb94675d977c8b5f73dc9fc5c4df25}
+\index{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}!Zest@{Zest}}
+\index{Zest@{Zest}!GNSS::GNSSPositioning@{G\-N\-S\-S\-::\-G\-N\-S\-S\-Positioning}}
+\subsubsection[{Zest}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-G\-N\-S\-S\-Positioning.\-Zest = 0}\label{namespaceGNSS_1_1GNSSPositioning_a96f7a2d185201c5b6978111127f8fe6f}

@@ -1,0 +1,114 @@
+\section{Referencia del Namespace G\-N\-S\-S.\-Sat\-Positioning}
+\label{namespaceGNSS_1_1SatPositioning}\index{G\-N\-S\-S.\-Sat\-Positioning@{G\-N\-S\-S.\-Sat\-Positioning}}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Sat\-Positioning}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def {\bf main}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf pasos} = 30
+\begin{DoxyCompactList}\small\item\em print(\-X,\-Y,\-Z) Xsal=X+vx$\ast$t+ax$\ast$t$\ast$$\ast$2 Ysal=Y+vy$\ast$t+ay$\ast$t$\ast$$\ast$2 Zsal=Z+vz$\ast$t+az$\ast$t$\ast$$\ast$2 \end{DoxyCompactList}\item 
+tuple {\bf itera} = floor(abs(t/{\bf pasos}))
+\item 
+{\bf Xa} = X
+\begin{DoxyCompactList}\small\item\em print(itera) \end{DoxyCompactList}\item 
+{\bf Ya} = Y
+\item 
+{\bf Za} = Z
+\item 
+{\bf vxa} = vx
+\item 
+{\bf vya} = vy
+\item 
+{\bf vza} = vz
+\item 
+float {\bf Tx} = -\/0.\-36
+\begin{DoxyCompactList}\small\item\em Parametros Boucher-\/\-Altamini. \end{DoxyCompactList}\item 
+float {\bf Ty} = 0.\-08
+\item 
+float {\bf Tz} = 0.\-018
+\item 
+{\bf Xsal} = {\bf Xa}+{\bf Tx}
+\begin{DoxyCompactList}\small\item\em Transformacion de 7 parametros de Helmert. \end{DoxyCompactList}\item 
+{\bf Ysal} = {\bf Ya}+{\bf Ty}
+\item 
+{\bf Zsal} = {\bf Za}+{\bf Tz}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!main@{main}}
+\index{main@{main}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}def G\-N\-S\-S.\-Sat\-Positioning.\-main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespaceGNSS_1_1SatPositioning_a4e2589b84298df7c89fa1ce99c998f01}
+
+
+\subsection{Documentación de las variables}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!itera@{itera}}
+\index{itera@{itera}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{itera}]{\setlength{\rightskip}{0pt plus 5cm}tuple G\-N\-S\-S.\-Sat\-Positioning.\-itera = floor(abs(t/{\bf pasos}))}\label{namespaceGNSS_1_1SatPositioning_a3b359ad6f7a73e1be2650d38f2a96fce}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!pasos@{pasos}}
+\index{pasos@{pasos}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{pasos}]{\setlength{\rightskip}{0pt plus 5cm}int G\-N\-S\-S.\-Sat\-Positioning.\-pasos = 30}\label{namespaceGNSS_1_1SatPositioning_ae97c87d6248222f8b87f8418c48a197a}
+
+
+print(\-X,\-Y,\-Z) Xsal=X+vx$\ast$t+ax$\ast$t$\ast$$\ast$2 Ysal=Y+vy$\ast$t+ay$\ast$t$\ast$$\ast$2 Zsal=Z+vz$\ast$t+az$\ast$t$\ast$$\ast$2 
+
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Tx@{Tx}}
+\index{Tx@{Tx}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Tx}]{\setlength{\rightskip}{0pt plus 5cm}float G\-N\-S\-S.\-Sat\-Positioning.\-Tx = -\/0.\-36}\label{namespaceGNSS_1_1SatPositioning_ae2c57f5e8a6384e6ac88f3b59ea74c58}
+
+
+Parametros Boucher-\/\-Altamini. 
+
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Ty@{Ty}}
+\index{Ty@{Ty}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Ty}]{\setlength{\rightskip}{0pt plus 5cm}float G\-N\-S\-S.\-Sat\-Positioning.\-Ty = 0.\-08}\label{namespaceGNSS_1_1SatPositioning_aa4058e797743f72df3ced5eed6664d7c}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Tz@{Tz}}
+\index{Tz@{Tz}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Tz}]{\setlength{\rightskip}{0pt plus 5cm}float G\-N\-S\-S.\-Sat\-Positioning.\-Tz = 0.\-018}\label{namespaceGNSS_1_1SatPositioning_a10b39837974729286abb699940203a5d}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!vxa@{vxa}}
+\index{vxa@{vxa}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{vxa}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-vxa = vx}\label{namespaceGNSS_1_1SatPositioning_a77c9cdc74d89171dfffc7f884f54c1e0}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!vya@{vya}}
+\index{vya@{vya}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{vya}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-vya = vy}\label{namespaceGNSS_1_1SatPositioning_ad8141ab46704621daaa57f8018f82b95}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!vza@{vza}}
+\index{vza@{vza}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{vza}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-vza = vz}\label{namespaceGNSS_1_1SatPositioning_a6f0d15f4b3ef08deb11f92316b14f4fd}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Xa@{Xa}}
+\index{Xa@{Xa}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Xa}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Xa = X}\label{namespaceGNSS_1_1SatPositioning_a9327ffa8a502bd9cf020dbadf428f5ce}
+
+
+print(itera) 
+
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Xsal@{Xsal}}
+\index{Xsal@{Xsal}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Xsal}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Xsal = {\bf Xa}+{\bf Tx}}\label{namespaceGNSS_1_1SatPositioning_ac61393bd0611fc9c0ce4f7f969a22d0a}
+
+
+Transformacion de 7 parametros de Helmert. 
+
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Ya@{Ya}}
+\index{Ya@{Ya}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Ya}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Ya = Y}\label{namespaceGNSS_1_1SatPositioning_a2cc5a3f3c42a05996188b08a5a5fad8c}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Ysal@{Ysal}}
+\index{Ysal@{Ysal}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Ysal}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Ysal = {\bf Ya}+{\bf Ty}}\label{namespaceGNSS_1_1SatPositioning_adfe8e5c527caedaad5c9b12fc14130ad}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Za@{Za}}
+\index{Za@{Za}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Za}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Za = Z}\label{namespaceGNSS_1_1SatPositioning_a2d1ce93943ae8d9d6f149ba8e618656a}
+\index{G\-N\-S\-S\-::\-Sat\-Positioning@{G\-N\-S\-S\-::\-Sat\-Positioning}!Zsal@{Zsal}}
+\index{Zsal@{Zsal}!GNSS::SatPositioning@{G\-N\-S\-S\-::\-Sat\-Positioning}}
+\subsubsection[{Zsal}]{\setlength{\rightskip}{0pt plus 5cm}G\-N\-S\-S.\-Sat\-Positioning.\-Zsal = {\bf Za}+{\bf Tz}}\label{namespaceGNSS_1_1SatPositioning_aac178de23ef6a25b313c22d1fe9eb582}

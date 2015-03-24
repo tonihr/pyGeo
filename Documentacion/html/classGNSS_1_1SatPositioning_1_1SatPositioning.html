@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>PyGeo: Referencia de la Clase GNSS.SatPositioning.SatPositioning</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PyGeo
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classGNSS_1_1SatPositioning_1_1SatPositioning.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pub-attribs">Atributos públicos</a> &#124;
+<a href="#pub-static-attribs">Atributos públicos estáticos</a> &#124;
+<a href="classGNSS_1_1SatPositioning_1_1SatPositioning-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase GNSS.SatPositioning.SatPositioning</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Diagrama de herencias de GNSS.SatPositioning.SatPositioning</div>
+<div class="dyncontent">
+<div class="center"><img src="classGNSS_1_1SatPositioning_1_1SatPositioning__inherit__graph.png" border="0" usemap="#GNSS_8SatPositioning_8SatPositioning_inherit__map" alt="Inheritance graph"/></div>
+<map name="GNSS_8SatPositioning_8SatPositioning_inherit__map" id="GNSS_8SatPositioning_8SatPositioning_inherit__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboración para GNSS.SatPositioning.SatPositioning:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGNSS_1_1SatPositioning_1_1SatPositioning__coll__graph.png" border="0" usemap="#GNSS_8SatPositioning_8SatPositioning_coll__map" alt="Collaboration graph"/></div>
+<map name="GNSS_8SatPositioning_8SatPositioning_coll__map" id="GNSS_8SatPositioning_8SatPositioning_coll__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:af8d94ee1854c87922ffd19bfe3eb4ccb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#af8d94ee1854c87922ffd19bfe3eb4ccb">__init__</a></td></tr>
+<tr class="separator:af8d94ee1854c87922ffd19bfe3eb4ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffb0f2be6474ed28f92336e1fc23f2f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#adffb0f2be6474ed28f92336e1fc23f2f">getPosition</a></td></tr>
+<tr class="separator:adffb0f2be6474ed28f92336e1fc23f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a323b4692629d6d50495c1b26152b6681"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a323b4692629d6d50495c1b26152b6681">ef</a></td></tr>
+<tr class="separator:a323b4692629d6d50495c1b26152b6681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110b573c0503117e7594b377a54b6713"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a110b573c0503117e7594b377a54b6713">obs</a></td></tr>
+<tr class="separator:a110b573c0503117e7594b377a54b6713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:a04716d4e46aa3aad5e08682b735a56f7"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a04716d4e46aa3aad5e08682b735a56f7">Dif</a> = []</td></tr>
+<tr class="memdesc:a04716d4e46aa3aad5e08682b735a56f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">print(X,Y,Z) print(i[1],E_sig,true_anom,alfa,Omega1,incli,r,OMEGA_FIN,float(j[2][0]))  <a href="#a04716d4e46aa3aad5e08682b735a56f7">Más...</a><br/></td></tr>
+<tr class="separator:a04716d4e46aa3aad5e08682b735a56f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430c987cd27baba6340920667f516b18"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a430c987cd27baba6340920667f516b18">t_obs</a> = u2g.UTC2GPS(j[0])</td></tr>
+<tr class="separator:a430c987cd27baba6340920667f516b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e92f5012647282daae766fd9b7c963"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ad7e92f5012647282daae766fd9b7c963">t_efem</a> = u2g.UTC2GPS(i[0])</td></tr>
+<tr class="separator:ad7e92f5012647282daae766fd9b7c963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae069db656557b98ae22210a9312d26c0"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a04716d4e46aa3aad5e08682b735a56f7">Dif</a>[0]</td></tr>
+<tr class="separator:ae069db656557b98ae22210a9312d26c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d975adb25605ecfb081b62d160d399f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a7d975adb25605ecfb081b62d160d399f">vali</a> = i</td></tr>
+<tr class="separator:a7d975adb25605ecfb081b62d160d399f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab662885f940f68d792eb5f335cf285ef"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ab662885f940f68d792eb5f335cf285ef">tefem</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[0]</td></tr>
+<tr class="separator:ab662885f940f68d792eb5f335cf285ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c7ed5bbe71fdfa8a1a966744d763158"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a9c7ed5bbe71fdfa8a1a966744d763158">tobs</a> = j[0]</td></tr>
+<tr class="separator:a9c7ed5bbe71fdfa8a1a966744d763158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001802e1b0760576df5bd4c8448a604f"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a001802e1b0760576df5bd4c8448a604f">tau</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:a001802e1b0760576df5bd4c8448a604f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02d0bd3315f00e5d16f721a4a7230da"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae02d0bd3315f00e5d16f721a4a7230da">gamma</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:ae02d0bd3315f00e5d16f721a4a7230da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2dd0ee5e2ac1ea2d6ff7d420e30152b"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#aa2dd0ee5e2ac1ea2d6ff7d420e30152b">tk</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:aa2dd0ee5e2ac1ea2d6ff7d420e30152b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a835fdc3cfdf5c092cde9b10792d73"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a56a835fdc3cfdf5c092cde9b10792d73">X</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:a56a835fdc3cfdf5c092cde9b10792d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244a741a2ad62da9cd659f3b092ca75f"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a244a741a2ad62da9cd659f3b092ca75f">vx</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:a244a741a2ad62da9cd659f3b092ca75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d465a47037a750763ea55caa19826c"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a27d465a47037a750763ea55caa19826c">ax</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:a27d465a47037a750763ea55caa19826c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6739ac0c26e7beec612b5d7bc435f9"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#afc6739ac0c26e7beec612b5d7bc435f9">health</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:afc6739ac0c26e7beec612b5d7bc435f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40278bc6aa56c03fda110afe8165c507"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a40278bc6aa56c03fda110afe8165c507">Y</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:a40278bc6aa56c03fda110afe8165c507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893abcd584565225433a90c99fe77661"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a893abcd584565225433a90c99fe77661">vy</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:a893abcd584565225433a90c99fe77661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5532199ba55f05af50b9fa172c0b48"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ada5532199ba55f05af50b9fa172c0b48">ay</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:ada5532199ba55f05af50b9fa172c0b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2523a038ea1c4e30a83e91f54070535"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ac2523a038ea1c4e30a83e91f54070535">f</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:ac2523a038ea1c4e30a83e91f54070535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afe04025a56065826847bdb2a98edea"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a5afe04025a56065826847bdb2a98edea">Z</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:a5afe04025a56065826847bdb2a98edea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0e254b5e62147b5ab11fe5d8a1cdb8"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a8b0e254b5e62147b5ab11fe5d8a1cdb8">vz</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:a8b0e254b5e62147b5ab11fe5d8a1cdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3b2873e2148c1407fc8df2c999bc43"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#aac3b2873e2148c1407fc8df2c999bc43">az</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:aac3b2873e2148c1407fc8df2c999bc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa698726f92db5d9590bc6ca72a975e45"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#aa698726f92db5d9590bc6ca72a975e45">age</a> = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td></tr>
+<tr class="separator:aa698726f92db5d9590bc6ca72a975e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeaad5cbf19059e2a2087adcccd30ccf"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#aaeaad5cbf19059e2a2087adcccd30ccf">t</a> = (u2g.UTC2GPS(<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a9c7ed5bbe71fdfa8a1a966744d763158">tobs</a>)-u2g.UTC2GPS(<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ab662885f940f68d792eb5f335cf285ef">tefem</a>))</td></tr>
+<tr class="separator:aaeaad5cbf19059e2a2087adcccd30ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae724ccc30bd5d58194afdb7802af1c1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae724ccc30bd5d58194afdb7802af1c1d">Atsv</a> = -<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a001802e1b0760576df5bd4c8448a604f">tau</a>+<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae02d0bd3315f00e5d16f721a4a7230da">gamma</a>*<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#aaeaad5cbf19059e2a2087adcccd30ccf">t</a></td></tr>
+<tr class="separator:ae724ccc30bd5d58194afdb7802af1c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc81d1c1558a3d31a175c3c7f5addf26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#adc81d1c1558a3d31a175c3c7f5addf26">t</a> = t-<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae724ccc30bd5d58194afdb7802af1c1d">Atsv</a></td></tr>
+<tr class="separator:adc81d1c1558a3d31a175c3c7f5addf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><pre class="fragment">classdocs
+</pre> </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="af8d94ee1854c87922ffd19bfe3eb4ccb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def GNSS.SatPositioning.SatPositioning.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>Efems</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>Obs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Constructor 
+</pre> 
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="adffb0f2be6474ed28f92336e1fc23f2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def GNSS.SatPositioning.SatPositioning.getPosition </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="aa698726f92db5d9590bc6ca72a975e45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.age = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae724ccc30bd5d58194afdb7802af1c1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GNSS.SatPositioning.SatPositioning.Atsv = -<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a001802e1b0760576df5bd4c8448a604f">tau</a>+<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae02d0bd3315f00e5d16f721a4a7230da">gamma</a>*<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#aaeaad5cbf19059e2a2087adcccd30ccf">t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a27d465a47037a750763ea55caa19826c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.ax = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ada5532199ba55f05af50b9fa172c0b48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.ay = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aac3b2873e2148c1407fc8df2c999bc43"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.az = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a04716d4e46aa3aad5e08682b735a56f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.Dif = []</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>print(X,Y,Z) print(i[1],E_sig,true_anom,alfa,Omega1,incli,r,OMEGA_FIN,float(j[2][0])) </p>
+
+</div>
+</div>
+<a class="anchor" id="a323b4692629d6d50495c1b26152b6681"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GNSS.SatPositioning.SatPositioning.ef</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac2523a038ea1c4e30a83e91f54070535"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.f = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae02d0bd3315f00e5d16f721a4a7230da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.gamma = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afc6739ac0c26e7beec612b5d7bc435f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.health = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a110b573c0503117e7594b377a54b6713"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GNSS.SatPositioning.SatPositioning.obs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaeaad5cbf19059e2a2087adcccd30ccf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tuple GNSS.SatPositioning.SatPositioning.t = (u2g.UTC2GPS(<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a9c7ed5bbe71fdfa8a1a966744d763158">tobs</a>)-u2g.UTC2GPS(<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ab662885f940f68d792eb5f335cf285ef">tefem</a>))</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc81d1c1558a3d31a175c3c7f5addf26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GNSS.SatPositioning.SatPositioning.t = t-<a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae724ccc30bd5d58194afdb7802af1c1d">Atsv</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7e92f5012647282daae766fd9b7c963"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tuple GNSS.SatPositioning.SatPositioning.t_efem = u2g.UTC2GPS(i[0])</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a430c987cd27baba6340920667f516b18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tuple GNSS.SatPositioning.SatPositioning.t_obs = u2g.UTC2GPS(j[0])</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a001802e1b0760576df5bd4c8448a604f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.tau = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab662885f940f68d792eb5f335cf285ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.tefem = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[0]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa2dd0ee5e2ac1ea2d6ff7d420e30152b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.tk = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9c7ed5bbe71fdfa8a1a966744d763158"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.tobs = j[0]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae069db656557b98ae22210a9312d26c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.vali = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#a04716d4e46aa3aad5e08682b735a56f7">Dif</a>[0]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7d975adb25605ecfb081b62d160d399f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GNSS.SatPositioning.SatPositioning.vali = i</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a244a741a2ad62da9cd659f3b092ca75f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.vx = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a893abcd584565225433a90c99fe77661"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.vy = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8b0e254b5e62147b5ab11fe5d8a1cdb8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.vz = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56a835fdc3cfdf5c092cde9b10792d73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.X = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a40278bc6aa56c03fda110afe8165c507"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.Y = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5afe04025a56065826847bdb2a98edea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list GNSS.SatPositioning.SatPositioning.Z = <a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html#ae069db656557b98ae22210a9312d26c0">vali</a>[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>/home/toni/Dropbox/pyGeo/GNSS/<a class="el" href="SatPositioning_8py.html">SatPositioning.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGNSS.html">GNSS</a></li><li class="navelem"><a class="el" href="namespaceGNSS_1_1SatPositioning.html">SatPositioning</a></li><li class="navelem"><a class="el" href="classGNSS_1_1SatPositioning_1_1SatPositioning.html">SatPositioning</a></li>
+    <li class="footer">Generado el Lunes, 23 de Marzo de 2015 10:57:10 para PyGeo por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
