@@ -227,16 +227,16 @@ def main():
                     X=float(input("X(UTM): "))
                     Y=float(input("Y(UTM): "))
                     Huso=int(input("Huso: "))
-                    Nombre_Elipsoide=input("Elipsoide: ")
+                    Nombre_Elipsoide=str(input("Elipsoide: "))
                     p=putm.PuntoUTM(X,Y,Huso=Huso)
                     sal=UTM2Geo(p,Nombre_Elipsoide)
                     print()
                     print("Resultados:")
-                    print("Latitud: "+str(sal.get_Latitud()))
-                    print("Longitud: "+str(sal.get_Longitud()))
-                    print("h Elipsoidal: "+str(sal.get_Altura_Elipsoidal()))
-                    print("kp: %.5f"%p.get_Escala_Local_Punto())
-                    print("conv_med: %.6f"%p.get_Convergencia_Meridianos())
+                    print("Latitud: "+str(sal.getLatitud()))
+                    print("Longitud: "+str(sal.getLongitud()))
+                    print("h Elipsoidal: "+str(sal.getAlturaElipsoidal()))
+                    print("kp: %.5f"%p.getEscalaLocalPunto())
+                    print("conv_med: %.6f"%p.getConvergenciaMeridianos())
                 except Exception as e:
                     print(e)
                     continue
@@ -253,7 +253,7 @@ def main():
                     sal=UTM2GeoFromFile(r_ent,Nombre_Elipsoide)
                     pr=open(r_sal,'wb',1024)
                     for i in sal:
-                        a=bytes((""+str(i.get_Latitud())+";"+str(i.get_Longitud())+"\n").encode(encoding='UTF-8',errors='strict'))
+                        a=bytes((""+str(i.getLatitud())+";"+str(i.getLongitud())+"\n").encode(encoding='UTF-8',errors='strict'))
                         pr.write(a)
                 except Exception as e:
                     print(e)
