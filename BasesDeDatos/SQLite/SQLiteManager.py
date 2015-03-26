@@ -192,6 +192,14 @@ class SQLiteManager(object):
         return self.__cursor.fetchall()
         pass
     
+    def ObtenerFila(self,tabla,idfila):
+        '''!
+        '''
+        sentence='''SELECT * FROM '''+tabla+" WHERE rowid="+idfila
+        self.__cursor.execute(sentence)
+        return self.__cursor.fetchall()
+        pass
+    
     def ObtenerColumna(self,tabla,columna):
         '''!
         @brief: Método que devuleve todos los valores de una columna (campo).
@@ -231,8 +239,103 @@ class SQLiteManager(object):
             
             
 def main():
+    #### Parametros Cambio de marco. ####
+    db=SQLiteManager("/home/toni/Dropbox/pyGeo/Geodesia/CambiosMarco.db")
+#     db.CrearTabla('Parametros',\
+#                   ["Origen","Destino","Tx","Ty","Tz","d","Rx","Ry","Rz","t0","rTx","rTy","rTz","rd","rRx","rRy","rRz"],\
+#                   ["text","text","real","real","real","real","real","real","real","real","real","real","real","real","real","real","real"])
+    db.AddRow("Parametros",\
+              ["'ITRF93'","'ITRF89'",\
+               "1.9","4.1","-5.3","0.39E-8","1.8907733563272E-9","-3.8785094488763E-9","4.6542113386515E-9","1988.0",\
+               "0.29","-0.04","-0.08","0.0","5.3329504922049E-10","9.2114599410812E-10","-2.4240684055477E-10"])
 
-    db=SQLiteManager("/home/toni/Dropbox/pyGeo/Geodesia/Elipsoides/Elipsoides.db")
+
+    #### Base de datos valores EMG Peninsula y baleares. ####
+#     db=SQLiteManager("/home/toni/Dropbox/pyGeo/Geodesia/EGM/EGM_Peninsula.db")
+#     db.CrearTabla('Cabecera',\
+#                   ["TLLatitude","TRLongitud","IncrementoLatitud","IncrementoLongitud","Filas","Columnas"],\
+#                   ["real","real","real","real","real","real"])
+#     f=open('/home/toni/Dropbox/pyGeo/Geodesia/EGM/EGM08_REDNAP.txt','r')
+#     lin=f.readline()
+#     lin=lin.split()
+#     print(lin)
+#     ilat=float(lin[2])/60
+#     ilon=float(lin[3])/60
+#     db.AddRow("Cabecera",[str(lin[0]),str(lin[1]),str(ilat),str(ilon),str(lin[4]),str(lin[5])])
+#     vals=[]
+#     for i in range(int(lin[5])):
+#         name='ond_'+str(i+1)
+#         vals.append(name)
+#          
+#     vals1=["real"]*len(vals)
+#  
+#     db.CrearTabla('Ondulaciones',\
+#                   vals,\
+#                   vals1)
+#     const=85
+#     seguir=True
+#     while seguir:
+#         try:
+#             onds=[]
+#             lins=[f.readline() for _ in range(const)]
+#             for i in lins:
+#                 i=i.split()
+#                 for j in i:
+#                     onds.append(j)
+#             db.AddRow('Ondulaciones',\
+#                       onds)
+#              
+#         except:
+#             seguir=False
+
+
+
+
+#### Base de datos valores EMG Canarias. ####
+#     db=SQLiteManager("/home/toni/Dropbox/pyGeo/Geodesia/EGM/EGM_Canarias.db")
+#     db.CrearTabla('Cabecera',\
+#                   ["TLLatitude","TRLongitud","IncrementoLatitud","IncrementoLongitud","Filas","Columnas"],\
+#                   ["real","real","real","real","real","real"])
+#     f=open('/home/toni/Dropbox/pyGeo/Geodesia/EGM/EGM08_REDNAP_Canarias.txt','r')
+#     lin=f.readline()
+#     lin=lin.split()
+#     print(lin)
+#     ilat=float(lin[2])/60
+#     ilon=float(lin[3])/60
+#     db.AddRow("Cabecera",[str(lin[0]),str(lin[1]),str(ilat),str(ilon),str(lin[4]),str(lin[5])])
+#     vals=[]
+#     for i in range(int(lin[5])):
+#         name='ond_'+str(i+1)
+#         vals.append(name)
+#           
+#     vals1=["real"]*len(vals)
+#   
+#     db.CrearTabla('Ondulaciones',\
+#                   vals,\
+#                   vals1)
+#     const=34
+#     seguir=True
+#     while seguir:
+#         try:
+#             onds=[]
+#             lins=[f.readline() for _ in range(const)]
+#             for i in lins:
+#                 i=i.split()
+#                 for j in i:
+#                     onds.append(j)
+#             db.AddRow('Ondulaciones',\
+#                       onds)
+#               
+#         except:
+#             seguir=False
+
+
+
+
+    
+    
+    #####Base de datos Elipsoides ####
+#     db=SQLiteManager("/home/toni/Dropbox/pyGeo/Geodesia/Elipsoides/Elipsoides.db")
 #     db.AddRow("Elipsoides",["'Hayford 1950'","6378388.0","NULL","297.0","NULL","NULL","NULL"])
 #     db.AddRow("Elipsoides",["'PZ-90'","6378136.0","NULL","298.257839303","3.9860044E14","7.292115E-5","-1.08262575E-3"])
     

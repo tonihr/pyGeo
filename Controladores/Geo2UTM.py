@@ -17,7 +17,7 @@ from os import sep,pardir,getcwd
 from os.path import normpath
 import Geometrias.PuntoGeodesico
 import Proyecciones.Geo2UTM
-import Geodesia.EMG.CalcularOndulacionTxt
+import Geodesia.EGM.CalcularOndulacionTxt
 
 
 class Geo2UTM(QtGui.QWidget):
@@ -64,7 +64,7 @@ class Geo2UTM(QtGui.QWidget):
         import BasesDeDatos.SQLite.SQLiteManager
         try:
             db=BasesDeDatos.SQLite.SQLiteManager.SQLiteManager(self.__rutaroot+'/Geodesia/Elipsoides/Elipsoides.db')
-            Nombres=db.ObtenerColumna('Nombre', 'Elipsoides')
+            Nombres=db.ObtenerColumna( 'Elipsoides','Nombre')
             Nombres=[i[0] for i in Nombres]
             Nombres.sort()
             self.comboBox.addItems(Nombres)
@@ -127,7 +127,7 @@ class Geo2UTM(QtGui.QWidget):
             self.lineEdit_7.setText(str(round(Sal.getConvergenciaMeridianos(),self.__pw)))
             self.lineEdit_8.setText(str(round(Sal.getEscalaLocalPunto(),self.__pkp)))
             try:
-                self.lineEdit_9.setText(str(round(Geodesia.EMG.CalcularOndulacionTxt.CalcularOndulacion(pgeo),self.__pN)))
+                self.lineEdit_9.setText(str(round(Geodesia.EGM.CalcularOndulacionTxt.CalcularOndulacion(pgeo),self.__pN)))
             except:
                 self.lineEdit_9.setText("")
         except Exception as e:
@@ -195,7 +195,7 @@ class Geo2UTM(QtGui.QWidget):
                 line+=str(round(i[2].getConvergenciaMeridianos(),self.__pw))+","
                 line+=str(round(i[2].getEscalaLocalPunto(),self.__pkp))+","
                 try:
-                    line+=str(round(Geodesia.EMG.CalcularOndulacionTxt.CalcularOndulacion(i[1]),self.__pN))+","
+                    line+=str(round(Geodesia.EGM.CalcularOndulacionTxt.CalcularOndulacion(i[1]),self.__pN))+","
                 except:
                     line+=","
                 line+=str(i[2].getZonaUTM())+"\n"

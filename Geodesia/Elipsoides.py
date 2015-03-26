@@ -63,7 +63,7 @@ class Elipsoides(object):
         '''!
         '''
         if not isinstance(Nombre, str):
-            raise Exception("Se esperaba un string como argumento de entrada.")
+            raise Exception("Se esperaba un str como argumento de entrada.")
         
         
     def getSemiEjeMayor(self):
@@ -161,12 +161,12 @@ class Elipsoides(object):
         return "{"+\
             '"Nombre":'+'"'+str(self.__nom)+'"'+",\n"\
             '"Semieje Mayor":'+'"'+str(self.getSemiEjeMayor())+'"'+",\n"\
-            '"Aplanamiento":'+'"'+str(self.getSemiEjeMenor())+'"'+"\n"\
-            '"Excentricidad Lineal":'+'"'+str(self.getExcentricidadLineal())+'"'+"\n"\
-            '"Primera Excentricidad":'+'"'+str(self.getPrimeraExcentricidad())+'"'+"\n"\
-            '"Segunda Excentricidad":'+'"'+str(self.getSegundaExcentricidad())+'"'+"\n"\
-            '"Producto GM":'+'"'+str(self.getProductoGM())+'"'+"\n"\
-            '"Velocidad Angular":'+'"'+str(self.getVelocidadAngular())+'"'+"\n"\
+            '"Aplanamiento":'+'"'+str(self.getSemiEjeMenor())+'"'+",\n"\
+            '"Excentricidad Lineal":'+'"'+str(self.getExcentricidadLineal())+'"'+",\n"\
+            '"Primera Excentricidad":'+'"'+str(self.getPrimeraExcentricidad())+'"'+",\n"\
+            '"Segunda Excentricidad":'+'"'+str(self.getSegundaExcentricidad())+'"'+",\n"\
+            '"Producto GM":'+'"'+str(self.getProductoGM())+'"'+",\n"\
+            '"Velocidad Angular":'+'"'+str(self.getVelocidadAngular())+'"'+",\n"\
             '"Factor de forma dinámico":'+'"'+str(self.getFactorFormaDinamico())+'"'+"\n"\
             +"}"
         
