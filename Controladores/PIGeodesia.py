@@ -50,7 +50,7 @@ class PIGeodesia(QtGui.QWidget):
         import BasesDeDatos.SQLite.SQLiteManager
         try:
             db=BasesDeDatos.SQLite.SQLiteManager.SQLiteManager(self.__rutaroot+'/Geodesia/Elipsoides/Elipsoides.db')
-            Nombres=db.ObtenerColumna('Nombre', 'Elipsoides')
+            Nombres=db.ObtenerColumna('Elipsoides','Nombre')
             Nombres=[i[0] for i in Nombres]
             Nombres.sort()
             self.comboBox.addItems(Nombres)

@@ -11,6 +11,7 @@ Created on 5/2/2015
 '''
 import BasesDeDatos.SQLite.SQLiteManager as bd
 from math import sqrt
+from os.path import split,realpath
 
 class Elipsoides(object):
     '''!
@@ -33,7 +34,8 @@ class Elipsoides(object):
         @param NombreElipsoide srt: Nombre del elipsoide a cargar.
         '''
         self.__checkNombreElipsoide(NombreElipsoide)
-        elips=bd.SQLiteManager('../Geodesia/Elipsoides/Elipsoides.db')
+        rutafil, file=split(realpath(__file__))
+        elips=bd.SQLiteManager(rutafil+'/Elipsoides/Elipsoides.db')
         
         try:
             parametros=elips.Consulta('''SELECT * FROM Elipsoides WHERE Nombre='''+"'"+NombreElipsoide+"'")

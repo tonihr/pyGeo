@@ -18,7 +18,7 @@ from os import sep,pardir,getcwd
 from os.path import normpath
 import Geometrias.PuntoUTM
 import Proyecciones.UTM2Geo
-import Geodesia.EGM.CalcularOndulacionTxt
+import Geodesia.EGM.CalcularOndulacion
 
 class UTM2Geo(QtGui.QWidget):
     '''
@@ -102,7 +102,7 @@ class UTM2Geo(QtGui.QWidget):
             self.lineEdit_5.setText(str(round(putm.getConvergenciaMeridianos(),self.__pw)))
             self.lineEdit_6.setText(str(putm.getEscalaLocalPunto()))
             try:
-                self.lineEdit_7.setText(str(round(Geodesia.EGM.CalcularOndulacionTxt.CalcularOndulacion(Sal),self.__pN)))
+                self.lineEdit_7.setText(str(round(Geodesia.EGM.CalcularOndulacion.CalcularOndulacion(Sal),self.__pN)))
             except:
                 self.lineEdit_7.setText("")
 

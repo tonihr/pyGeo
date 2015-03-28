@@ -89,7 +89,7 @@ class PoliLinea2D(object):
     def selfIntersect(self):
         '''
         '''
-        Sal=[]
+        selfInter=[]
         for indi1,i in enumerate(self.__lins):
             for indi2,j in enumerate(self.__lins):
                 if indi1==indi2 or indi1>indi2:
@@ -98,18 +98,19 @@ class PoliLinea2D(object):
                     continue
                 elif indi1-1==indi2:
                     continue
-                elif self.isClose()==True:
-                    if indi1==len(self.__lins)-1 and indi2==0:
-                        continue
-                    if indi2==len(self.__lins)-1 and indi1==0:
-                        continue
+                elif self.isClose()==True and indi1==len(self.__lins)-1 and indi2==0:
+                    continue
+                elif self.isClose()==True and indi2==len(self.__lins)-1 and indi1==0:
+                    continue
                 else:
                     inter=inter2d.Interseccion2D(i,j)
                     sal=inter.Intersectar(tipo='real')
                     if sal==None:
                         continue
                     else:
-                        print(indi1,indi2,sal.getX(),sal.getY())
+                        selfInter.append([indi1,indi2,sal.getX(),sal.getY()])
+                        #print(indi1,indi2,sal.getX(),sal.getY())
+        return selfInter
         
         
         

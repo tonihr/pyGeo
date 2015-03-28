@@ -70,6 +70,7 @@ class Punto2D(object):
         @exception: Se producira una excepción si se introduce un valor negativo con la propiedad negativos=False.
         '''
         if isinstance(X, str) or isinstance(X, int) or isinstance(X, float):
+            #Se comprueba el tipo de dato introducido y se intenta convertir a float.
             try:
                 self.__X=float(X)
             except Exception as e:
@@ -78,6 +79,7 @@ class Punto2D(object):
             raise ValueError()
         
         if self.__neg==False and self.__X<0:
+            #En el caso de que el valor sea negativo y no se puedan introducir números negativos saltara la excepción.
             raise Exception("La coordenada X no puede ser negativa.\nNegativos="+str(self.__neg))
         
         
@@ -89,6 +91,7 @@ class Punto2D(object):
         @exception: Se producira una excepción si se introduce un valor negativo con la propiedad negativos=False.
         '''
         if isinstance(Y, str) or isinstance(Y, int) or isinstance(Y, float):
+            #Se comprueba el tipo de dato introducido y se intenta convertir a float.
             try:
                 self.__Y=float(Y)
             except Exception as e:
@@ -97,6 +100,7 @@ class Punto2D(object):
             raise ValueError()
         
         if self.__neg==False and self.__Y<0:
+            #En el caso de que el valor sea negativo y no se puedan introducir números negativos saltara la excepción.
             raise Exception("La coordenada Y no puede ser negativa.\nNegativos="+str(self.__neg))
         
     def setNegativos(self,Negativos):
@@ -109,11 +113,15 @@ class Punto2D(object):
         @exception: Se producira una excepcion si se cambia la propiedad negativos a Flase y existen coordenadas negativas en la clase.
         '''
         if isinstance(Negativos, bool) or isinstance(Negativos, str) or isinstance(Negativos, int):
+            #Se comprueba el tipo de dato introducido y se intenta convertir a bool.
             try:
                 self.__neg=bool(Negativos)
             except Exception as e:
                 raise Exception(e)
+            
         if self.__neg==False:
+            #En el caso de que no se puedan introducir números negativos y la clase contenga algún valor
+            #en las coordenadas X e Y, si estas son negativas saltara una excepción.
             if self.__X!=None and self.__X<0:
                 raise Exception("La coordenada X de la clase es negativa.")
             if self.__Y!=None and self.__Y<0:

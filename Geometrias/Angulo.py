@@ -469,6 +469,16 @@ class Angulo(object):
             self.__s=None
             self.setFormato('longitud360')
             return
+        elif self.__f=='longitud180' and Formato=="longitud360":
+            if self.__ang<0:
+                self.__ang+=360
+            self.setFormato('longitud360')
+            return
+        elif self.__f=='longitud360' and Formato=="longitud180":
+            if self.__ang>180:
+                self.__ang-=360
+            self.setFormato('longitud180')
+            return
             
             
     def Convert2Min(self):

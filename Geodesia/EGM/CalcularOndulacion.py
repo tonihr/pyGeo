@@ -9,21 +9,23 @@ Created on 25/3/2015
 @copyright: (C) 2015 by Antonio Hermosilla Rodrigo.
 @version: 1.0.0
 '''
-import sys
-sys.path.append('../..')
 
-
+from os.path import split,realpath
 import Geometrias.PuntoGeodesico as pgeo
 import BasesDeDatos.SQLite.SQLiteManager as DB
 
 
-def CalcularOndulacion(PuntoGeodesico):
+def CalcularOndulacion(PuntoGeodesico,tipo='distancia'):
     '''
     Función para calcular la ondulación del Geoide del Modelo EGM08 del IGN.
     '''
+    if tipo!='bilineal' and tipo!='bicubica' and tipo!='distancia':
+        raise Exception("La interpolación de la ondulación ha de ser de tipo bilineal o bicubica.")
     # Conexión a las bases de datos existentes.
-    db1 = DB.SQLiteManager('EGM_Peninsula.db')
-    db2 = DB.SQLiteManager('EGM_Canarias.db')
+    rutafil, file=split(realpath(__file__))
+    print(rutafil)
+    db1 = DB.SQLiteManager(rutafil+'/EGM_Peninsula.db')
+    db2 = DB.SQLiteManager(rutafil+'/EGM_Canarias.db')
     # comprobar si el punto introducido puede ser calculado.
     lat = PuntoGeodesico.getLatitud()
     lon = PuntoGeodesico.getLongitud()
@@ -74,6 +76,8 @@ def CalcularOndulacion(PuntoGeodesico):
     inccol=0
     onds1=None
     onds2=None
+    onds3=None
+    onds4=None
     lat_calc=0
     lon_calc=0
     
@@ -84,8 +88,14 @@ def CalcularOndulacion(PuntoGeodesico):
             diflon=lonaux-lon1
             incfil=int(diflat/ilat1)
             inccol=int(diflon/ilon1)
-            onds1=db1.ObtenerFila('Ondulaciones', str(incfil))
-            onds2=db1.ObtenerFila('Ondulaciones', str(incfil+1))
+            if tipo == 'bilineal' or 'distancia':
+                onds1=db1.ObtenerFila('Ondulaciones', str(incfil))
+                onds2=db1.ObtenerFila('Ondulaciones', str(incfil+1))
+            elif tipo == 'bicubica':
+                onds1=db1.ObtenerFila('Ondulaciones', str(incfil-1))
+                onds2=db1.ObtenerFila('Ondulaciones', str(incfil))
+                onds3=db1.ObtenerFila('Ondulaciones', str(incfil+1))
+                onds4=db1.ObtenerFila('Ondulaciones', str(incfil+2))
             lat_calc=lat1-ilat1*incfil
             lon_calc=lon1+ilon1*inccol
             if lon_calc>=360:
@@ -96,8 +106,14 @@ def CalcularOndulacion(PuntoGeodesico):
             diflon=(360-lon1)+lonaux
             incfil=int(diflat/ilat1)
             inccol=int(diflon/ilon1)
-            onds1=db1.ObtenerFila('Ondulaciones', str(incfil))
-            onds2=db1.ObtenerFila('Ondulaciones', str(incfil+1))
+            if tipo == 'bilineal' or 'distancia':
+                onds1=db1.ObtenerFila('Ondulaciones', str(incfil))
+                onds2=db1.ObtenerFila('Ondulaciones', str(incfil+1))
+            elif tipo == 'bicubica':
+                onds1=db1.ObtenerFila('Ondulaciones', str(incfil-1))
+                onds2=db1.ObtenerFila('Ondulaciones', str(incfil))
+                onds3=db1.ObtenerFila('Ondulaciones', str(incfil+1))
+                onds4=db1.ObtenerFila('Ondulaciones', str(incfil+2))
             lat_calc=lat1-ilat1*incfil
             lon_calc=lon1+ilon1*inccol
             if lon_calc>=360:
@@ -108,8 +124,14 @@ def CalcularOndulacion(PuntoGeodesico):
         diflon=lonaux-lon2
         incfil=int(diflat/ilat2)
         inccol=int(diflon/ilon2)
-        onds1=db2.ObtenerFila('Ondulaciones', str(incfil))
-        onds2=db2.ObtenerFila('Ondulaciones', str(incfil+1))
+        if tipo == 'bilineal':
+            onds1=db1.ObtenerFila('Ondulaciones', str(incfil))
+            onds2=db1.ObtenerFila('Ondulaciones', str(incfil+1))
+        elif tipo == 'bicubica':
+            onds1=db1.ObtenerFila('Ondulaciones', str(incfil-1))
+            onds2=db1.ObtenerFila('Ondulaciones', str(incfil))
+            onds3=db1.ObtenerFila('Ondulaciones', str(incfil+1))
+            onds4=db1.ObtenerFila('Ondulaciones', str(incfil+2))
         lat_calc=lat2-ilat2*incfil
         lon_calc=lon2+ilon2*inccol
         if lon_calc>=360:
@@ -120,26 +142,32 @@ def CalcularOndulacion(PuntoGeodesico):
     
 #     print(onds1)
 #     print(onds2)
-    ond0=onds1[0][inccol+1]
-    ond1=onds1[0][inccol]
-    ond2=onds2[0][inccol+1]
-    ond3=onds2[0][inccol]
+    if tipo == 'bilineal':
+        ond0=onds1[0][inccol+1]
+        ond1=onds1[0][inccol]
+        ond2=onds2[0][inccol+1]
+        ond3=onds2[0][inccol]
+
+        Alat=abs(lat_calc-lat)
+        Alon=abs(lon_calc-lonaux)
+
+        v1=ond0*Alon*Alat
+        v2=ond1*(ilon1-Alon)*Alat
+        v3=ond2*Alon*(ilat1-Alat)
+        v4=ond3*(ilon1-Alon)*(ilat1-Alat)
+        #print(v1,v2,v3,v4)
+        return(v1+v2+v3+v4)/(ilon1*ilat1)
     
-#     print(ond0,ond1)
-#     print(ond2,ond3)
-#     print(lat_calc,lat)
-#     print(lon_calc,lonaux)
-    Alat=abs(lat_calc-lat)
-    Alon=abs(lon_calc-lonaux)
-#     print(Alat,Alon)
-    
-    #Interpolación bilineal.
-    v1=ond0*Alon*Alat
-    v2=ond1*(ilon1-Alon)*Alat
-    v3=ond2*Alon*(ilat1-Alat)
-    v4=ond3*(ilon1-Alon)*(ilat1-Alat)
-    #print(v1,v2,v3,v4)
-    return(v1+v2+v3+v4)/(ilat1*ilon1)
+    elif tipo == 'distancia':
+        ond0=onds1[0][inccol+1]
+        ond1=onds1[0][inccol]
+        ond2=onds2[0][inccol+1]
+        ond3=onds2[0][inccol]
+        import Geodesia.PIGeodesia as pigeo
+        p=pigeo.PIGeodesia(PuntoGeodesico,pgeo.PuntoGeodesico(lat1,lonaux))
+        az,dr=p.CalcularBessel('GRS 1980')
+        print(dr)
+        pass
 
 
 
