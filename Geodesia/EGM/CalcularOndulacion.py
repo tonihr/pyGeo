@@ -23,7 +23,7 @@ def CalcularOndulacion(PuntoGeodesico,tipo='distancia'):
         raise Exception("La interpolación de la ondulación ha de ser de tipo bilineal o bicubica.")
     # Conexión a las bases de datos existentes.
     rutafil, file=split(realpath(__file__))
-    print(rutafil)
+    #print(rutafil)
     db1 = DB.SQLiteManager(rutafil+'/EGM_Peninsula.db')
     db2 = DB.SQLiteManager(rutafil+'/EGM_Canarias.db')
     # comprobar si el punto introducido puede ser calculado.
@@ -137,7 +137,7 @@ def CalcularOndulacion(PuntoGeodesico,tipo='distancia'):
         if lon_calc>=360:
             lon_calc-=360
     else:
-        print('No valido')
+        #print('No valido')
         return None
     
 #     print(onds1)

@@ -157,9 +157,18 @@ class Punto3D(Punto2D):
         return '\n'.join(val)
     
     def toGeoJSON(self):
+        '''!
+        '''
         val=Punto2D.toGeoJSON(self).split('\n')
         val[2]='"coordinates":'+'['+str(self.getX())+','+str(self.getY())+','+str(self.__Z)+']'
         return '\n'.join(val)
+    
+    def toWKT(self):
+        '''!
+        '''
+        return 'POINTZ ('+str(self.getX())+' '+str(self.getY())+' '+str(self.__Z)+')'
+    
+    
         
         
 def main():
@@ -170,7 +179,9 @@ def main():
 #     print(json.loads(p1.toJSON())['X'])
     print(p1.toGeoJSON())
     print(json.loads(p1.toGeoJSON())['coordinates'])
+    print(p1.toWKT())
 #     p1.setNegativos(False)
+
     
 if __name__=="__main__":
     main()

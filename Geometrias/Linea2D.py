@@ -12,6 +12,7 @@ Created on 1/2/2015
 import sys
 sys.path.append('..')
 from Geometrias.Punto2D import Punto2D
+from json import loads
 
 class Linea2D(object):
     '''!
@@ -39,6 +40,43 @@ class Linea2D(object):
             self.__checkLinea()
         else:
             raise Exception("La clase Linea2D recibe 2 parametros como argumentos.\nSe han introducido: "+str(len(args))+" parametros.")
+        
+        
+        
+    def setFromWKT(self,wkt):
+        '''!
+        '''
+        try:
+            coor = wkt.split('LINESTRING')[1]
+        except Exception as e:
+            raise Exception(e)
+        coor = coor.replace('(', '')
+        coor = coor.replace(')', '')
+        coor=coor.split(',')
+        if len(coor)>2:
+            raise Exception("La linea contiene más de dos puntos.")
+        vals=coor[0].rstrip().split()
+        self.setPuntoInicial(Punto2D(vals[0],vals[1]))
+        vals=coor[1].rstrip().split()
+        self.setPuntoFinal(Punto2D(vals[0],vals[1]))
+        
+    def setFromGeoJSON(self,geojson):
+        '''!
+        '''
+        try:
+            coors=loads(geojson)
+        except Exception as e:
+            raise Exception(e)
+        
+        if coors['type'] != 'LineString':
+            raise Exception("El GeoJSON introducido no corresponde con una línea")
+        else:
+            coor = coors['coordinates']
+        if len(coors)>2:
+            raise Exception("")
+        else:
+            self.setPuntoInicial(Punto2D(coor[0][0],coor[0][1]))
+            self.setPuntoFinal(Punto2D(coor[1][0],coor[1][1])) 
         
     def setPuntoInicial(self,PuntoInicial):
         '''!
@@ -128,6 +166,32 @@ class Linea2D(object):
         az=Topografia.Azimut.Azimut(self.__pini,self.__pfin)
         return az.getAzimut()
     
+    def PointIn(self,Punto2D):
+        '''!
+        @brief: The method check if point is in line.
+        '''
+        v1=self.__pfin.getX()-self.__pini.getX()
+        v2=self.__pfin.getY()-self.__pini.getY()
+        if v1==0:
+            vals=[self.__pini.getY(),self.__pfin.getY()]
+            vals.sort()
+            if Punto2D.getY()>=vals[0] and Punto2D.getY()<=vals[1] and Punto2D.getX()==self.__pini.getX():
+                return True
+            else:
+                return False
+        if v2==0:
+            vals=[self.__pini.getX(),self.__pfin.getX()]
+            vals.sort()
+            if Punto2D.getX()>=vals[0] and Punto2D.getX()<=vals[1] and Punto2D.getY()==self.__pini.getY():
+                return True
+            else:
+                return False
+        if Punto2D.getY()==(self.__pini.getY()-((self.__pini.getX()*v2)/v1)+(v2/v1)*Punto2D.getX()):
+            return True
+        else:
+            return False
+        
+    
     def toString(self):
         '''!
         @brief: Método que devuleve toda la información del punto en formato str.
@@ -171,18 +235,27 @@ class Linea2D(object):
             str(self.__pfin.getX())+','+str(self.__pfin.getY())+']]'+"\n"\
             "}"
             
+    def toWKT(self):
+        '''!
+        '''
+        return 'LINESTRING ('+\
+            str(self.__pini.getX())+' '+str(self.__pini.getY())+', '+\
+            str(self.__pfin.getX())+' '+str(self.__pfin.getY())+')'
+            
 def main():
     l=Linea2D(Punto2D(10,10),Punto2D(20,30))
     print(l.toString())
     print(l.toJSON())
-    import json
-    print(json.loads(l.toJSON())['Punto inicial']['X'])
-    print(json.loads(l.toGeoJSON())['coordinates'])
-        
-        
+
+    print(loads(l.toJSON())['Punto inicial']['X'])
+    print(l.toGeoJSON())
+    print(loads(l.toGeoJSON())['coordinates'])
+    print(l.toWKT())
+    l.setFromWKT('LINESTRING (100.0 10.0, 20.0 30.0)')
+    print(l.toWKT())
+    l.setFromGeoJSON('{"type":"LineString","coordinates":[[10.0,10.0],[20.0,30.0]]}')
+    print(l.toWKT()) 
         
 if __name__=="__main__":
     main()
-    
-    
         

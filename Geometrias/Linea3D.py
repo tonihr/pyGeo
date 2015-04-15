@@ -200,6 +200,13 @@ class Linea3D(object):
             str(self.__pfin.getX())+','+str(self.__pfin.getY())+','+str(self.__pfin.getZ())+']]'+"\n"\
             "}"
             
+    def toWKT(self):
+        '''!
+        '''
+        return 'LINESTRINGZ ('+\
+            str(self.__pini.getX())+' '+str(self.__pini.getY())+' '+str(self.__pini.getZ())+', '+\
+            str(self.__pfin.getX())+' '+str(self.__pfin.getY())+' '+str(self.__pfin.getZ())+')'
+            
     
             
             
@@ -212,6 +219,7 @@ def main():
     l2=l.toLinea2D()
     print(l2.toJSON())
     print(json.loads(l.toGeoJSON())['coordinates'])
+    print(l.toWKT())
         
         
         

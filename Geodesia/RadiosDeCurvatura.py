@@ -86,6 +86,10 @@ def main():
     p=pgeo.PuntoGeodesico(ang.Angulo(45,formato="latitud"),ang.Angulo(45,formato="longitud180"))
     print(r.getRadioPrimerVertical(p),
           r.getRadioElipseMeridiana(p))
+    p=pgeo.PuntoGeodesico(ang.Angulo(0,formato="latitud"),ang.Angulo(45,formato="longitud180"))
+    print(r.getRadioPrimerVertical(p),
+          r.getRadioElipseMeridiana(p))
+
 
 if __name__=="__main__":
     main()

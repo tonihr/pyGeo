@@ -11,6 +11,9 @@ Created on 10/3/2015
 '''
 import Geometrias.Linea2D as l2d
 import Geometrias.Punto2D as pt2
+from numpy import matrix,array,add
+from numpy.linalg import det,solve
+
 
 class Interseccion2D(object):
     '''!
@@ -81,70 +84,96 @@ class Interseccion2D(object):
         #Coordenadas de cada punto.
         xi1=self.__l1.getPuntoInicial().getX()
         yi1=self.__l1.getPuntoInicial().getY()
+        
         xf1=self.__l1.getPuntoFinal().getX()
         yf1=self.__l1.getPuntoFinal().getY()
+        
         xi2=self.__l2.getPuntoInicial().getX()
         yi2=self.__l2.getPuntoInicial().getY()
+        
         xf2=self.__l2.getPuntoFinal().getX()
         yf2=self.__l2.getPuntoFinal().getY()
         
+        v1=[xf1-xi1,yf1-yi1]
+        v2=[xf2-xi2,yf2-yi2]
+        A=matrix([[v1[1],-v1[0]],
+                  [v2[1],-v2[0]]])
+        B=array([xf1*v1[1]-yf1*v1[0],xf2*v2[1]-yf2*v2[0]])
+        if det(A)==0:
+            A=add.reduce(A, 0)
+            B=add.reduce(B, 0)
+            #print(A,B)
+            if B==0:
+                # sol ay=bx
+                return None
+            if B!=0:
+                if A.item((0, 0))==0:
+                    x=xi1
+                    y=B/A.item((0, 1))
+                elif A.item((0, 1))==0:
+                    x=B/A.item((0, 0))
+                    y=yi1
+        else:
+            sol=solve(A,B)
+            x=sol[0]
+            y=sol[1]
         #Cálculo de la interseccion #y=ax+b
-        a1=None
-        a2=None
-        b1=None
-        b2=None
-            
-        if abs(yf1-yi1)==0.0:
-            a1=0.0
-        elif abs(xf1-xi1)==0.0:
-            a1=None
-        else:
-            a1=(yf1-yi1)/(xf1-xi1)
-            
-        if abs(yf2-yi2)==0.0:
-            a2=0.0
-        elif abs(xf2-xi2)==0.0:
-            a2=None
-        else:
-            a2=(yf2-yi2)/(xf2-xi2)
-            
-        if a1==None:
-            b1=xi1
-        else:
-            b1=yi1-a1*xi1
-            
-        if a2==None:
-            b2=xi2
-        else:
-            b2=yi2-a2*xi2
-        
-            
-#         print(a1,a2,b1,b2)
-        if a1==None and a2==None:
-            #Paralelas.
-            return None
-        elif a1==None and a2==0.0:
-            x=xi2
-            y=a2
-            
-        elif a1==0.0 and a2==None:
-            x=b2
-            y=b1
-        elif a1==None:
-            x=b1
-            y=(b2-b1)/(-a2)
-        elif a2==None:
-            x=b2
-            y=(b2-b1)/(a1)
-        elif a1==None and a2==None:
-            x=(b2-b1)
-        else:
-            try:
-                x=(b2-b1)/(a1-a2)
-                y=a1*x+b1
-            except:
-                x=0.0
-                y=a1*x+b1
+#         a1=None
+#         a2=None
+#         b1=None
+#         b2=None
+#             
+#         if abs(yf1-yi1)==0.0:
+#             a1=0.0
+#         elif abs(xf1-xi1)==0.0:
+#             a1=None
+#         else:
+#             a1=(yf1-yi1)/(xf1-xi1)
+#             
+#         if abs(yf2-yi2)==0.0:
+#             a2=0.0
+#         elif abs(xf2-xi2)==0.0:
+#             a2=None
+#         else:
+#             a2=(yf2-yi2)/(xf2-xi2)
+#             
+#         if a1==None:
+#             b1=xi1
+#         else:
+#             b1=yi1-a1*xi1
+#             
+#         if a2==None:
+#             b2=xi2
+#         else:
+#             b2=yi2-a2*xi2
+#         
+#             
+# #         print(a1,a2,b1,b2)
+#         if a1==None and a2==None:
+#             #Paralelas.
+#             return None
+#         elif a1==None and a2==0.0:
+#             x=xi2
+#             y=a2
+#             
+#         elif a1==0.0 and a2==None:
+#             x=b2
+#             y=b1
+#         elif a1==None:
+#             x=b1
+#             y=(b2-b1)/(-a2)
+#         elif a2==None:
+#             x=b2
+#             y=(b2-b1)/(a1)
+#         elif a1==None and a2==None:
+#             x=(b2-b1)
+#         else:
+#             try:
+#                 x=(b2-b1)/(a1-a2)
+#                 y=a1*x+b1
+#             except:
+#                 x=0.0
+#                 y=a1*x+b1
                 
                 
         if tipo=='real':
@@ -165,6 +194,24 @@ class Interseccion2D(object):
         
         
 def main():
+    la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(0,10))
+    lb=l2d.Linea2D(pt2.Punto2D(0,5),pt2.Punto2D(20,0))
+    i1=Interseccion2D(la,lb)
+    sal=i1.Intersectar(tipo='real')
+    if sal==None:
+        print(sal)
+    else:
+        print(sal.getX(),sal.getY())
+        
+        
+    la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(10,10))
+    lb=l2d.Linea2D(pt2.Punto2D(10,10),pt2.Punto2D(20,20))
+    i1=Interseccion2D(la,lb)
+    sal=i1.Intersectar(tipo='real')
+    if sal==None:
+        print(sal)
+    else:
+        print(sal.getX(),sal.getY())
 
     la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(10,10))
     lb=l2d.Linea2D(pt2.Punto2D(0.0,10),pt2.Punto2D(0.0,-5))

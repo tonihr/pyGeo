@@ -10,8 +10,7 @@ Created on 10/2/2015
 @version: 1.0.0
 '''
 import sys
-from PyQt4 import QtCore
-from PyQt4 import QtGui
+from PyQt4 import QtCore,QtGui
 from PyQt4 import uic
 from os import sep,pardir,getcwd
 from os.path import normpath
@@ -48,7 +47,7 @@ class Geo2UTM(QtGui.QWidget):
         self.__tabChanged()
         self.__setPrecision()
         self.connect(self.pushButton, QtCore.SIGNAL("clicked()"), self.Calcular)
-        self.connect(self.pushButton_4, QtCore.SIGNAL("clicked()"), self.launch)
+        self.connect(self.pushButton_4, QtCore.SIGNAL("clicked()"), self.CalcularArchivo)
         self.connect(self.pushButton_2, QtCore.SIGNAL("clicked()"), self.AbrirFicheroGeo)
         self.connect(self.pushButton_3, QtCore.SIGNAL("clicked()"), self.AbrirFicheroUTM)
         self.connect(self.checkBox, QtCore.SIGNAL("stateChanged (int)"), self.__ForzarHuso)
@@ -84,10 +83,10 @@ class Geo2UTM(QtGui.QWidget):
         else:
             self.spinBox.setEnabled(False)
             
-    def launch(self):
-        '''!
-        '''
-        QtCore.QThread(self.CalcularArchivo()).exec_()
+#     def launch(self):
+#         '''!
+#         '''
+#         QtCore.QThread(self.CalcularArchivo()).exec_()
 #         p = Process(target=self.CalcularArchivo)
 #         p.start()
 #         p.join()
@@ -166,10 +165,12 @@ class Geo2UTM(QtGui.QWidget):
         #Formato del fichero de coordenadas Geodesicas.
         #ID,Latitud,Longitud,helip(opcional),ForzarHuso(opcional)
         pd.show()
-        pd.setLabelText("Tarea 1..2 Procesando el fichero.")
+        pd.setLabelText("Tarea 1...2 Procesando el fichero.")
         
         try:
             QtGui.QApplication.processEvents()
+            if pd.wasCanceled():
+                return
             sal=Proyecciones.Geo2UTM.Geo2UTMFromFile(self.lineEdit_10.text(), self.comboBox_2.currentText())
         except Exception as e:
             self.__msgBoxErr.setText(e.__str__())
@@ -181,12 +182,14 @@ class Geo2UTM(QtGui.QWidget):
         pg.setMaximum(len(sal))
         cont=0
         #X,Y,Hemis,Huso,Convm,kp,N,zona
-        pd.setLabelText("Tarea 2..2 Escribiendo nuevo fichero.")
+        pd.setLabelText("Tarea 2...2 Escribiendo nuevo fichero.")
         
         with open(self.lineEdit_11.text(),'w') as f:
             pg.show()
             for i in sal:
                 QtGui.QApplication.processEvents()
+                if pd.wasCanceled():
+                    return
                 line=""
                 line+=i[0]+","
                 line+=str(round(i[2].getX(),self.__px))+","
