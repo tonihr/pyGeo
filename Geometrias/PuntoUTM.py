@@ -155,6 +155,9 @@ class PuntoUTM(object):
         @brief: Método para asignar la convergencia de meridianos del punto.
         @param ConvergenciaMeridianos float|int|str: Valor de la Convergencia de meridianos.
         '''
+        if ConvergenciaMeridianos==None:
+            return
+        
         try:
             float(ConvergenciaMeridianos)
         except Exception as e:
@@ -167,6 +170,9 @@ class PuntoUTM(object):
         @brief: Método para asignar la escala local del punto.
         @param EscalaLocalPunto float|int|str: Valor de la escala local.
         '''
+        if EscalaLocalPunto==None:
+            return
+        
         try:
             float(EscalaLocalPunto)
         except Exception as e:

@@ -166,27 +166,36 @@ class Linea2D(object):
         az=Topografia.Azimut.Azimut(self.__pini,self.__pfin)
         return az.getAzimut()
     
-    def PointIn(self,Punto2D):
+    def PointIn(self,Punto2D,tolerance=0):
+        #Añadir tolerancia.
         '''!
-        @brief: The method check if point is in line.
+        @brief: El método comprueba si un punto se encuentra sobre la línea. The method check if point is in line.
         '''
-        v1=self.__pfin.getX()-self.__pini.getX()
-        v2=self.__pfin.getY()-self.__pini.getY()
+        v1=self.getAX()
+        v2=self.getAY()
         if v1==0:
+            #Incremento de X es 0. Línea vertical.
             vals=[self.__pini.getY(),self.__pfin.getY()]
             vals.sort()
-            if Punto2D.getY()>=vals[0] and Punto2D.getY()<=vals[1] and Punto2D.getX()==self.__pini.getX():
+            vals[0]=vals[0]-tolerance
+            vals[1]=vals[1]+tolerance
+            if Punto2D.getY()>=vals[0] and Punto2D.getY()<=vals[1]:
                 return True
             else:
                 return False
         if v2==0:
+            #Incremento de Y es 0. Línea horizontal.
             vals=[self.__pini.getX(),self.__pfin.getX()]
             vals.sort()
-            if Punto2D.getX()>=vals[0] and Punto2D.getX()<=vals[1] and Punto2D.getY()==self.__pini.getY():
+            vals[0]=vals[0]-tolerance
+            vals[1]=vals[1]+tolerance
+            if Punto2D.getX()>=vals[0] and Punto2D.getX()<=vals[1]:
                 return True
             else:
                 return False
-        if Punto2D.getY()==(self.__pini.getY()-((self.__pini.getX()*v2)/v1)+(v2/v1)*Punto2D.getX()):
+        val=self.__pini.getY()-((self.__pini.getX()*v2)/v1)+(v2/v1)*Punto2D.getX()
+        print(val,tolerance,Punto2D.getY())
+        if Punto2D.getY()+tolerance<=val and Punto2D.getY()-tolerance>=val:
             return True
         else:
             return False

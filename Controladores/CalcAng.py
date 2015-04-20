@@ -34,6 +34,7 @@ class CalcAng(QtGui.QWidget):
         self.connect(self.tabWidget, QtCore.SIGNAL("currentChanged (int)"), self.__tabChanged)
         self.connect(self.comboBox, QtCore.SIGNAL("currentIndexChanged(const QString&)"), self.__RellenarCombos)
         self.connect(self.pushButton, QtCore.SIGNAL("clicked()"), self.Convertir)
+        self.connect(self.comboBox_2, QtCore.SIGNAL("currentIndexChanged (int)"), self.Convertir)
         self.connect(self.pushButton_2, QtCore.SIGNAL("clicked()"), self.AbrirFicheroAngulos)
         self.connect(self.pushButton_3, QtCore.SIGNAL("clicked()"), self.AbrirFicheroResultados)
                 
@@ -139,7 +140,7 @@ class CalcAng(QtGui.QWidget):
         if self.tabWidget.currentIndex()==0:
             self.setFixedSize ( 502, 132)
         elif self.tabWidget.currentIndex()==1:
-            self.setFixedSize ( 502, 400)
+            self.setFixedSize ( 522, 270)
             pass
         elif self.tabWidget.currentIndex()==2:
             self.setFixedSize ( 360, 120)

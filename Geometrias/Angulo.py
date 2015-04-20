@@ -368,7 +368,7 @@ class Angulo(object):
             self.__ang*=(180/pi)
             self.setFormato('longitud180')
             return
-        elif self.__f=='radian' and Formato=="longitu360":
+        elif self.__f=='radian' and Formato=="longitud360":
             self.__ang*=(180/pi)
             self.setFormato('longitud360')
             return

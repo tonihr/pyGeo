@@ -31,6 +31,11 @@ class Geo2UTM(QtGui.QWidget):
     __pw=None
     __pkp=None
     __pN=None
+    #Opciones del fichero.
+    __cw=True
+    __ckp=True
+    __cN=True
+    __cZona=True
 
 
     def __init__(self, parent=None):
@@ -46,16 +51,23 @@ class Geo2UTM(QtGui.QWidget):
         self.__CargarElipsoides()
         self.__tabChanged()
         self.__setPrecision()
+        self.__setOpcionesfichero()
         self.connect(self.pushButton, QtCore.SIGNAL("clicked()"), self.Calcular)
         self.connect(self.pushButton_4, QtCore.SIGNAL("clicked()"), self.CalcularArchivo)
         self.connect(self.pushButton_2, QtCore.SIGNAL("clicked()"), self.AbrirFicheroGeo)
         self.connect(self.pushButton_3, QtCore.SIGNAL("clicked()"), self.AbrirFicheroUTM)
         self.connect(self.checkBox, QtCore.SIGNAL("stateChanged (int)"), self.__ForzarHuso)
         self.connect(self.tabWidget, QtCore.SIGNAL("currentChanged (int)"), self.__tabChanged)
+        #Precisiones.
         self.connect(self.spinBox_2, QtCore.SIGNAL("valueChanged (int)"), self.__setPrecision)
         self.connect(self.spinBox_3, QtCore.SIGNAL("valueChanged (int)"), self.__setPrecision)
         self.connect(self.spinBox_4, QtCore.SIGNAL("valueChanged (int)"), self.__setPrecision)
         self.connect(self.spinBox_5, QtCore.SIGNAL("valueChanged (int)"), self.__setPrecision)
+        #Opciones del fichero.
+        self.connect(self.checkBox_2, QtCore.SIGNAL("stateChanged (int)"), self.__setOpcionesfichero)
+        self.connect(self.checkBox_3, QtCore.SIGNAL("stateChanged (int)"), self.__setOpcionesfichero)
+        self.connect(self.checkBox_4, QtCore.SIGNAL("stateChanged (int)"), self.__setOpcionesfichero)
+        self.connect(self.checkBox_5, QtCore.SIGNAL("stateChanged (int)"), self.__setOpcionesfichero)
         
     def __CargarElipsoides(self):
         '''!
@@ -151,7 +163,7 @@ class Geo2UTM(QtGui.QWidget):
     def CalcularArchivo(self):
         '''!
         '''
-        pd=QtGui.QProgressDialog()
+        self.pd=QtGui.QProgressDialog()
         #QtGui.QApplication.processEvents()
         if self.lineEdit_10.text()=="":
             self.__msgBoxErr.setText("Debe introducir un fichero de coordenadas geodesicas.")
@@ -164,31 +176,31 @@ class Geo2UTM(QtGui.QWidget):
         
         #Formato del fichero de coordenadas Geodesicas.
         #ID,Latitud,Longitud,helip(opcional),ForzarHuso(opcional)
-        pd.show()
-        pd.setLabelText("Tarea 1...2 Procesando el fichero.")
+        self.pd.show()
+        self.pd.setLabelText("Tarea 1...2 Procesando el fichero.")
         
         try:
             QtGui.QApplication.processEvents()
-            if pd.wasCanceled():
+            sal=Proyecciones.Geo2UTM.Geo2UTMFromFile(self.lineEdit_10.text(), self.comboBox_2.currentText(),self.__cw,self.__ckp,self)
+            if self.pd.wasCanceled():
                 return
-            sal=Proyecciones.Geo2UTM.Geo2UTMFromFile(self.lineEdit_10.text(), self.comboBox_2.currentText())
         except Exception as e:
             self.__msgBoxErr.setText(e.__str__())
             self.__msgBoxErr.exec_()
             return
-        pg=QtGui.QProgressBar(pd)
-        pd.setBar(pg)
-        pg.setMinimum(0)
-        pg.setMaximum(len(sal))
+        self.pg=QtGui.QProgressBar(self.pd)
+        self.pd.setBar(self.pg)
+        self.pg.setMinimum(0)
+        self.pg.setMaximum(len(sal))
         cont=0
         #X,Y,Hemis,Huso,Convm,kp,N,zona
-        pd.setLabelText("Tarea 2...2 Escribiendo nuevo fichero.")
+        self.pd.setLabelText("Tarea 2...2 Escribiendo nuevo fichero.")
         
         with open(self.lineEdit_11.text(),'w') as f:
-            pg.show()
+            self.pg.show()
             for i in sal:
                 QtGui.QApplication.processEvents()
-                if pd.wasCanceled():
+                if self.pd.wasCanceled():
                     return
                 line=""
                 line+=i[0]+","
@@ -196,18 +208,27 @@ class Geo2UTM(QtGui.QWidget):
                 line+=str(round(i[2].getY(),self.__py))+","
                 line+=str(i[2].getHemisferioY())+","
                 line+=str(i[2].getHuso())+","
-                line+=str(round(i[2].getConvergenciaMeridianos(),self.__pw))+","
-                line+=str(round(i[2].getEscalaLocalPunto(),self.__pkp))+","
-                try:
-                    line+=str(round(Geodesia.EGM.CalcularOndulacion.CalcularOndulacion(i[1]),self.__pN))+","
-                except:
-                    line+=","
-                line+=str(i[2].getZonaUTM())+"\n"
+                if self.__cw:
+                    line+=str(round(i[2].getConvergenciaMeridianos(),self.__pw))+","
+                if self.__ckp:
+                    line+=str(round(i[2].getEscalaLocalPunto(),self.__pkp))+","
+                if self.__cN:
+                    try:
+                        line+=str(round(Geodesia.EGM.CalcularOndulacion.CalcularOndulacion(i[1]),self.__pN))+","
+                    except:
+                        line+=","
+                if self.__cZona:
+                    line+=str(i[2].getZonaUTM())+"\n"
+                if line.endswith(','):
+                    line=list(line)
+                    line[-1]='\n'
+                    line=''.join(line)
                 f.write(line)
-                pg.setValue(cont)
+                self.pg.setValue(cont)
                 cont+=1
             f.close()
-            pg.hide()
+            self.pg.hide()
+            self.pd.hide()
             
     def __setPrecision(self):
         '''!
@@ -217,6 +238,33 @@ class Geo2UTM(QtGui.QWidget):
         self.__pw=self.spinBox_4.value()
         self.__pkp=self.spinBox_5.value()
         self.__pN=self.spinBox_6.value()
+        
+    def __setOpcionesfichero(self):
+        '''!
+        '''
+        if self.checkBox_2.isChecked():
+            self.__cw=True
+        else:
+            self.__cw=False
+            
+        if self.checkBox_3.isChecked():
+            self.__ckp=True
+        else:
+            self.__ckp=False
+            
+        if self.checkBox_4.isChecked():
+            self.__cN=True
+        else:
+            self.__cN=False
+            
+        if self.checkBox_5.isChecked():
+            self.__cZona=True
+        else:
+            self.__cZona=False
+            
+        #print(self.__cw,self.__ckp,self.__cN,self.__cZona)
+            
+        
                 
             
         
@@ -229,7 +277,7 @@ class Geo2UTM(QtGui.QWidget):
             self.setFixedSize ( 562, 272)
             pass
         elif self.tabWidget.currentIndex()==2:
-            self.setFixedSize ( 344, 242)
+            self.setFixedSize ( 344, 400)
             pass
         
             

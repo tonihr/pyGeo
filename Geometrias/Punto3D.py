@@ -166,7 +166,7 @@ class Punto3D(Punto2D):
     def toWKT(self):
         '''!
         '''
-        return 'POINTZ ('+str(self.getX())+' '+str(self.getY())+' '+str(self.__Z)+')'
+        return 'POINT Z ('+str(self.getX())+' '+str(self.getY())+' '+str(self.__Z)+')'
     
     
         

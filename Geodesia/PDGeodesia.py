@@ -125,8 +125,8 @@ class PDGeodesia(object):
           ((tan(lat)**2*sin(az)*cos(2*az))/(nhu**2*ro*cos(lat)))+\
           ((tan(lat)**2*sin(az)*cos(2*az))/(nhu**3*cos(lat)))))
         
-        print(lon)
-        print(lonsal)
+        #print(lon)
+        #print(lonsal)
         
         azsal=az+\
         ((s*tan(lat)*sin(az))/(nhu))+\
@@ -147,8 +147,8 @@ class PDGeodesia(object):
           ((e1**2*sin(2*lat)*tan(lat)**2)/(2*a**2))+\
           ((1)/(nhu**2*cos(lat)**2))))
         
-        print(az)
-        print(azsal)
+        #print(az)
+        #print(azsal)
         
         return latsal,lonsal,azsal
     
@@ -215,7 +215,7 @@ class PDGeodesia(object):
         
         
 def main():
-    PD=PDGeodesia(pgeo.PuntoGeodesico(50,10),15000000,140)
+    PD=PDGeodesia(pgeo.PuntoGeodesico(50,10),1500000,140)
     lat,lon,az=PD.Rk4o('Hayford 1950')
     #lat,lon,az=PD.Rk4o('WGS 84')
     #lat,lon,az=PD.CalcularLegendre('WGS 84')
