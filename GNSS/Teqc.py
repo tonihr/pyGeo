@@ -87,7 +87,8 @@ class Teqc(object):
         if borrar==True:
             for i in archivos_borrar:
                 remove(path+"/"+i)
-                print(i)
+                #print(i)
+        return outs
                 
                 
     def UnirRinex(self,FicherosUnir,intervalo,nombreSalida,ordenar=False):
