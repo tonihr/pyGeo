@@ -20,7 +20,7 @@ import Geometrias.PuntoUTM as putm
 
 
 
-def Geo2UTM(PuntoGeodesico,NombreElipsoide,Huso=None):
+def Geo2UTM(PuntoGeodesico,NombreElipsoide,Huso=None,w=True,kp=True):
     '''!
     @brief: Método que convierte coordenadas Geodésicas elipsoidales a coordenadas UTM.
     @param PuntoGeodesico PuntoGeodesico: Punto Geodesico con las coordenadas del punto.
@@ -134,20 +134,26 @@ def Geo2UTM(PuntoGeodesico,NombreElipsoide,Huso=None):
         
     #Cálculo de la convergencia de meridianos.
     #coeficientes.
-    m3=(1.0+3.0*n2+2*n4)
-    m5=(2.0-t2+15.0*n2*t2+35.0*n4-50.0*n4*t2+33.0*n6-60.0*n6*t2+11.0*n8-24.0*n8*t2)
-    m7=(-148.0-3427.0*t2+18.0*t4-1387.0*t6+2023.0*n2-46116.0*n2*t2+5166.0*n2*t4+18984.0*n4-100212.0*n4*t4+34783*n6-219968.0*n6*t2+144900.0*n6*t4+36180.0*n8-261508.0*n8*t2+155904.0*n8*t4+18472.0*n10-114528.0*n10*t2+94080.0*n10*t4+4672.0*n12-30528.0*n12*t2+23040.0*n12*t4)
-    convmed=(Alon*s1)+(((Alon**3)/3.0)*s1*c2*m3)+(((Alon**5)/15.0)*s1*c4*m5)+(((Alon**7)/5040.0)*s1*c6*m7)
-    convmed=ang.Angulo(convmed,formato='radian')
-    convmed.Convertir('pseudosexagesimal')
-    convmed=convmed.getAngulo()
+    if w:
+        m3=(1.0+3.0*n2+2*n4)
+        m5=(2.0-t2+15.0*n2*t2+35.0*n4-50.0*n4*t2+33.0*n6-60.0*n6*t2+11.0*n8-24.0*n8*t2)
+        m7=(-148.0-3427.0*t2+18.0*t4-1387.0*t6+2023.0*n2-46116.0*n2*t2+5166.0*n2*t4+18984.0*n4-100212.0*n4*t4+34783*n6-219968.0*n6*t2+144900.0*n6*t4+36180.0*n8-261508.0*n8*t2+155904.0*n8*t4+18472.0*n10-114528.0*n10*t2+94080.0*n10*t4+4672.0*n12-30528.0*n12*t2+23040.0*n12*t4)
+        convmed=(Alon*s1)+(((Alon**3)/3.0)*s1*c2*m3)+(((Alon**5)/15.0)*s1*c4*m5)+(((Alon**7)/5040.0)*s1*c6*m7)
+        convmed=ang.Angulo(convmed,formato='radian')
+        convmed.Convertir('pseudosexagesimal')
+        convmed=convmed.getAngulo()
+    else:
+        convmed=None
     #Calculo de la escala local del punto.
     #coeficientes.
-    k2=(1+n2)
-    k4=(8.0-24.0*t2+4.0*t4+20.0*n2-28.0*n2*t2+16.0*n4-48.0*n4*t2+4.0*n6-24.0*n6*t2)
-    k6=(136.0+10576.0*t2-9136.0*t4+224.0*t6+616.0*n2+43952.0*n2*t2-50058.0*n2*t4-1120.0*n4+66960.0*n4*t2-95680.0*n4*t4+1024.0*n6+42736.0*n6*t2-80160.0*n6*t4+472.0*n8+9184.0*n8*t2-21888.0*n8*t4+88.0*n10-1632.0*n10*t2+1920.0*n10*t4)
-    kp=(0.9996**2)*(1+((Alon**2)*c2*k2)+(((Alon**4)/12.0)*c4*k4)+(((Alon**6)/360.0)*c6*k6))
-    kp=sqrt(kp)
+    if kp:
+        k2=(1+n2)
+        k4=(8.0-24.0*t2+4.0*t4+20.0*n2-28.0*n2*t2+16.0*n4-48.0*n4*t2+4.0*n6-24.0*n6*t2)
+        k6=(136.0+10576.0*t2-9136.0*t4+224.0*t6+616.0*n2+43952.0*n2*t2-50058.0*n2*t4-1120.0*n4+66960.0*n4*t2-95680.0*n4*t4+1024.0*n6+42736.0*n6*t2-80160.0*n6*t4+472.0*n8+9184.0*n8*t2-21888.0*n8*t4+88.0*n10-1632.0*n10*t2+1920.0*n10*t4)
+        kpsal=(0.9996**2)*(1+((Alon**2)*c2*k2)+(((Alon**4)/12.0)*c4*k4)+(((Alon**6)/360.0)*c6*k6))
+        kpsal=sqrt(kpsal)
+    else:
+        kpsal=None
     
     posY=None
     if Latitud.getAngulo() > 0:
@@ -157,11 +163,11 @@ def Geo2UTM(PuntoGeodesico,NombreElipsoide,Huso=None):
     
     sal=putm.PuntoUTM(X, Y, hemisferioY=str(posY), helip=AlturaElipsoidal, huso=int(Huso) )
     sal.setConvergenciaMeridianos(convmed)
-    sal.setEscalaLocalPunto(kp)
+    sal.setEscalaLocalPunto(kpsal)
     
     return sal
 
-def Geo2UTMFromFile(File,NombreElipsoide):
+def Geo2UTMFromFile(File,NombreElipsoide,w=True,kp=True,parent=None):
     '''
     @brief: Función que realiza la conversión de geodesicas a UTM desde un fichero.
     @param File str:Ruta del fichero con las coordenadas a transformar.
@@ -205,6 +211,8 @@ def Geo2UTMFromFile(File,NombreElipsoide):
         
     for iden,lat,lon,h,f in zip(IDS,Lats,Lons,helips,Forzar):
         QtGui.QApplication.processEvents()
+        if parent.pd.wasCanceled():
+            return
         p=pgeo.PuntoGeodesico(lat,lon,h)
         
         
@@ -215,11 +223,11 @@ def Geo2UTMFromFile(File,NombreElipsoide):
             ant=p1.getHuso()-1
             sig=p1.getHuso()+1
             try:
-                p2=Geo2UTM(pgeo.PuntoGeodesico(lat,lon,h),NombreElipsoide,ant)
+                p2=Geo2UTM(pgeo.PuntoGeodesico(lat,lon,h),NombreElipsoide,ant,w,kp)
                 Sal.append([iden,p,p2])
             except:
                 try:
-                    p3=Geo2UTM(pgeo.PuntoGeodesico(lat,lon,h),NombreElipsoide,sig)
+                    p3=Geo2UTM(pgeo.PuntoGeodesico(lat,lon,h),NombreElipsoide,sig,w,kp)
                     Sal.append([iden,p,p3])
                 except:
                     continue

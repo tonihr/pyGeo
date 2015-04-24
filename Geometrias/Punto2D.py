@@ -113,6 +113,9 @@ class Punto2D(object):
         \brief Método que establece la tolerancia del punto.
         \param tolerance float|int|str: Valor de la tolerancia.
         '''
+        if tolerance==None:
+            self.__tolerance=None
+            return
         if isinstance(tolerance, str) or isinstance(tolerance, int) or isinstance(tolerance, float):
             # Se comprueba el tipo de dato introducido y se intenta convertir a float.
             try:
@@ -128,13 +131,31 @@ class Punto2D(object):
         \brief Método que establece los valores de la clase a partir de un wkt
         \param wkt str: Un string en formato wkt.
         '''
-        #Parsear tb puntos con tolerancia M.
-        coor = wkt.split('POINT')[1]
-        coor = coor.replace('(', '')
-        coor = coor.replace(')', '')
-        coor = coor.split()
-        self.setX(coor[0])
-        self.setY(coor[1])
+        
+        tipo=''
+        for i in list(wkt):
+            if i=='(':
+                break
+            else:
+                tipo+=i
+                
+        if tipo=='POINT M ':
+            coor = wkt.split('POINT M')[1]
+            coor = coor.replace('(', '')
+            coor = coor.replace(')', '')
+            coor = coor.split()
+            self.setX(coor[0])
+            self.setY(coor[1])
+            self.setTolerance(coor[2])
+        elif tipo=='POINT ':
+            coor = wkt.split('POINT')[1]
+            coor = coor.replace('(', '')
+            coor = coor.replace(')', '')
+            coor = coor.split()
+            self.setX(coor[0])
+            self.setY(coor[1])
+        else:
+            raise Exception('No WKT.')
         
     def setFromGeoJSON(self, geojson):
         '''!
@@ -243,7 +264,7 @@ class Punto2D(object):
         '''
         #Incluir la tolerancia M.
         if self.__tolerance!=None:
-            'POINT M (' + str(self.__X) + ' ' + str(self.__Y) + ' ' + str(self.__tolerance) + ')'
+            return 'POINT M (' + str(self.__X) + ' ' + str(self.__Y) + ' ' + str(self.__tolerance) + ')'
         else:
             return 'POINT (' + str(self.__X) + ' ' + str(self.__Y) + ')'
                 
@@ -260,8 +281,12 @@ def main():
     p1.setFromWKT('POINT (50 50)')
     print(p1.toWKT())
     
+    p1.setFromWKT('POINT M (50 50 0.001)')
+    print(p1.toWKT())
+    
     geojson = '{"type":"Point","coordinates":[-10.0,20.0]}'
     p1.setFromGeoJSON(geojson)
+    p1.setTolerance(None)
     print(p1.toWKT())
 #     p1.setNegativos(False)
     

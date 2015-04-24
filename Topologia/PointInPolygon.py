@@ -53,7 +53,7 @@ class PointInPolygon(object):
             raise Exception("Se esperaba un objeto de la clase Poligono2D.")
         self.__bbox=self.__pol.getBbox()
         self.__lins=self.__pol.getPolilinea2D().getLineas()
-#         print(self.__bbox[0].getX(),self.__bbox[0].getY(),self.__bbox[1].getX(),self.__bbox[1].getY())
+        print(self.__bbox[0].getX(),self.__bbox[0].getY(),self.__bbox[1].getX(),self.__bbox[1].getY())
         
     def setPunto(self,Punto2D):
         '''!
@@ -68,6 +68,7 @@ class PointInPolygon(object):
         '''!
         '''
         # Comprobar si el Punto esta dentro de bbox del Poligono2D.
+        pto=pt2d.Punto2D()
         if (self.__pt.getX()<self.__bbox[0].getX() or self.__pt.getX()>self.__bbox[1].getX()) and (self.__pt.getY()>self.__bbox[0].getY() or self.__pt.getY()<self.__bbox[1].getY()):
             return False        
         else:
@@ -77,9 +78,16 @@ class PointInPolygon(object):
                     return False
 #                     return 'Perimetro'
 
+
+            lin=None
             Rmatch=0
             #Right intersection.
-            lin=lin2d.Linea2D(self.__pt,pt2d.Punto2D(self.__bbox[1].getX(),self.__pt.getY()))
+            pto.setX(self.__bbox[1].getX())
+            pto.setY(self.__pt.getY())
+            #pt=pt2d.Punto2D(self.__bbox[1].getX(),self.__pt.getY())
+            lin=lin2d.Linea2D(self.__pt,pto)
+            print(lin.getPuntoInicial().getX(),lin.getPuntoInicial().getY())
+            print(lin.getPuntoFinal().getX(),lin.getPuntoFinal().getY())
             for i in self.__lins:
                 Intersecta=inter2d.Interseccion2D(lin,i)
                 res=Intersecta.Intersectar(tipo='real')
@@ -96,16 +104,20 @@ class PointInPolygon(object):
                         Rmatch+=1
                         continue
                     Rmatch+=1
-                 
+                    
+                    
+            pto.setX(self.__bbox[0].getX())
+            lin.setPuntoFinal(pto)
             Lmatch=0
             #Left Intersection
-            lin=lin2d.Linea2D(self.__pt,pt2d.Punto2D(self.__bbox[0].getX(),self.__pt.getY()))
+            #lin=lin2d.Linea2D(self.__pt,pt2d.Punto2D(self.__bbox[0].getX(),self.__pt.getY()))
             print(lin.getPuntoInicial().getX(),lin.getPuntoInicial().getY())
             print(lin.getPuntoFinal().getX(),lin.getPuntoFinal().getY())
             for i in self.__lins:
-                Intersecta=None
+                #Intersecta=None
                 Intersecta=inter2d.Interseccion2D(lin,i)
                 res=Intersecta.Intersectar(tipo='real')
+                print(res)
                 if res!=None:
                     print(res.getX(),res.getY())
                     print(i.getPuntoInicial().getY(),i.getPuntoFinal().getY(),res.getY())
@@ -138,8 +150,6 @@ class PointInPolygon(object):
                 return True
                     
 def main():
-    import Geometrias.Punto2D as pt2
-    import Geometrias.Linea2D as l2d
     
     pol=pol2d.Poligono2D()
     pol.setFromWKT('POLYGON (3.4 39.6, 40 39.6, 40 14, 3.4 14, 3.4 39.6)')

@@ -11,7 +11,7 @@ Created on 10/3/2015
 '''
 import Geometrias.Linea2D as l2d
 import Geometrias.Punto2D as pt2
-from numpy import matrix,array,add
+from numpy import matrix,array,add,greater_equal
 from numpy.linalg import det,solve
 
 
@@ -99,6 +99,7 @@ class Interseccion2D(object):
         A=matrix([[v1[1],-v1[0]],
                   [v2[1],-v2[0]]])
         B=array([xf1*v1[1]-yf1*v1[0],xf2*v2[1]-yf2*v2[0]])
+        #print(A,B)
         if det(A)==0:
             A=add.reduce(A, 0)
             B=add.reduce(B, 0)
@@ -117,6 +118,7 @@ class Interseccion2D(object):
             sol=solve(A,B)
             x=sol[0]
             y=sol[1]
+            #print(x,y)
         #Cálculo de la interseccion #y=ax+b
 #         a1=None
 #         a2=None
@@ -178,11 +180,23 @@ class Interseccion2D(object):
                 
         if tipo=='real':
             #intervalos de definicion.
-            ixi=sorted([xi1,xf1])
-            iyi=sorted([yi1,yf1])
-            ixf=sorted([xi2,xf2])
-            iyf=sorted([yi2,yf2])
-            if x>=min(ixi) and x<=max(ixi) and y>=min(iyi) and y<=max(iyi) and x>=min(ixf) and x<=max(ixf) and y>=min(iyf) and y<=max(iyf):
+#             ixi=sorted([xi1,xf1])
+#             iyi=sorted([yi1,yf1])
+#             ixf=sorted([xi2,xf2])
+#             iyf=sorted([yi2,yf2])
+#             print(ixi,iyi,ixf,iyf)
+#             print(str(round(y,20)))
+#             print(round(min(iyi),20))
+#             print(y==min(iyi))
+#             print(self.__l1.PointIn(pt2.Punto2D(x,y),tolerance=0.001))
+#             print(self.__l2.PointIn(pt2.Punto2D(x,y),tolerance=0.001))
+#             print(x>=min(ixi),x<=max(ixi),y>=min(iyi),y<=max(iyi),x>=min(ixf),x<=max(ixf),y>=min(iyf),y<=max(iyf))
+#             print(greater_equal([x],[min(ixi),min(ixf)]))
+#             print(greater_equal([y],[min(iyi),min(iyf)]))
+#             print(y,min(iyf))
+#             if x>=min(ixi) and x<=max(ixi) and y>=min(iyi) and y<=max(iyi) and x>=min(ixf) and x<=max(ixf) and y>=min(iyf) and y<=max(iyf):
+#             if greater_equal([x,min(ixi)],[y,min(iyi)],[x,min(ixf)],[y,min(iyf)]):
+            if self.__l1.PointIn(pt2.Punto2D(x,y),tolerance=0.001) and self.__l1.PointIn(pt2.Punto2D(x,y),tolerance=0.001):
                 return pt2.Punto2D(x,y)
             else: 
                 return None
@@ -194,35 +208,45 @@ class Interseccion2D(object):
         
         
 def main():
-    la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(0,10))
-    lb=l2d.Linea2D(pt2.Punto2D(0,5),pt2.Punto2D(20,0))
-    i1=Interseccion2D(la,lb)
-    sal=i1.Intersectar(tipo='real')
-    if sal==None:
-        print(sal)
-    else:
-        print(sal.getX(),sal.getY())
+#     la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(0,10))
+#     lb=l2d.Linea2D(pt2.Punto2D(0,5),pt2.Punto2D(20,0))
+#     i1=Interseccion2D(la,lb)
+#     sal=i1.Intersectar(tipo='real')
+#     if sal==None:
+#         print(sal)
+#     else:
+#         print(sal.getX(),sal.getY())
+#         
+#         
+#     la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(10,10))
+#     lb=l2d.Linea2D(pt2.Punto2D(10,10),pt2.Punto2D(20,20))
+#     i1=Interseccion2D(la,lb)
+#     sal=i1.Intersectar(tipo='real')
+#     if sal==None:
+#         print(sal)
+#     else:
+#         print(sal.getX(),sal.getY())
+# 
+#     la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(10,10))
+#     lb=l2d.Linea2D(pt2.Punto2D(0.0,10),pt2.Punto2D(0.0,-5))
+#     i1=Interseccion2D(la,lb)
+#     sal=i1.Intersectar(tipo='real')
+#     print(sal.getX(),sal.getY())
+#     
+#     la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(10,0))
+#     lb=l2d.Linea2D(pt2.Punto2D(20,50),pt2.Punto2D(40,30))
+#     i1=Interseccion2D(la,lb)
+#     sal=i1.Intersectar(tipo='virtual')
+#     if sal==None:
+#         print(sal)
+#     else:
+#         print(sal.getX(),sal.getY())
         
         
-    la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(10,10))
-    lb=l2d.Linea2D(pt2.Punto2D(10,10),pt2.Punto2D(20,20))
+    la=l2d.Linea2D(pt2.Punto2D(3.4,39.6),pt2.Punto2D(3.4,14))
+    lb=l2d.Linea2D(pt2.Punto2D(18,37),pt2.Punto2D(3.4,37))
     i1=Interseccion2D(la,lb)
     sal=i1.Intersectar(tipo='real')
-    if sal==None:
-        print(sal)
-    else:
-        print(sal.getX(),sal.getY())
-
-    la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(10,10))
-    lb=l2d.Linea2D(pt2.Punto2D(0.0,10),pt2.Punto2D(0.0,-5))
-    i1=Interseccion2D(la,lb)
-    sal=i1.Intersectar(tipo='real')
-    print(sal.getX(),sal.getY())
-    
-    la=l2d.Linea2D(pt2.Punto2D(0.0,0.0),pt2.Punto2D(10,0))
-    lb=l2d.Linea2D(pt2.Punto2D(20,50),pt2.Punto2D(40,30))
-    i1=Interseccion2D(la,lb)
-    sal=i1.Intersectar(tipo='virtual')
     if sal==None:
         print(sal)
     else:
