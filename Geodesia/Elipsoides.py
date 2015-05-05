@@ -59,7 +59,7 @@ class Elipsoides(object):
         @return str: Nombres de los elipsoide.
         '''
         elips=bd.SQLiteManager('../Geodesia/Elipsoides/Elipsoides.db')
-        return elips.ObtenerColumna('Nombre', 'Elipsoides')
+        return elips.ObtenerColumna('Elipsoides', 'Nombre')
         
     def __checkNombreElipsoide(self,Nombre):
         '''!

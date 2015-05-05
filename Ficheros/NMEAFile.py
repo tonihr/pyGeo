@@ -90,8 +90,8 @@ class NMEAFile(object):
             año=int(i[4]+i[5])+2000
             FechaAUX.append(datetime(año, mes, dia, 0, 0, 0))
             aux=i
-        Fecha=list(set(FechaAUX))
-        return Fecha
+        #Fecha=list(set(FechaAUX))
+        return FechaAUX
     
     def getSegundosGPS(self):
         '''!
@@ -207,6 +207,48 @@ class NMEAFile(object):
                                    self.getAltitud(),self.getNumeroSatelites(),self.getHDOP()):
             sal.append([seg,lat,lon,hel,sats,hdop])
         return sal
+    
+    def toSHP(self,Elipsoide,path=None):
+        '''
+        \brief Convierte el fichero NMEA a shp.
+        param path str: Ruta en la que se quiere guardar el shp.
+        '''
+        #Por defecto la ruta sera la misma en la que se encuentre el fichero NMEA.
+        import shapefile
+        import Proyecciones.Geo2UTM as g2u
+        import Geometrias.PuntoGeodesico as pgeo
+        if path==None:
+            path=self.__filepath
+            
+        if not exists(path):
+            raise Exception("El fichero introducido no existe.")
+        if not isfile(path):
+            raise Exception("la ruta introducida no corresponde con un directorio.")
+        
+        w = shapefile.Writer(shapeType=8)
+        w.field('X','F',10,4)
+        w.field('Y','F',10,4)
+        w.field('h','F',10,4)#Float
+        #w.field('Fecha','D')#Date YYYYMMDD
+        w.field('Hora','C',6)#String
+        w.field('Segundos GPS','F',6,1)
+        w.field('Huso','N',2)#int, número de valores.
+        w.field('Satelites','N',3)
+        w.field('HDOP','F',3,2)
+        
+        #print(len(self.getFechas()),len(self.getHoras()),len(self.getSegundosGPS()))
+        
+        
+        for i,j,k,hora,sgps,sat,hdop in zip(self.getLatitud(),self.getLongitud(),self.getAltitud(),
+                                  self.getHoras(),self.getSegundosGPS(),
+                                  self.getNumeroSatelites(),self.getHDOP()):
+            #print(sgps)
+            sal=g2u.Geo2UTM(pgeo.PuntoGeodesico(i,j), Elipsoide)
+            w.point(sal.getX(),sal.getY(),k,0)
+            w.record(sal.getX(),sal.getY(),k,hora,sgps,sal.getHuso(),sat,hdop)
+        w.save(self.__path+'/pruebaSHP')
+        
+        
             
 
         
@@ -216,8 +258,9 @@ class NMEAFile(object):
     
 def main():
     nmea=NMEAFile('../ejemplos/doy298_treal')
-    print(nmea.getDoys())
-    print(nmea.getFechas())
+    nmea.toSHP('GRS 1980')
+#     print(nmea.getDoys())
+#     print(nmea.getFechas())
 #     for i in nmea.getSegundosGPS():
 #         print(i)
     #nmea.getLatitud()

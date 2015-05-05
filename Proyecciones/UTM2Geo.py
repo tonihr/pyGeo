@@ -6,7 +6,7 @@ Created on 6/2/2015
 @author: Antonio Hermosilla Rodrigo.
 @contact: anherro285@gmail.com
 @organization: Antonio Hermosilla Rodrigo.
-@copyright: (C) 2011 by Antonio Hermosilla Rodrigo
+@copyright: (C) 2014 by Antonio Hermosilla Rodrigo
 @version: 1.0.0
 """
 

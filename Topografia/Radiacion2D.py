@@ -6,103 +6,187 @@ Created on 9/3/2015
 @author: Antonio Hermosilla Rodrigo.
 @contact: anherro285@gmail.com
 @organization: Antonio Hermosilla Rodrigo.
-@copyright: (C) 2011 by Antonio Hermosilla Rodrigo
-@version: 1.0.0
+@copyright: (C) 2014 by Antonio Hermosilla Rodrigo
+@version: 1.0.1
 '''
 import Geometrias.Punto2D as pt2
 import Geometrias.Punto3D as pt3
 import Geometrias.Angulo as ang
 from math import sin,cos
+import Topografia.Azimut as azi
+from numpy import mean, std
+
 
 class Radiacion2D(object):
     '''!
     classdocs
     '''
-    __x=None
-    __y=None
+    __pEst=None
     __d=None
     __az=None
+    __referencias=[]
+    __lecturasRef=[]
 
 
-    def __init__(self, PuntoEstacion,Distancia,Azimut):
+    def __init__(self, PuntoEstacion,Referencias=[],Lecturas=[]):
         '''!
-        Constructor
+        Constructor de la clase Radiacion2D.
         '''
         self.setPuntoEstacion(PuntoEstacion)
-        self.setDistancia(Distancia)
-        self.setAzimut(Azimut)
+        self.setReferencias(Referencias)
+        self.setLecturasReferencias(Lecturas)
+        
+    def setReferencias(self,Referencias):
+        '''!
+        \brief Método que establece los puntos tomados como referencia para calcular la rediación.
+        \param Referencias [Punto2D]: Lista con los puntos que hacen de referencia.
+        \note Referencias Si no se expecifica ninguna refrencia, se supondrá que la lectura horizontal es un acimut.
+        \note Referencias Se debe itroducir el mismo número de Referencias que de lecturas.
+        
+        '''
+        if isinstance(Referencias, list):
+            if Referencias==[]:
+                return
+            else:
+                for i in Referencias:
+                    if not isinstance(i, pt2.Punto2D):
+                        raise Exception("No es de la clase Punto2D")
+                self.__referencias=Referencias
+        else:
+            raise Exception("Se esperaba una lista")
         
         
     def setPuntoEstacion(self,PuntoEstacion):
         '''!
-        @brief: Método que establece el Punto estación.
+        @brief Método que establece el Punto estación.
         @param PuntoEstacion Punto2D|Punto3D: Punto estación con las coordenadas.
         '''
         if isinstance(PuntoEstacion, pt2.Punto2D):
-            self.__x=PuntoEstacion.getX()
-            self.__y=PuntoEstacion.getY()
+            self.__pEst=PuntoEstacion
         elif isinstance(PuntoEstacion, pt3.Punto3D):
-            self.__x=PuntoEstacion.getX()
-            self.__y=PuntoEstacion.getY()
+            self.__pEst=PuntoEstacion
         else:
             raise Exception("Se esperaba un objeto de la clase Punto2D o Punto3D como valor de entrada.")
         
-    def setDistancia(self,Distancia):
+    def setLecturasReferencias(self,Lecturas):
         '''!
-        @brief: Método que asigna y comprueba la distancia introducida.
-        @param Distancia float|int|str: Distancia de cálculo.
+        \brief Método que establece las lecturas horizontales a las referencias.
+        \param Lecturas [Angulo]: Lecturas a cada una de las refrencias introducidas.
+        \note Lecturas Las lecturas son ángulos centesimales.
+        \note Lecturas Se debe incluir el mismo número de lecturas que de referencias.
         '''
-        if isinstance(Distancia, float) or isinstance(Distancia, int) or isinstance(Distancia, str):
-            try:
-                float(Distancia)
-            except Exception as e:
-                raise Exception(e)
-            finally:
-                self.__d=float(Distancia)
-        else:
-            raise Exception("Valor de distancia no válido.")
-        
-    def setAzimut(self,Azimut):
-        '''!
-        @brief: Método que asigna y comprueba el azimut introducido.
-        @param Distancia float|int|str|Angulo: Distancia de cálculo.
-        '''
-        if isinstance(Azimut, float) or isinstance(Azimut, int) or isinstance(Azimut, str):
-            try:
-                float(Azimut)
-                ang.Angulo(Azimut,formato='centesimal')
-            except Exception as e:
-                raise Exception(e)
-            finally:
-                a1=ang.Angulo(Azimut,formato='centesimal')
-                a1.Convertir('radian')
-                self.__az=float(a1.getAngulo())
-        elif isinstance(Azimut, ang.Angulo):
-            if Azimut.getFormato()=='centesimal':
-                Azimut.Convertir('radian')
-                self.__az=Azimut.getAngulo()
+        if isinstance(Lecturas, list):
+            if Lecturas==[]:
+                return
             else:
-                raise Exception("Se esperaba un ángulo de entrada de tipo centesimal.")
+                for i in Lecturas:
+                    if not isinstance(i, ang.Angulo):
+                        raise Exception("No es de la clase Angulo")
+                    if i.getFormato()!='centesimal':
+                        raise Exception('Se esperaba un ángulo centesimal')
+                self.__lecturasRef=Lecturas
         else:
-            raise Exception("Valor de azimut no válido.")
+            raise Exception("Se esperaba una lista")
         
-    def Radiacion2D(self):
+    def getReferencias(self):
+        return self.__referencias
+    
+    def getLecturasReferencias(self):
+        return self.__lecturasRef
+        
+    def __checkRefLec(self):
+        '''!
+        '''
+        if self.getReferencias()==[]:
+            return
+        if self.getLecturasReferencias()==[]:
+            return
+        if len(self.getReferencias())==len(self.getLecturasReferencias()):
+            return
+        else:
+            raise Exception('El número de lecturas no coincide con el número de referencias introducidas.')
+        
+    def Radiacion2D(self,Distancia,LecturaHorizontal):
         '''!
         @brief: Método que cálculo la radiación con los parametros introducidos.
         @return Punto2D: Devuelve un Punto2D con las coordenadas del punto radiado.
         '''
-        xs=self.__x+(self.__d*sin(self.__az))
-        ys=self.__y+(self.__d*cos(self.__az))
+        #TO-DO: Se puede introducir la distancia y lectura como listas y hacer bucle de radiación.
+        #Comprobaciones.
+        try:
+            Distancia=float(Distancia)
+        except Exception as e:
+            raise Exception(e)
+        
+        if isinstance(LecturaHorizontal, ang.Angulo):
+            if not LecturaHorizontal.getFormato()=='centesimal':
+                raise Exception('El ángulo debe ser de tipo centesimal.')
+        else:
+            raise Exception("No es ángulo")
+        
+        #Claculo de la raidiación.
+        desmean=0
+        angaux=ang.Angulo()
+        angaux.setGirar(True)
+        angaux.setNegativos(False)
+        self.__checkRefLec()
+        
+        if self.__referencias!=[] and self.__lecturasRef!=[]:
+            #Cálculo azimuts referencia.
+            azRef=[]
+            azimuts=azi.Azimut()
+            azimuts.setPuntoInicial(self.__pEst)
+            for i in self.__referencias:
+                azimuts.setPuntoFinal(i)
+                azRef.append(azimuts.getAzimut())
+            #print(azRef)
+            #Cálculo desorientaciones.
+            des=[]
+            for i,j in zip(azRef,self.__lecturasRef):
+                j.Convertir('radian')
+                deso=i-j.getAngulo()
+                angaux.setAngulo(deso)
+                angaux.setFormato('radian')
+                des.append(angaux.getAngulo())
+            #print(des)
+            #Cálculo de la radiación
+            desmean=mean(des)
+            #print(mean(des),std(des))
+        LecturaHorizontal.Convertir('radian')
+        az=LecturaHorizontal.getAngulo()+desmean
+        angaux.setAngulo(az)
+        angaux.setFormato('radian')
+        
+        xs=self.__pEst.getX()+(Distancia*sin(angaux.getAngulo()))
+        ys=self.__pEst.getY()+(Distancia*cos(angaux.getAngulo()))
         return pt2.Punto2D(xs,ys)
+    
+    
+    def Radiacion2DFromFile(self,fEstaciones,fReferencias,fLecturasReferencias,fLecturas):
+        '''!
+        \param fEstaciones Fichero con las coordenadas de las estaciones desde las que se quiere radiar.
+        \note fEstaciones Fomato: id_Estacion,X,Y,Z
+        
+        \param fReferencias Fichero con las coordenadas con los puntos usados como referencias.
+        \note fReferencias Formato: id_Referencia,X,Y,Z
+        
+        \param fLecturasReferencias Fichero con las lecturas realizadas a las referencias.
+        \note fLecturasReferencias Formato: id_Estacion,id_Referencia,LH,LV
+        
+        \param fLecturas Fichero con las lecturas de los puntos radiados.
+        \param fLecturas Formato: id_Estacion,id_Punto,LH,LV,Distancia
+        '''
         
         
         
         
 def main():
-    rad=Radiacion2D(pt2.Punto2D(10,20),40,ang.Angulo(56245,formato='centesimal'))
-    #rad=Radiacion2D(pt2.Punto2D(10,20),40,50)
-    sal=rad.Radiacion2D()
-    print(sal.getX(),sal.getY())       
-        
+    pest=pt2.Punto2D(0,0)
+    pref=[pt2.Punto2D(10,0),pt2.Punto2D(0,10),pt2.Punto2D(-10,-10),pt2.Punto2D(10,10)]
+    lecs=[ang.Angulo(0,formato='centesimal'),ang.Angulo(301,formato='centesimal'),ang.Angulo(149,formato='centesimal'),ang.Angulo(351,formato='centesimal')]
+    rad2d=Radiacion2D(pest,pref,lecs)
+#     rad2d=Radiacion2D(pest)
+    sal=rad2d.Radiacion2D(100, ang.Angulo(150,formato='centesimal'))
+    print(sal.getX(),sal.getY())
 if __name__=="__main__":
     main()

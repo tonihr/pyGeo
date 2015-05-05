@@ -12,6 +12,7 @@ Created on 1/2/2015
 import sys
 sys.path.append('..')
 from Geometrias.Punto2D import Punto2D
+from Geometrias.PuntoUTM import PuntoUTM
 from json import loads
 
 class Linea2D(object):
@@ -84,7 +85,7 @@ class Linea2D(object):
         @param PuntoInicial Punto2D: Punto inicial de la línea.
         @exception: Se producira una excepción si no se introduce un objeto de la clase Punto2D como valor de entrada del método.
         '''
-        if isinstance(PuntoInicial, Punto2D):
+        if isinstance(PuntoInicial, Punto2D) or isinstance(PuntoInicial, PuntoUTM):
             self.__pini=PuntoInicial
         else:
             raise Exception("Se esperaba un objeto de la clase Punto2D.")
@@ -97,7 +98,7 @@ class Linea2D(object):
         @param PuntoFinal Punto2D: Punto final de la línea.
         @exception: Se producira una excepción si no se introduce un objeto de la clase Punto2D como valor de entrada del método.
         '''
-        if isinstance(PuntoFinal, Punto2D):
+        if isinstance(PuntoFinal, Punto2D) or isinstance(PuntoFinal, PuntoUTM):
             self.__pfin=PuntoFinal
         else:
             raise Exception("Se esperaba un objeto de la clase Punto2D.")

@@ -1,7 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 '''
 Created on 18/2/2015
 
-@author: toni
+@author: Antonio Hermosilla Rodrigo.
+@contact: anherro285@gmail.com
+@organization: Antonio Hermosilla Rodrigo.
+@copyright: (C) 2015 by Antonio Hermosilla Rodrigo
+@version: 1.0.0
 '''
 import sys
 from PyQt4 import QtCore

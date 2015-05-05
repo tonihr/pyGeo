@@ -115,6 +115,7 @@ class Geo2UTM(QtGui.QWidget):
             self.__msgBoxErr.setText("Debe introducir un valor para la Longitud.")
             self.__msgBoxErr.exec_()
             return
+        
         try:
             pgeo=Geometrias.PuntoGeodesico.PuntoGeodesico(self.lineEdit.text(),self.lineEdit_2.text())
             if self.lineEdit_3.text()!="":
@@ -123,8 +124,8 @@ class Geo2UTM(QtGui.QWidget):
             self.__msgBoxErr.setText(e.__str__())
             self.__msgBoxErr.exec_()
             return
-        
         Sal=None
+        
         try:
             if self.spinBox.isEnabled():
                 Huso=self.spinBox.value()
@@ -140,7 +141,7 @@ class Geo2UTM(QtGui.QWidget):
             try:
                 self.lineEdit_9.setText(str(round(Geodesia.EGM.CalcularOndulacion.CalcularOndulacion(pgeo),self.__pN)))
             except Exception as e:
-                print(e)
+                #print(e)
                 self.lineEdit_9.setText("")
         except Exception as e:
             self.__msgBoxErr.setText(e.__str__())
@@ -188,6 +189,7 @@ class Geo2UTM(QtGui.QWidget):
             self.__msgBoxErr.setText(e.__str__())
             self.__msgBoxErr.exec_()
             return
+        
         self.pg=QtGui.QProgressBar(self.pd)
         self.pd.setBar(self.pg)
         self.pg.setMinimum(0)
@@ -272,7 +274,7 @@ class Geo2UTM(QtGui.QWidget):
         '''!
         '''
         if self.tabWidget.currentIndex()==0:
-            self.setFixedSize ( 334, 571)
+            self.setFixedSize ( 334, 637)
         elif self.tabWidget.currentIndex()==1:
             self.setFixedSize ( 562, 272)
             pass

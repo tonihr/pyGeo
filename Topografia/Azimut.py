@@ -16,6 +16,7 @@ import Geometrias.Punto2D as pt2
 import Geometrias.Punto3D as pt3
 import Geometrias.Linea2D as l2
 import Geometrias.Linea3D as l3
+import Geometrias.PuntoUTM as putm
 
 
 class Azimut(object):
@@ -56,7 +57,7 @@ class Azimut(object):
         '''!
         @brief: Metodo para comprobar si el objeto introducido es una instancia a la clase Punto2D o Punto3D.
         '''
-        if isinstance(Punto,pt3.Punto3D) or isinstance(Punto,pt2.Punto2D):
+        if isinstance(Punto,pt3.Punto3D) or isinstance(Punto,pt2.Punto2D) or isinstance(Punto,putm.PuntoUTM):
             pass
         else:
             raise Exception("El Punto introduccido no es una instancia de la clase Punto2D o Punto3D.")
