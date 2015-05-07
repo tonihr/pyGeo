@@ -35,6 +35,7 @@ class Radiacion2D(object):
         self.setPuntoEstacion(PuntoEstacion)
         self.setReferencias(Referencias)
         self.setLecturasReferencias(Lecturas)
+        self.__checkRefLec()
         
     def setReferencias(self,Referencias):
         '''!
@@ -89,47 +90,83 @@ class Radiacion2D(object):
             raise Exception("Se esperaba una lista")
         
     def getReferencias(self):
+        '''!
+        '''
         return self.__referencias
     
     def getLecturasReferencias(self):
+        '''!
+        '''
         return self.__lecturasRef
         
     def __checkRefLec(self):
         '''!
         '''
-        if self.getReferencias()==[]:
-            return
-        if self.getLecturasReferencias()==[]:
+        if not isinstance(self.getReferencias(), list):
             return
         if len(self.getReferencias())==len(self.getLecturasReferencias()):
             return
         else:
             raise Exception('El número de lecturas no coincide con el número de referencias introducidas.')
+    
+    def __checkDistancia(self,Distancia):
+        '''!
+        '''
+        if isinstance(Distancia,list):
+            for i in Distancia:
+                try:
+                    float(i)
+                except Exception as e:
+                    raise Exception(e)
+            
+        elif isinstance(Distancia, float) or isinstance(Distancia, int) or isinstance(Distancia, str):
+            try:
+                float(Distancia)
+            except Exception as e:
+                raise Exception(e)
+        else:
+            raise Exception("No se reconoce el valor introducido como distancia.")
+        
+    def __checkLecturaHorizontal(self,LecturaHorizontal):
+        '''!
+        '''
+        if isinstance(LecturaHorizontal, list):
+            for i in LecturaHorizontal:
+                if not isinstance(i, ang.Angulo):
+                    raise Exception("No es ángulo")
+                if not i.getFormato()=='centesimal':
+                    raise Exception('El ángulo debe ser de tipo centesimal.')
+        elif isinstance(LecturaHorizontal, ang.Angulo):
+            if not LecturaHorizontal.getFormato()=='centesimal':
+                raise Exception('El ángulo debe ser de tipo centesimal.')
+        else:
+            raise Exception("No es ángulo")
+        
+        
+    def __checkLecDis(self,Distancia,LecturaHorizontal):
+        '''!
+        '''
+        if isinstance(Distancia, list) and isinstance(LecturaHorizontal, list):
+            if len(Distancia)==len(LecturaHorizontal):
+                return True
+            else:
+                raise Exception("El número de distancias y lecturas horizontales debe de coincidir")
+        
+    
         
     def Radiacion2D(self,Distancia,LecturaHorizontal):
         '''!
         @brief: Método que cálculo la radiación con los parametros introducidos.
         @return Punto2D: Devuelve un Punto2D con las coordenadas del punto radiado.
         '''
-        #TO-DO: Se puede introducir la distancia y lectura como listas y hacer bucle de radiación.
         #Comprobaciones.
-        try:
-            Distancia=float(Distancia)
-        except Exception as e:
-            raise Exception(e)
-        
-        if isinstance(LecturaHorizontal, ang.Angulo):
-            if not LecturaHorizontal.getFormato()=='centesimal':
-                raise Exception('El ángulo debe ser de tipo centesimal.')
-        else:
-            raise Exception("No es ángulo")
-        
+        self.__checkDistancia(Distancia)
+        self.__checkLecturaHorizontal(LecturaHorizontal)
         #Claculo de la raidiación.
         desmean=0
         angaux=ang.Angulo()
         angaux.setGirar(True)
         angaux.setNegativos(False)
-        self.__checkRefLec()
         
         if self.__referencias!=[] and self.__lecturasRef!=[]:
             #Cálculo azimuts referencia.
@@ -149,17 +186,31 @@ class Radiacion2D(object):
                 angaux.setFormato('radian')
                 des.append(angaux.getAngulo())
             #print(des)
-            #Cálculo de la radiación
             desmean=mean(des)
             #print(mean(des),std(des))
-        LecturaHorizontal.Convertir('radian')
-        az=LecturaHorizontal.getAngulo()+desmean
-        angaux.setAngulo(az)
-        angaux.setFormato('radian')
-        
-        xs=self.__pEst.getX()+(Distancia*sin(angaux.getAngulo()))
-        ys=self.__pEst.getY()+(Distancia*cos(angaux.getAngulo()))
-        return pt2.Punto2D(xs,ys)
+        #Cálculo de la radiación
+        if self.__checkLecDis(Distancia, LecturaHorizontal)==True:
+            Sal=[]
+            #Radiación por bucle.
+            for i,j in zip(Distancia,LecturaHorizontal):
+                j.Convertir('radian')
+                az=j.getAngulo()+desmean
+                angaux.setAngulo(az)
+                angaux.setFormato('radian')
+                xs=self.__pEst.getX()+(i*sin(angaux.getAngulo()))
+                ys=self.__pEst.getY()+(i*cos(angaux.getAngulo()))
+                Sal.append(pt2.Punto2D(xs,ys))
+            return Sal
+        else:
+            #Radiación simle
+            LecturaHorizontal.Convertir('radian')
+            az=LecturaHorizontal.getAngulo()+desmean
+            angaux.setAngulo(az)
+            angaux.setFormato('radian')
+            
+            xs=self.__pEst.getX()+(Distancia*sin(angaux.getAngulo()))
+            ys=self.__pEst.getY()+(Distancia*cos(angaux.getAngulo()))
+            return pt2.Punto2D(xs,ys)
     
     
     def Radiacion2DFromFile(self,fEstaciones,fReferencias,fLecturasReferencias,fLecturas):
@@ -176,7 +227,7 @@ class Radiacion2D(object):
         \param fLecturas Fichero con las lecturas de los puntos radiados.
         \param fLecturas Formato: id_Estacion,id_Punto,LH,LV,Distancia
         '''
-        
+        #TO-DO:
         
         
         
@@ -186,7 +237,18 @@ def main():
     lecs=[ang.Angulo(0,formato='centesimal'),ang.Angulo(301,formato='centesimal'),ang.Angulo(149,formato='centesimal'),ang.Angulo(351,formato='centesimal')]
     rad2d=Radiacion2D(pest,pref,lecs)
 #     rad2d=Radiacion2D(pest)
-    sal=rad2d.Radiacion2D(100, ang.Angulo(150,formato='centesimal'))
+    dis=[100,200,300]
+    angs=[ang.Angulo(150,formato='centesimal'),ang.Angulo(250,formato='centesimal'),ang.Angulo(350,formato='centesimal')]
+    sal=rad2d.Radiacion2D(dis, angs)
+    for i in sal:
+        print(i.getX(),i.getY())
+        
+    rad2d=Radiacion2D(pest)
+    sal=rad2d.Radiacion2D(100, ang.Angulo(100,formato='centesimal'))
     print(sal.getX(),sal.getY())
+        
+        
+        
+        
 if __name__=="__main__":
     main()

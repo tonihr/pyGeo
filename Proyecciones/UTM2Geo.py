@@ -120,9 +120,23 @@ def UTM2Geo(PuntoUTM,NombreElipsoide):
     
     #Cálculo de la convergencia de meridianos.
     #coeficientes.
+    s1=sin(Lats)
+    c1=cos(Lats)
     c2=(c1**2)
     c4=(c1**4)
     c6=(c1**6)
+    t=tan(Lats)
+    t2=(t**2)
+    t4=(t**4)
+    t6=(t**6)
+    t8=(t**8)
+    n2=((e2**2))*((cos(Lats)**2))
+    n4=(n2**2)
+    n6=(n2**3)
+    n8=(n2**4)
+    n10=(n2**5)
+    n12=(n2**6)
+    n14=(n2**7)
     m3=(1.0+3.0*n2+2*n4)
     m5=(2.0-t2+15.0*n2*t2+35.0*n4-50.0*n4*t2+33.0*n6-60.0*n6*t2+11.0*n8-24.0*n8*t2)
     m7=(-148.0-3427.0*t2+18.0*t4-1387.0*t6+2023.0*n2-46116.0*n2*t2+5166.0*n2*t4+18984.0*n4-100212.0*n4*t4+34783*n6-219968.0*n6*t2+144900.0*n6*t4+36180.0*n8-261508.0*n8*t2+155904.0*n8*t4+18472.0*n10-114528.0*n10*t2+94080.0*n10*t4+4672.0*n12-30528.0*n12*t2+23040.0*n12*t4)
@@ -133,10 +147,10 @@ def UTM2Geo(PuntoUTM,NombreElipsoide):
     #Calculo de la escala local del punto.
     #coeficientes.
     k2=(1+n2)
-    k4=(8.0-24.0*t2+4.0*t4+20.0*n2-28.0*n2*t2+16.0*n4-48.0*n4*t2+4.0*n6-24.0*n6*t2)
-    k6=(136.0+10576.0*t2-9136.0*t4+224.0*t6+616.0*n2+43952.0*n2*t2-50058.0*n2*t4-1120.0*n4+66960.0*n4*t2-95680.0*n4*t4+1024.0*n6+42736.0*n6*t2-80160.0*n6*t4+472.0*n8+9184.0*n8*t2-21888.0*n8*t4+88.0*n10-1632.0*n10*t2+1920.0*n10*t4)
-    kp=(0.9996**2)*(1+((Alon**2)*c2*k2)+(((Alon**4)/12.0)*c4*k4)+(((Alon**6)/360.0)*c6*k6))
-    kp=sqrt(kp)
+    k4=(5.0-4.0*t2+14.0*n2-28.0*n2*t2+13.0*n4-48.0*n4*t2+4.0*n6-24.0*n6*t2)
+    k6=(61.0+10636.0*t2-9136.0*t4+224.0*t6+331.0*n2+44432.0*n2*t2-50058.0*n2*t4-715.0*n4+68100.0*n4*t2-95680.0*n4*t4+769.0*n6+43816.0*n6*t2-80160.0*n6*t4+412.0*n8+9644.0*n8*t2-21888.0*n8*t4+88.0*n10-1632.0*n10*t2+1920.0*n10*t4)
+    kp=(0.9996)*(1+(0.5*(Alon**2)*c2*k2)+(((Alon**4)/24.0)*c4*k4)+(((Alon**6)/720.0)*c6*k6))
+    #kp=sqrt(kp)
     
     Lats=ang.Angulo(Lats,formato='radian')
     Lats.Convertir('latitud')
@@ -210,6 +224,7 @@ def UTM2GeoFromFile(File,NombreElipsoide):
 
 
 def main():
+    sal=UTM2Geo(putm.PuntoUTM(500000,4000000), 'WGS 84')
     import os
     print("Conversor de Coordenadas UTM a Geodesicas.")
     opt=None

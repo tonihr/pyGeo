@@ -121,6 +121,7 @@ class Azimut(object):
         @brief: Método que devuleve el azimut de la direccion, en radianes.
         @return float: Azimut de la dirección.
         '''
+        #print(self.__getAX(),self.__getAY())
         if self.__getAX()==0 and self.__getAY()>0:
             self.__azimut=0
             return self.__azimut
@@ -136,15 +137,15 @@ class Azimut(object):
             return self.__azimut
         #Primer cuadrante
         if self.__getAX()>0 and self.__getAY()>0:
-            self.__azimut=atan(self.__getAY()/self.__getAX())
+            self.__azimut=atan(self.__getAX()/self.__getAY())
             return self.__azimut
         #Segundo cuadrante
         if self.__getAX()>0 and self.__getAY()<0:
-            self.__azimut=(pi/2)+abs(atan(self.__getAY()/self.__getAX()))
+            self.__azimut=(pi/2)+abs(atan(self.__getAX()/self.__getAY()))
             return self.__azimut
         #Tercer cuadrante
         if self.__getAX()<0 and self.__getAY()<0:
-            self.__azimut=(pi)+atan(self.__getAY()/self.__getAX())
+            self.__azimut=(pi)+atan(self.__getAX()/self.__getAY())
             return self.__azimut
         #Cuarto cuadrante
         if self.__getAX()<0 and self.__getAY()>0:

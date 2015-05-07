@@ -99,11 +99,12 @@ def Crx2Rnx(RutaRINEXCompacto):
 def main():
     rutasample=abspath(join(dirname( __file__ ),'..','ejemplos'))
     #Conversión Rinex Compacto a Rinex standard
-    rutaunion=rutasample+"/unionRinex"
+    #rutaunion=rutasample+"/unionRinex"
+    rutaunion=rutasample
     validos=[]
     from os import listdir
     for i in listdir(rutaunion):
-        if 'VALE' in i and i.endswith('d'):
+        if 'DENI' in i and i.endswith('d'):
             validos.append(rutaunion+"/"+i)
     print(validos)
     Crx2Rnx(validos)

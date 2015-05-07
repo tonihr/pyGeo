@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>402</width>
-    <height>571</height>
+    <height>637</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -276,6 +276,40 @@
              <widget class="QLineEdit" name="lineEdit_12">
               <property name="readOnly">
                <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QLineEdit" name="lineEdit_13"/>
+            </item>
+            <item row="8" column="1">
+             <widget class="QLineEdit" name="lineEdit_14"/>
+            </item>
+            <item row="7" column="2">
+             <widget class="QLabel" name="label_30">
+              <property name="text">
+               <string>º</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="2">
+             <widget class="QLabel" name="label_31">
+              <property name="text">
+               <string>º</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_32">
+              <property name="text">
+               <string>ξ:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_33">
+              <property name="text">
+               <string>η:</string>
               </property>
              </widget>
             </item>
